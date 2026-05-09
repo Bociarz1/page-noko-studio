@@ -1,0 +1,24 @@
+
+---
+import HeaderMenu from "./components/HeaderMenu/HeaderMenu.astro";
+import HeaderMenuMobile from "./components/HeaderMenuMobile/HeaderMenuMobile.astro";
+
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+
+const isPathActive = currentPath === pathname;
+---
+
+<nav class="navigation">
+    <a class="logo" href="/">
+        <span class="noko">NOKO</span>
+        <span class="studio">STUDIO</span>
+    </a>
+    <HeaderMenuMobile isPathActive={isPathActive}/>
+    <HeaderMenu isPathActive={isPathActive}/>
+</nav>
+
+<style lang="scss" >
+    @use "./Header.scss";
+</style>

@@ -1,0 +1,10 @@
+@use "@styles/_breakpoints.scss" as *;
+
+.header-menu-desktop {
+    @include hide-on(mobile);
+    height: 100%;
+    width: 380px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
