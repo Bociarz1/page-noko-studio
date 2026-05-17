@@ -1,60 +1,58 @@
-@use "@styles/_breakpoints.scss" as *;
-@use "@styles/_colors.scss" as *;
-@use "@styles/_variables.scss" as *;
-@use "@styles/_z-indexes.scss" as *;
+@use '@styles/_breakpoints.scss' as *;
+@use '@styles/_colors.scss' as *;
+@use '@styles/_variables.scss' as *;
+@use '@styles/_z-indexes.scss' as *;
 
 .header-menu-mobile {
-    @include hide-on(tablet, desktop, wide);
+  @include hide-on(tablet, desktop, wide);
 
-    &[open] {
-        .icon-menu {
-            transform:rotate(90deg);
-        }
-    }
-
+  &[open] {
     .icon-menu {
-        transition: .3s;
-        cursor: pointer;
+      transform: rotate(90deg);
     }
+  }
 
+  .icon-menu {
+    transition: 0.3s;
+    cursor: pointer;
+  }
 
+  summary {
+    user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+    list-style: none;
 
-    summary {
-        user-select: none;
-        -webkit-user-select: none;
-        outline: none;
-        list-style: none;
-
-        &::marker, &::-webkit-details-marker {
-            display: none;
-            content: "";
-        }
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+      content: '';
     }
+  }
 
-    &__link-wrapper {
-        position: absolute;
-        width: 100vw;
-        left: 0;
-        top: $header-height;
-        border-bottom: 1px solid $color-transparent;
-        z-index: $z-header;
-        background-color: $color-white;
+  &__link-wrapper {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: $header-height;
+    border-bottom: 1px solid $color-transparent;
+    z-index: $z-header;
+    background-color: $color-white;
 
-        li {
-            text-align: center;
-            padding: 10px;
-            border: none;
-            
-            &.link--active {
-                color: $color-dark;
-                font-weight: 500;
-                
-                a {
-                    padding-bottom: 4px;
-                    border-bottom: 2px solid $color-dark;
-                }
-            }
+    li {
+      text-align: center;
+      padding: 10px;
+      border: none;
+
+      &.link--active {
+        color: $color-dark;
+        font-weight: 500;
+
+        a {
+          padding-bottom: 4px;
+          border-bottom: 2px solid $color-dark;
         }
+      }
     }
-
-        }
+  }
+}

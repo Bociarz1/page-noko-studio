@@ -1,28 +1,29 @@
 ---
-import Menu from "@assets/icons/icon-menu.svg";
-import { NAV_ELEMENTS } from "src/constants/navLinks";
+import Menu from '@assets/icons/icon-menu.svg';
+import { NAV_ELEMENTS } from 'src/constants/navLinks';
 
 interface Props {
-    isPathActive: boolean
+  isPathActive: boolean;
 }
 const { isPathActive } = Astro.props;
----    
+---
+
 <details class="header-menu-mobile">
-        <summary>
-            <Menu class="icon-menu" fill="black"/>
-        </summary>
-        <ul class="header-menu-mobile__link-wrapper">
-        {
-            NAV_ELEMENTS.map((element) => (
-                <li class={isPathActive ? "link--active" : ""}>
-                    <a href={element.href}>{element.label}</a>
-                </li>
-            ))
-        }
-        </ul>
+  <summary>
+    <Menu class="icon-menu" fill="black" />
+  </summary>
+  <ul class="header-menu-mobile__link-wrapper">
+    {
+      NAV_ELEMENTS.map((element) => (
+        <li class={isPathActive ? 'link--active' : ''}>
+          <a href={element.href}>{element.label}</a>
+        </li>
+      ))
+    }
+  </ul>
 </details>
 
 <style lang="scss">
-    @use "../../Header.scss";
-    @use "./HeaderMenuMobile.scss";
+  @use '../../Header.scss';
+  @use './HeaderMenuMobile.scss';
 </style>

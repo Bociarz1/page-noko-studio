@@ -1,8 +1,8 @@
-// Used for elements that must be behind the main content flow. 
+// Used for elements that must be behind the main content flow.
 // E.g., background decorative shapes, parallax layers, or "under-canvas" patterns.
 $z-below: -1;
 
-// The standard stacking level for all normal elements. 
+// The standard stacking level for all normal elements.
 // Use this as a baseline to reset or explicitly define the main content area.
 $z-default: 1;
 
@@ -21,6 +21,6 @@ $z-overlay: 80;
 // High-level UI components like popups, alerts, and dialog windows.
 $z-modal: 90;
 
-// The absolute highest priority elements. 
+// The absolute highest priority elements.
 // Tooltips, cookie banners, and critical system-wide notifications.
 $z-critical: 100;

@@ -1,59 +1,63 @@
 ---
-import { NAV_ELEMENTS } from "src/constants/navLinks";
-import LocationOn from "@assets/icons/icon-location-on.svg";
-import PhoneInTalk from "@assets/icons/icon-phone-in-talk.svg";
-import Mail from "@assets/icons/icon-mail.svg";
+import { NAV_ELEMENTS } from 'src/constants/navLinks';
+import LocationOn from '@assets/icons/icon-location-on.svg';
+import PhoneInTalk from '@assets/icons/icon-phone-in-talk.svg';
+import Mail from '@assets/icons/icon-mail.svg';
 ---
 
 <footer class="footer">
-    <div class="footer__content">
+  <div class="footer__content">
     <section class="main">
-        <p class="logo"><span class="noko">NOKO</span> <span class="studio">STUDIO</span></p>
-        <p class="description">Projektowanie wnętrz z pasją i dbałością o każdy detal</p>
+      <p class="logo">
+        <span class="noko">NOKO</span>
+        <span class="studio">STUDIO</span>
+      </p>
+      <p class="description">Projektowanie wnętrz z pasją i dbałością o każdy detal</p>
     </section>
     <section class="menu">
-        <p class="title">Menu</p>
-        <ul>
-            {NAV_ELEMENTS.map((element) => (
-                <li>
-                    <a href={element.href}>{element.label}</a>
-                </li>
-            ))}
-        </ul>
+      <p class="title">Menu</p>
+      <ul>
+        {
+          NAV_ELEMENTS.map((element) => (
+            <li>
+              <a href={element.href}>{element.label}</a>
+            </li>
+          ))
+        }
+      </ul>
     </section>
     <section class="contact">
-        <p class="title">Kontakt</p>
-        <address class="contact-details">
-            <div class="email">
-                <Mail width={16} height={16}/>
-                biuro@noko-studio.com
-            </div>
-            <div class="phone">
-                <PhoneInTalk width={16} height={16}/>
-                Paulina +48 455 408 602
-            </div>
-                       <div class="phone">
-                <PhoneInTalk width={16} height={16}/>
-                Aleksandra +48 455 408 601
-
-            </div>
-            <div class="address">
-                <LocationOn width={20} height={20} />
-                Białystok, Polska
-            </div>
-        </address>
+      <p class="title">Kontakt</p>
+      <address class="contact-details">
+        <div class="email">
+          <Mail width={16} height={16} />
+          biuro@noko-studio.com
+        </div>
+        <div class="phone">
+          <PhoneInTalk width={16} height={16} />
+          Paulina +48 455 408 602
+        </div>
+        <div class="phone">
+          <PhoneInTalk width={16} height={16} />
+          Aleksandra +48 455 408 601
+        </div>
+        <div class="address">
+          <LocationOn width={20} height={20} />
+          Białystok, Polska
+        </div>
+      </address>
     </section>
     <section class="working-hours">
-        <p class="title">Godziny pracy</p>
-        <div class="working-hours-details">
-            <p>Pon - Pt: 9:00 - 17:00</p>
-            <p>Sob - Nd: Zamknięte</p>
-        </div>
+      <p class="title">Godziny pracy</p>
+      <div class="working-hours-details">
+        <p>Pon - Pt: 9:00 - 17:00</p>
+        <p>Sob - Nd: Zamknięte</p>
+      </div>
     </section>
-    </div>
-        <div class="footer__copyright">© 2023 NOKO STUDIO. Wszystkie prawa zastrzeżone.</div>
+  </div>
+  <div class="footer__copyright">© 2023 NOKO STUDIO. Wszystkie prawa zastrzeżone.</div>
 </footer>
 
 <style lang="scss">
-    @use "./Footer.scss";
+  @use './Footer.scss';
 </style>
