@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
+import Button from '@components/shared/Button/Button.astro';
 ---
 
 <style lang="scss">
@@ -19,22 +20,22 @@ import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-wa
   />
   <div class="hero__overlay"></div>
   <div class="hero__content">
-    <h1 class="hero__title">
-      Tworzymy przestrzenie,
-      <br />
-      które inspirują
+    <h1 class="hero__pretitle page-pretitle">
+      Profesjonalne projektowanie wnętrz w Białymstoku
     </h1>
-    <p class="hero__desc">
-      Projektowanie wnętrz to nasza pasja. Łączymy funkcjonalność z estetyką,
-      tworząc unikalne przestrzenie dopasowane do Twoich potrzeb.
+    <p class="hero__title section-title">
+      Stwórzmy razem 
+    <br>
+      Twoje wymarzone wnętrze,
+      <br />
+      bez stresu i niespodzianek
+    </p>
+    <p class="hero__desc section-description">
+      Specjaliści od wnętrz: od pierwszej koncepcji aż po finalną realizację projektu.
     </p>
     <div class="hero__actions">
-      <a href="/realizacje" class="hero__btn hero__btn--primary">
-        Zobacz realizacje <span aria-hidden="true">→</span>
-      </a>
-      <a href="/uslugi" class="hero__btn hero__btn--secondary">
-        Poznaj ofertę
-      </a>
+      <Button href="/realizacje" title="Zobacz realizacje" variant="primary" />
+      <Button href="/uslugi" title="Poznaj ofertę" variant="secondary" />
     </div>
   </div>
 </section>

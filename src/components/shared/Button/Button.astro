@@ -1,0 +1,17 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const { href, title, variant = 'primary' } = Astro.props;
+---
+
+<style lang="scss">
+  @use './Button.scss';
+</style>
+
+<a href={href} class={`btn btn--${variant}`}>
+  {title} {variant === 'primary' && <span aria-hidden="true">→</span>}
+</a>
