@@ -7,6 +7,11 @@ interface Props {
 const { isPathActive } = Astro.props;
 ---
 
+<style lang="scss">
+  @use '@components/Header/Header.scss';
+  @use './HeaderMenu.scss';
+</style>
+
 <ul class="header-menu-desktop">
   {
     NAV_ELEMENTS.map((element) => (
@@ -16,8 +21,3 @@ const { isPathActive } = Astro.props;
     ))
   }
 </ul>
-
-<style lang="scss">
-  @use '../../Header.scss';
-  @use './HeaderMenu.scss';
-</style>

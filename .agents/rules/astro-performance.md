@@ -22,4 +22,7 @@ Zawsze optymalizuj kod pod kątem Core Web Vitals (LCP, CLS, INP) oraz najwyższ
 <style lang="scss">
   @use './Component.scss';
 </style>
-- zawsze używaj @use przy importowaniu
+- Zawsze używaj `@use` przy importowaniu.
+- Importowane style `<style>` powinny się znajdować na samej górze, od razu pod `---` w pliku `.astro`.
+- W przypadku, kiedy wysokość elementu zależy od innego elementu (np. headera, footera), bezwzględnie korzystaj ze zmiennych z pliku `_variables.scss` (np. `$header-height`) zamiast wpisywać sztywno wartości w pikselach.
+- **NIGDY** nie nadpisuj właściwości `font-family` w poszczególnych komponentach. Zawsze korzystaj z globalnego ustawienia zdefiniowanego w `_global.scss`.

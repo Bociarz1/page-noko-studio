@@ -8,6 +8,11 @@ interface Props {
 const { isPathActive } = Astro.props;
 ---
 
+<style lang="scss">
+  @use '@components/Header/Header.scss';
+  @use './HeaderMenuMobile.scss';
+</style>
+
 <details class="header-menu-mobile">
   <summary>
     <Menu class="icon-menu" fill="black" />
@@ -22,8 +27,3 @@ const { isPathActive } = Astro.props;
     }
   </ul>
 </details>
-
-<style lang="scss">
-  @use '../../Header.scss';
-  @use './HeaderMenuMobile.scss';
-</style>

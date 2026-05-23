@@ -11,6 +11,13 @@ interface Props {
 const { title = '', metaDescription = '' } = Astro.props;
 ---
 
+<style lang="scss" is:global>
+  @use '@styles/_global.scss';
+</style>
+<style lang="scss">
+  @use './MainLayout.scss';
+</style>
+
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
@@ -30,10 +37,3 @@ const { title = '', metaDescription = '' } = Astro.props;
     <Footer />
   </body>
 </html>
-
-<style lang="scss" is:global>
-  @use '../../styles/_global.scss';
-</style>
-<style lang="scss">
-  @use './MainLayout.scss';
-</style>
