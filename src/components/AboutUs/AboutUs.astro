@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import Owners from "@assets/images/noko-studio-wlascicielki-sesja-wizerunkowa.webp";
+---
+
+<style lang="scss">
+  @use './AboutUs.scss';
+</style>
+
+<section class="about-us">
+  <div class="about-us__container">
+    <div class="about-us__content">
+      <h2 class="about-us__pretitle page-pretitle">Architekt wnętrz, którego szukasz</h2>
+      <p class="about-us__title section-title">
+        Poznaj nasz zespół
+      </p>
+      <p class="about-us__desc-pretitle">
+        ALEKSANDRA I PAULINA
+      </p>
+      <p class="about-us__desc section-description">
+        Nazywamy się Aleksandra i Paulina. Poznałyśmy się na studiach na Wydziale Architektury Wnętrz Politechniki Białostockiej i szybko odkryłyśmy, że łączy nas podobne podejście do projektowania. Świetnie się uzupełniamy – jedna zwraca uwagę na detale, druga dba o funkcjonalność, a wspólnie tworzymy przestrzenie dopasowane do stylu życia i potrzeb naszych klientów. Tak narodził się pomysł na stworzenie własnej pracowni.
+      </p>
+            <p class="about-us__desc-pretitle">
+        CZYM SIĘ KIERUJEMY ?
+      </p>
+      <p class="about-us__desc section-description">
+        Każdy projekt traktujemy indywidualnie, dbając o to, by łączył estetykę z funkcjonalnością. Wierzymy, że dobrze zaprojektowane wnętrze to takie, które nie tylko zachwyca wyglądem, ale przede wszystkim odpowiada na codzienne potrzeby jego użytkowników. Realizujemy projekty stacjonarne na terenie Białegostoku i okolic, a współpraca online możliwa jest w całej Polsce.
+      </p>
+      <a href="/uslugi" class="about-us__link">
+        Sprawdź naszą ofertę <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    
+    <div class="about-us__images">
+      <Image
+        src={Owners}
+        alt="Projekt wnętrza — salon"
+        class="about-us__img"
+        width={400}
+        height={533}
+        format="webp"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
