@@ -22,7 +22,7 @@ const { title = '', metaDescription = '' } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.unsplash.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' 'unsafe-inline'; upgrade-insecure-requests;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io; upgrade-insecure-requests;" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
