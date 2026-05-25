@@ -34,12 +34,16 @@ import Owners from "@assets/images/noko-studio-wlascicielki-sesja-wizerunkowa.we
     <div class="about-us__images">
       <Image
         src={Owners}
-        alt="Projekt wnętrza — salon"
+        alt="Aleksandra i Paulina – właścicielki NOKO Studio"
         class="about-us__img"
-        width={400}
-        height={533}
-        format="webp"
+        width={760}
+        height={1013}
+        format="avif"
+        quality="mid"
         loading="lazy"
+        decoding="async"
+        widths={[400, 600, 760]}
+        sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 760px"
       />
     </div>
   </div>

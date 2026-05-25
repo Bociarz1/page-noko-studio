@@ -3,10 +3,20 @@ import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+    build: {
+        inlineStylesheets: "always"
+    },
     fonts: [{
         provider: fontProviders.fontsource(),
         name: "Montserrat",
         cssVariable: "--font-montserrat",
-        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]
-  }]
+        weights: [300, 400, 500, 600],
+        styles: ["normal"],
+        display: "optional",
+        subsets: ["latin"],
+        fallbacks: ["Arial", "Helvetica", "sans-serif"]
+    }],
+    image: {
+        domains: ["images.unsplash.com"]
+    }
 });

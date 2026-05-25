@@ -9,8 +9,32 @@
     <h2 class="page-pretitle">CO MÓWIĄ O NAS INWESTORZY? TWÓJ POLECANY PROJEKTANT WNĘTRZ Z BIAŁEGOSTOKU</h2>
     <p class="reviews__title section-title">Opinie naszych klientów</p>
     
-    <div class="reviews__widget">
-      <script defer async src='https://cdn.trustindex.io/loader.js?88c83d572a4273338746f27a843'></script>
+    <div class="reviews__widget" id="reviews-widget-container">
+      <!-- Skrypt zostanie wstrzyknięty dynamicznie przy scrollowaniu -->
     </div>
   </div>
 </section>
+
+<script>
+  // Leniwe ładowanie widgetu Trustindex
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('reviews-widget-container');
+    
+    if (container && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.trustindex.io/loader.js?88c83d572a4273338746f27a843';
+            script.defer = true;
+            script.async = true;
+            container.appendChild(script);
+            observer.disconnect();
+          }
+        });
+      }, { rootMargin: '200px' });
+      
+      observer.observe(container);
+    }
+  });
+</script>
