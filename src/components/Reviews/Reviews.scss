@@ -1,0 +1,26 @@
+@use '@styles/_colors.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
+
+.reviews {
+  background-color: $color-light;
+  padding: 2rem 2.4rem;
+  text-align: center;
+
+  @include mq('tablet') {
+    padding: 4.6rem 4rem;
+  }
+
+  &__container {
+    max-width: 160rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $color-ink;
+    margin: 2.4rem 0;
+  }
+
+  &__widget {
+    min-height: 200px;
+  }
+}

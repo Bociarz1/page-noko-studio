@@ -1,0 +1,44 @@
+@use '@styles/_colors.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
+
+.cta {
+  background-color: $color-light;
+  padding: 9.6rem 2.4rem;
+  text-align: center;
+
+  @include mq('tablet') {
+    padding: 12.8rem 4rem;
+  }
+
+  &__container {
+    max-width: 160rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $color-ink;
+  }
+
+  &__description {
+    color: $color-gray;
+    margin: 2.4rem auto 0;
+    max-width: 57.6rem;
+  }
+
+  &__button {
+    margin-top: 4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: $color-ink;
+    color: $color-white;
+    padding: 1.6rem 3.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

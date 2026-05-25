@@ -34,3 +34,21 @@ Ponieważ nie używamy Reacta, przenieś całą logikę interaktywną (kliknięc
   }
   const { title, description } = Astro.props;
   ---
+```
+
+### 4. Stylowanie i Klasy CSS
+- Przeanalizuj klasy użyte w oryginalnym kodzie (np. klasy narzędziowe z Tailwind lub zwykłe klasy CSS).
+- Odwzoruj to stylowanie, tworząc dedykowany plik `.scss` obok komponentu Astro (np. `Component.astro` -> `Component.scss`).
+- Wygeneruj odpowiednie reguły CSS/SCSS w tym pliku, aby odtworzyć wygląd nadawany przez oryginalne klasy.
+- Pamiętaj o poprawnym zaimportowaniu pliku stylów na górze komponentu, zaraz pod blokiem `---`:
+  ```astro
+  <style lang="scss">
+    @use './Component.scss';
+  </style>
+  ```
+- Wszystkie użyte kolory w stylach muszą pochodzić ze zmiennych zadeklarowanych w pliku `src/styles/_colors.scss`.
+- Jeżeli oryginalny kod używa koloru, którego brakuje w `src/styles/_colors.scss`, masz obowiązek dodać go do tego pliku przed użyciem.
+- Do tworzenia stylów responsywnych (RWD) bezwzględnie używaj pliku `src/styles/_breakpoints.scss`. Zaimportuj go za pomocą `@use '@styles/_breakpoints.scss' as *;` i korzystaj z mixina, np. `@include mq('tablet')` (dostępne rozmiary to: `mobile`, `tablet`, `desktop`, `wide`), zamiast ręcznego tworzenia zapytań `@media (min-width: ...)`.
+
+### 5. Czystość Kodu
+- W docelowym, wygenerowanym kodzie (zarówno w plikach `.astro`, `.scss`, jak i `.ts`) **nie mogą pojawiać się absolutnie żadne komentarze**. Ostateczny kod musi być całkowicie oczyszczony z komentarzy.

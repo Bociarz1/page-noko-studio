@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+const projects = [
+  {
+    slug: "projekt-1",
+    cover: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "Rezydencja pod Lasem",
+    location: "Warszawa",
+    index: "01",
+    category: "mieszkalne",
+    area: "320 m²",
+    year: "2023"
+  },
+  {
+    slug: "projekt-2",
+    cover: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "Biuro Architektoniczne",
+    location: "Kraków",
+    index: "02",
+    category: "komercyjne",
+    area: "150 m²",
+    year: "2022"
+  }
+];
+---
+<style lang="scss">
+  @use './Portfolio.scss';
+</style>
+
+<section class="portfolio">
+  <div class="portfolio__container">
+    <div class="portfolio__header">
+      <div class="portfolio__header-text">
+        <p class="label-eyebrow portfolio__eyebrow page-pretitle">ZOBACZ PORTFOLIO NASZEGO BIURA PROJEKTOWEGO</p>
+        <h2 class="portfolio__title section-title">
+          Zaprojektowane z pasją, dopracowane w każdym detalu
+        </h2>
+        <p class="portfolio__description section-description">
+          Projekty mieszkalne i komercyjne, w których łączymy funkcjonalność
+          z dopracowaną estetyką.
+        </p>
+      </div>
+      <a
+        href="/realizacje"
+        class="portfolio__link"
+      >
+        Zobacz wszystkie <span aria-hidden>→</span>
+      </a>
+    </div>
+
+    <div class="portfolio__grid">
+      {projects.map((p) => (
+        <a
+          href="/realizacje"
+          class="portfolio-card"
+        >
+          <div class="portfolio-card__image-wrapper">
+            <Image
+              src={p.cover}
+              alt={`${p.title}, ${p.location}`}
+              width={800}
+              height={600}
+              class="portfolio-card__image"
+            />
+          </div>
+          <div class="portfolio-card__content">
+            <div class="portfolio-card__text">
+              <p class="portfolio-card__meta">
+                {p.index} · {p.category === "mieszkalne" ? "Mieszkalne" : "Komercyjne"}
+              </p>
+              <h3 class="portfolio-card__title">
+                {p.title}
+              </h3>
+              <p class="portfolio-card__details">
+                {p.location} · {p.area} · {p.year}
+              </p>
+            </div>
+            <span
+              aria-hidden
+              class="portfolio-card__arrow"
+            >
+              →
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
