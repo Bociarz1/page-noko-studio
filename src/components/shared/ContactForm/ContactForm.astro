@@ -1,0 +1,83 @@
+---
+---
+<style lang="scss">
+  @use './ContactForm.scss';
+</style>
+
+<div class="contact-form">
+  <h2 class="contact-form__title">Opowiedz nam o swojej przestrzeni</h2>
+  <form class="contact-form__form" id="contact-form" novalidate>
+    <div class="contact-form__row">
+      <div class="contact-form__field">
+        <label for="name" class="contact-form__label">Imię i nazwisko</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="contact-form__input"
+          placeholder="Jan Kowalski"
+          required
+        />
+      </div>
+      <div class="contact-form__field">
+        <label for="email" class="contact-form__label">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="contact-form__input"
+          placeholder="jan@example.com"
+          required
+        />
+      </div>
+    </div>
+    <div class="contact-form__field">
+      <label for="subject" class="contact-form__label">Temat</label>
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        class="contact-form__input"
+        placeholder="Projekt mieszkania"
+        required
+      />
+    </div>
+    <div class="contact-form__field">
+      <label for="message" class="contact-form__label">Wiadomość</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="6"
+        class="contact-form__textarea"
+        placeholder="Metraż, lokalizacja, oczekiwania…"
+        required
+      ></textarea>
+    </div>
+    <div class="contact-form__footer">
+      <button type="submit" class="contact-form__submit" id="contact-submit">
+        Wyślij wiadomość <span aria-hidden="true">→</span>
+      </button>
+      <p class="contact-form__status" id="contact-status" aria-live="polite"></p>
+    </div>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = document.getElementById('contact-status') as HTMLParagraphElement;
+  const submit = document.getElementById('contact-submit') as HTMLButtonElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submit.disabled = true;
+    status.textContent = 'Wysyłanie…';
+    status.className = 'contact-form__status contact-form__status--pending';
+
+    await new Promise((r) => setTimeout(r, 1000));
+
+    status.textContent = 'Wiadomość została wysłana. Skontaktujemy się wkrótce.';
+    status.className = 'contact-form__status contact-form__status--success';
+    form.reset();
+    submit.disabled = false;
+  });
+</script>

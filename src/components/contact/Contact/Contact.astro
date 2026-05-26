@@ -1,0 +1,18 @@
+---
+import ContactForm from '@components/shared/ContactForm/ContactForm.astro';
+import ContactInfo from '@components/contact/ContactInfo/ContactInfo.astro';
+---
+
+<style lang="scss">
+  @use './Contact.scss';
+</style>
+
+<section class="contact">
+  <div class="contact__container">
+    <ContactInfo />
+
+    <div class="contact__form-wrapper">
+      <ContactForm />
+    </div>
+  </div>
+</section>

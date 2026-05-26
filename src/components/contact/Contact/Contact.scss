@@ -1,0 +1,33 @@
+@use '@styles/_colors.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
+@use '@styles/_variables.scss' as *;
+
+.contact {
+  background-color: $color-light;
+  padding: 8rem 2.4rem;
+
+  @include mq('tablet') {
+    padding: 10rem 4rem;
+  }
+
+  @include mq('desktop') {
+    padding: 12rem 6.4rem;
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 6.4rem;
+
+    @include mq('desktop') {
+      grid-template-columns: 2fr 3fr;
+      gap: 8rem;
+      align-items: start;
+    }
+  }
+
+  &__form-wrapper {
+    border: 1px solid $color-hairline;
+  }
+}

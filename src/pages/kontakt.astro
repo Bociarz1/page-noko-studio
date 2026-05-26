@@ -1,0 +1,25 @@
+---
+import MainLayout from '@layouts/MainLayout/MainLayout.astro';
+import Hero from '@components/shared/Hero/Hero.astro';
+import Contact from '@components/contact/Contact/Contact.astro';
+import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
+---
+
+<MainLayout
+  title="Kontakt – NOKO Studio | Pracownia Architektury Wnętrz"
+  metaDescription="Skontaktuj się z NOKO Studio. Zaprojektujemy Twoje wnętrze w Białymstoku i w całej Polsce. Napisz do nas lub zadzwoń."
+>
+  <Hero
+    preTitle="Napisz do nas"
+    title="Porozmawiajmy o Twoim wnętrzu"
+    description="Opowiedz nam o swoim projekcie – odezwiemy się w ciągu 24 godzin."
+    image={{
+      src: heroImg,
+      alt: 'Wnętrze zaprojektowane przez NOKO Studio',
+      sizes: '100vw',
+    }}
+    height="60vh"
+  />
+
+  <Contact />
+</MainLayout>

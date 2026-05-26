@@ -1,0 +1,47 @@
+---
+import LocationOn from '@assets/icons/icon-location-on.svg';
+import PhoneInTalk from '@assets/icons/icon-phone-in-talk.svg';
+import Mail from '@assets/icons/icon-mail.svg';
+---
+
+<style lang="scss">
+  @use './ContactInfo.scss';
+</style>
+
+<div class="contact-info">
+  <p class="page-pretitle contact-info__eyebrow">Pracownia</p>
+  <p class="contact-info__studio-name">NOKO Studio</p>
+  <p class="contact-info__studio-sub">Pracownia Architektury Wnętrz</p>
+
+  <ul class="contact-info__list">
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <Mail width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">E-mail</p>
+        <a href="mailto:biuro@noko-studio.pl" class="contact-info__item-value">biuro@noko-studio.pl</a>
+      </div>
+    </li>
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <PhoneInTalk width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">Telefon</p>
+        <a href="tel:+48455408602" class="contact-info__item-value">Paulina · +48 455 408 602</a>
+        <a href="tel:+48455408601" class="contact-info__item-value">Aleksandra · +48 455 408 601</a>
+      </div>
+    </li>
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <LocationOn width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">Lokalizacja</p>
+        <p class="contact-info__item-value">Białystok i okolice</p>
+        <p class="contact-info__item-sub">zdalnie — cała Polska</p>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,128 @@
+@use '@styles/_colors.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
+
+.contact-form {
+  background-color: $color-white;
+  padding: 4rem 3.2rem;
+  color: $color-dark;
+
+  @include mq('tablet') {
+    padding: 6.4rem 4.8rem;
+  }
+
+  @include mq('desktop') {
+    padding: 8rem 6.4rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+
+    @include mq('tablet') {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    color: $color-gray;
+  }
+
+  &__row {
+    display: grid;
+    gap: 2.4rem;
+
+    @include mq('tablet') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  &__input,
+  &__textarea {
+    background-color: $color-white;
+    border: 1px solid $color-light-gray;
+    color: $color-dark;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.6rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+    resize: none;
+
+    &::placeholder {
+      color: $color-gray;
+    }
+
+    &:focus {
+      border-color: $color-dark;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 16rem;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: flex-start;
+  }
+
+  &__submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: $color-cream;
+    color: $color-dark;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1.6rem 3.2rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 0.04em;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+
+    &:hover {
+      background-color: $color-light-gray;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__status {
+    font-size: 1.4rem;
+    min-height: 2rem;
+
+    &--pending {
+      color: $color-cream-muted;
+    }
+
+    &--success {
+      color: $color-cream;
+    }
+  }
+}
