@@ -1,0 +1,65 @@
+@use '@styles/_breakpoints.scss' as *;
+@use '@styles/_colors.scss' as *;
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+
+  &__image-wrapper {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 700ms ease;
+
+    .portfolio-card:hover & {
+      transform: scale(1.03);
+    }
+  }
+
+  &__content {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  &__meta {
+    font-size: 1.2rem;
+    color: $color-gray;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  &__title {
+    margin-top: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: $color-dark;
+
+    @include mq('tablet') {}
+  }
+
+  &__details {
+    margin-top: 0.25rem;
+    color: $color-gray;
+    font-size: 1.2rem;
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    transition: transform 300ms ease;
+
+    .portfolio-card:hover & {
+      transform: translateX(0.25rem);
+    }
+  }
+}

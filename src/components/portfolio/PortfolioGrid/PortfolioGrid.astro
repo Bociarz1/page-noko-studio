@@ -1,0 +1,41 @@
+---
+import PortfolioItem from "@components/shared/PortfolioItem/PortfolioItem.astro";
+
+interface ProjectItem {
+  slug: string;
+  cover: ImageMetadata;
+  title: string;
+  location: string;
+  index: string;
+  category: string;
+  area: string;
+  year: string;
+}
+
+interface Props {
+  projects: ProjectItem[];
+}
+
+const { projects } = Astro.props;
+---
+
+<style lang="scss">
+  @use './PortfolioGrid.scss';
+</style>
+
+<section class="portfolio-grid">
+  <div class="portfolio-grid__container">
+    {projects.map((p) => (
+      <PortfolioItem
+        slug={p.slug}
+        cover={p.cover}
+        title={p.title}
+        location={p.location}
+        index={p.index}
+        category={p.category}
+        area={p.area}
+        year={p.year}
+      />
+    ))}
+  </div>
+</section>

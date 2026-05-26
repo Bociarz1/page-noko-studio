@@ -1,0 +1,26 @@
+@use '@styles/_breakpoints.scss' as *;
+
+.portfolio-grid {
+  padding: 6rem 1.5rem;
+
+  @include mq('tablet') {
+    padding: 8rem 2.5rem;
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    @include mq('tablet') {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    @include mq('desktop') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,170 @@
+---
+import { Image } from 'astro:assets';
+
+interface LightboxImage {
+  src: ImageMetadata;
+  alt: string;
+}
+
+interface Props {
+  images: LightboxImage[];
+}
+
+const { images } = Astro.props;
+---
+
+<style lang="scss">
+  @use './Lightbox.scss';
+</style>
+
+<div
+  class="lightbox"
+  id="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Podgląd zdjęcia"
+  aria-hidden="true"
+>
+  <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+
+  <div class="lightbox__container">
+    <header class="lightbox__header">
+      <span class="lightbox__counter" id="lightbox-counter" aria-live="polite">1 / {images.length}</span>
+      <button
+        class="lightbox__close"
+        id="lightbox-close"
+        aria-label="Zamknij podgląd"
+        type="button"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </header>
+
+    <div class="lightbox__stage" id="lightbox-stage">
+      <div class="lightbox__track" id="lightbox-track">
+        {images.map((img) => (
+          <div class="lightbox__slide">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              width={1600}
+              height={1200}
+              format="avif"
+              quality="high"
+              loading="lazy"
+              decoding="async"
+              widths={[800, 1200, 1600]}
+              sizes="(max-width: 767px) 100vw, (max-width: 1199px) 80vw, 1200px"
+            />
+          </div>
+        ))}
+      </div>
+
+      {images.length > 1 && (
+        <>
+          <button class="lightbox__btn lightbox__btn--prev" id="lightbox-prev" aria-label="Poprzednie zdjęcie" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="lightbox__btn lightbox__btn--next" id="lightbox-next" aria-label="Następne zdjęcie" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </>
+      )}
+    </div>
+
+    {images.length > 1 && (
+      <nav class="lightbox__dots" aria-label="Nawigacja po zdjęciach">
+        {images.map((_, i) => (
+          <button
+            class={`lightbox__dot${i === 0 ? ' lightbox__dot--active' : ''}`}
+            data-index={i}
+            aria-label={`Zdjęcie ${i + 1}`}
+            type="button"
+          ></button>
+        ))}
+      </nav>
+    )}
+  </div>
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox')!;
+  const track = document.getElementById('lightbox-track')!;
+  const counter = document.getElementById('lightbox-counter')!;
+  const closeBtn = document.getElementById('lightbox-close')!;
+  const backdrop = document.getElementById('lightbox-backdrop')!;
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  const dots = document.querySelectorAll<HTMLButtonElement>('.lightbox__dot');
+
+  const total = track.children.length;
+  let current = 0;
+
+  function goTo(index: number) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    counter.textContent = `${current + 1} / ${total}`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('lightbox__dot--active', i === current);
+    });
+  }
+
+  function open(index: number) {
+    goTo(index);
+    lightbox.classList.add('lightbox--open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('lightbox--open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Open on gallery item click
+  document.querySelectorAll<HTMLElement>('.project-gallery__item').forEach((item, i) => {
+    item.style.cursor = 'zoom-in';
+    item.addEventListener('click', () => open(i));
+  });
+
+  // Close handlers
+  closeBtn.addEventListener('click', close);
+  backdrop.addEventListener('click', close);
+
+  // Navigation
+  prevBtn?.addEventListener('click', () => goTo(current - 1));
+  nextBtn?.addEventListener('click', () => goTo(current + 1));
+
+  // Dots
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
+      goTo(index);
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('lightbox--open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  // Touch / swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  track.addEventListener('touchend', (e) => {
+    const delta = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 50) goTo(delta > 0 ? current + 1 : current - 1);
+  }, { passive: true });
+</script>

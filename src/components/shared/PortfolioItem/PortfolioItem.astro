@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  slug: string;
+  cover: ImageMetadata;
+  title: string;
+  location: string;
+  index: string;
+  category: string;
+  area: string;
+  year: string;
+}
+
+const { slug, cover, title, location, index, category, area, year } = Astro.props;
+---
+
+<style lang="scss">
+  @use './PortfolioItem.scss';
+</style>
+
+<a href={`/realizacje/${slug}`} class="portfolio-card">
+  <div class="portfolio-card__image-wrapper">
+    <Image
+      src={cover}
+      alt={`${title}, ${location}`}
+      width={780}
+      height={585}
+      class="portfolio-card__image"
+      format="avif"
+      quality="mid"
+      loading="lazy"
+      decoding="async"
+      widths={[400, 600, 780]}
+      sizes="(max-width: 767px) 100vw, (max-width: 1599px) 50vw, 780px"
+    />
+  </div>
+  <div class="portfolio-card__content">
+    <div class="portfolio-card__text">
+      <p class="portfolio-card__meta">
+        {index} · {category === "mieszkalne" ? "Mieszkalne" : "Komercyjne"}
+      </p>
+      <h3 class="portfolio-card__title">{title}</h3>
+      <p class="portfolio-card__details">{location} · {area} · {year}</p>
+    </div>
+    <span aria-hidden class="portfolio-card__arrow">→</span>
+  </div>
+</a>

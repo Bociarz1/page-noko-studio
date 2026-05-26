@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "@layouts/MainLayout/MainLayout.astro";
+import { projects } from "@data/projects";
+import Hero from "@components/shared/Hero/Hero.astro";
+import Lightbox from "@components/portfolio/Lightbox/Lightbox.astro";
+import Button from "@components/shared/Button/Button.astro";
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<style lang="scss">
+  @use './slug.scss';
+</style>
+
+<MainLayout title={`${project.title} – NOKO Studio`} metaDescription={project.description}>
+  <Hero
+    preTitle={`${project.index} · ${project.category === "mieszkalne" ? "Mieszkalne" : "Komercyjne"}`}
+    title={project.title}
+    description={project.description}
+    image={{
+      src: project.cover,
+      alt: `${project.title}, ${project.location} – widok główny`,
+      sizes: '100vw'
+    }}
+    height="auto"
+  >
+    <div class="project-hero__details">
+      <span>{project.location}</span>
+      <span aria-hidden>·</span>
+      <span>{project.area}</span>
+      <span aria-hidden>·</span>
+      <span>{project.year}</span>
+    </div>
+  </Hero>
+
+  <section class="project-gallery">
+  <Button dark variant="secondary" href="/portfolio" title="Wróć do portfolio"/>
+    <div class="project-gallery__grid">
+      {project.images.map((img) => (
+        <div class="project-gallery__item">
+          <Image
+            src={img.src}
+            alt={img.alt}
+            width={1000}
+            height={1000}
+            class="project-gallery__image"
+            format="avif"
+            quality="mid"
+            loading="lazy"
+            decoding="async"
+            widths={[500, 1000]}
+            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <Lightbox images={project.images} />
+</MainLayout>
