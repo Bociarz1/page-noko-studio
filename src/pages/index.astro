@@ -1,15 +1,32 @@
 ---
 import MainLayout from '@layouts/MainLayout/MainLayout.astro';
-import Hero from '@components/Hero/Hero.astro';
-import OurServices from '@components/OurServices/OurServices.astro';
-import AboutUs from '@components/AboutUs/AboutUs.astro';
-import Portfolio from '@components/Portfolio/Portfolio.astro';
-import CTA from '@components/CTA/CTA.astro';
-import Reviews from '@components/Reviews/Reviews.astro';
+import Hero from '@components/shared/Hero/Hero.astro';
+import OurServices from '@components/index/OurServices/OurServices.astro';
+import AboutUs from '@components/index/AboutUs/AboutUs.astro';
+import Portfolio from '@components/index/Portfolio/Portfolio.astro';
+import CTA from '@components/index/CTA/CTA.astro';
+import Reviews from '@components/index/Reviews/Reviews.astro';
+import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
+import Button from '@components/shared/Button/Button.astro';
+
+
+const heroProps = {
+  preTitle: 'Architekt i projektant wnętrz: Poznaj naszą ofertę i pakiety usług',
+  title: 'Stwórzmy razem Twoje wymarzone wnętrze, bez stresu i niespodzianek',
+  description: 'Specjaliści od wnętrz: od pierwszej koncepcji aż po finalną realizację projektu.',
+  image: {
+    src: heroImg,
+    alt: 'Wnętrze zaprojektowane przez NOKO Studio',
+    sizes: '100vw',
+  },
+}
 ---
 
 <MainLayout title="Noko Studio" metaDescription="Strona główna Noko Studio">
-  <Hero />
+  <Hero {...heroProps}>
+    <Button href="/realizacje" title="Zobacz realizacje" variant="primary" />
+    <Button href="/uslugi" title="Poznaj ofertę" variant="secondary" />
+  </Hero>
   <OurServices />
   <Portfolio />
   <AboutUs />

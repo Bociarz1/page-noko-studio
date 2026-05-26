@@ -1,0 +1,23 @@
+---
+import MainLayout from "@layouts/MainLayout/MainLayout.astro";
+import Hero from "@components/shared/Hero/Hero.astro";
+import Button from "@components/shared/Button/Button.astro";
+import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
+
+const heroProps = {
+  preTitle: 'Architekt i projektant wnętrz: Poznaj naszą ofertę i pakiety usług',
+  title: 'Sprawdź naszą ofertę i pakiety usług',
+  description: 'Oferujemy profesjonalną aranżację wnętrz – od układu funkcjonalnego i fotorealistycznych wizualizacji, aż po nadzór autorski.',
+  image: {
+    src: heroImg,
+    alt: 'Wnętrze zaprojektowane przez NOKO Studio',
+    sizes: '60vw',
+  },
+  height: 'auto',
+}
+---
+
+<MainLayout title="Noko Studio" metaDescription="Strona główna Noko Studio">
+  <Hero {...heroProps}>
+  </Hero>
+</MainLayout>

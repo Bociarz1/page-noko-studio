@@ -1,17 +1,31 @@
 ---
 import { Image } from 'astro:assets';
-import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import Button from '@components/shared/Button/Button.astro';
+
+interface Props {
+  preTitle: string;
+  title: string;
+  description: string;
+  image: {
+    src: ImageMetadata;
+    alt: string;
+    sizes: string;
+  };
+  height?: string;
+}
+
+const { preTitle,title, description, image, height } = Astro.props;
+const {src, alt, sizes} = image;
 ---
 
 <style lang="scss">
   @use './Hero.scss';
 </style>
 
-<section class="hero">
+<section class="hero" style={height ? `--hero-height: ${height}` : null}>
   <Image
-    src={heroImg}
-    alt="Wnętrze zaprojektowane przez NOKO Studio"
+    src={src}
+    alt={alt}
     class="hero__bg"
     width={1920}
     height={1080}
@@ -21,26 +35,21 @@ import Button from '@components/shared/Button/Button.astro';
     fetchpriority="high"
     decoding="sync"
     widths={[768, 1280, 1920]}
-    sizes="100vw"
+    sizes={sizes}
   />
   <div class="hero__overlay"></div>
   <div class="hero__content">
     <h1 class="hero__pretitle page-pretitle">
-      Profesjonalne projektowanie wnętrz w Białymstoku
+      {preTitle}
     </h1>
     <p class="hero__title section-title">
-      Stwórzmy razem 
-    <br>
-      Twoje wymarzone wnętrze,
-      <br />
-      bez stresu i niespodzianek
+      {title}
     </p>
     <p class="hero__desc section-description">
-      Specjaliści od wnętrz: od pierwszej koncepcji aż po finalną realizację projektu.
+      {description}
     </p>
     <div class="hero__actions">
-      <Button href="/realizacje" title="Zobacz realizacje" variant="primary" />
-      <Button href="/uslugi" title="Poznaj ofertę" variant="secondary" />
+      <slot/>
     </div>
   </div>
 </section>

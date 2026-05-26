@@ -4,8 +4,7 @@
 
 .hero {
   position: relative;
-  height: calc(100dvh - #{$header-height});
-  min-height: 640px;
+  height: var(--hero-height, calc(100dvh - #{$header-height}));
   width: 100%;
   overflow: hidden;
 
@@ -38,6 +37,7 @@
   }
 
   &__pretitle {
+    margin-top: 6.4rem;
     color: rgba(255, 255, 255, 0.85);
   }
 

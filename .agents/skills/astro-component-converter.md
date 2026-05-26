@@ -14,7 +14,7 @@ Podczas konwersji bezwzględnie stosuj się do poniższych zasad:
   - `className` -> `class`
   - `htmlFor` -> `for`
   - Nie używaj inline styles `style={{ color: 'red' }}` -> `style="color: red;"`
-  - Atrybuty self-closing (np. `<input />`, `<img />`) zamień na poprawne <Image> zgodnie z zasadami Astro (width, height, alt)
+  - Atrybuty self-closing (np. `<input />`, `<img />`) zamień na poprawne <Image> zgodnie z zasadami Astro (width, height, alt) musi posiadać propsy widths, sizes, 
 
 ### 2. Obsługa Stanu i Logiki (Reaktywność)
 Ponieważ nie używamy Reacta, przenieś całą logikę interaktywną (kliknięcia, inputy, modyfikacje DOM):
