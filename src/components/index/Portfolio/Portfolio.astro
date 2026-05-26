@@ -1,6 +1,7 @@
 ---
 import PortfolioItem from "@components/shared/PortfolioItem/PortfolioItem.astro";
 import { projects as allProjects } from "@data/projects";
+import { NavLinks, SectionIds } from "@constants/navLinks";
 
 const featuredIndexes = ["01", "02", "03", "04"];
 const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
@@ -9,7 +10,7 @@ const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
   @use './Portfolio.scss';
 </style>
 
-<section class="portfolio">
+<section id={SectionIds[NavLinks.HOME].portfolio} class="portfolio">
   <div class="portfolio__container">
     <div class="portfolio__header">
       <div class="portfolio__header-text">
@@ -22,7 +23,7 @@ const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
           z dopracowaną estetyką.
         </p>
       </div>
-      <a href="/realizacje" class="portfolio__link">
+      <a href={NavLinks.PORTFOLIO} class="portfolio__link">
         Zobacz wszystkie <span aria-hidden>→</span>
       </a>
     </div>

@@ -1,10 +1,11 @@
 ---
+import { NavLinks, SectionIds } from '@constants/navLinks';
 ---
 <style lang="scss">
   @use './Reviews.scss';
 </style>
 
-<section class="reviews">
+<section id={SectionIds[NavLinks.HOME].reviews} class="reviews">
   <div class="reviews__container">
     <h2 class="page-pretitle">CO MÓWIĄ O NAS INWESTORZY? TWÓJ POLECANY PROJEKTANT WNĘTRZ Z BIAŁEGOSTOKU</h2>
     <p class="reviews__title section-title">Opinie naszych klientów</p>

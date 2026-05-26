@@ -1,27 +1,43 @@
 interface NavLink {
   label: string;
-  href: string;
+  href: NavLinks;
 }
+
+export enum NavLinks {
+  HOME = '/',
+  PORTFOLIO = '/portfolio',
+  ABOUT_US = `/#o-nas`,
+  OFFER = '/oferta',
+  CONTACT = '/kontakt',
+}
+
+export const SectionIds = {
+  [NavLinks.HOME]: { hero: '', ourServices: 'nasze-uslugi', portfolio: 'portfolio', aboutUs: 'o-nas', cta: 'cta', reviews: 'opinie' },
+  [NavLinks.PORTFOLIO]: { hero: '', grid: 'projekty' },
+  [NavLinks.OFFER]: { hero: '', offerCards: 'pakiety', faq: 'faq' },
+  [NavLinks.CONTACT]: { hero: '', contact: 'kontakt' },
+};
 
 export const NAV_ELEMENTS = [
   {
     label: 'Home',
-    href: '',
+    href: NavLinks.HOME,
   },
   {
     label: 'Portfolio',
-    href: '/portfolio',
+    href: NavLinks.PORTFOLIO,
   },
   {
     label: 'O nas',
-    href: '/#about-us',
+    href: NavLinks.ABOUT_US,
   },
   {
     label: 'Oferta',
-    href: '/oferta',
+    href: NavLinks.OFFER,
   },
   {
     label: 'Kontakt',
-    href: '/#contact',
+    href: NavLinks.CONTACT,
   },
 ] satisfies NavLink[];
+

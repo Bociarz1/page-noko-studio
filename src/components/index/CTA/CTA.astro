@@ -1,10 +1,11 @@
 ---
+import { NavLinks, SectionIds } from "@constants/navLinks";
 ---
 <style lang="scss">
   @use './CTA.scss';
 </style>
 
-<section class="cta">
+<section id={SectionIds[NavLinks.HOME].cta} class="cta">
   <div class="cta__container">
     <h2 class="cta__title section-title">
       Masz pomysł na wnętrze?
@@ -15,7 +16,7 @@
       Pozwól nam zająć się estetyką i ergonomią Twojej przestrzeni.
       Umów spotkanie i zróbmy pierwszy krok ku Twojemu nowemu wnętrzu.
     </p>
-    <a href="/kontakt" class="cta__button">
+    <a href={NavLinks.CONTACT} class="cta__button">
       Zarezerwuj darmową konsultację
       <span aria-hidden="true">→</span>
     </a>

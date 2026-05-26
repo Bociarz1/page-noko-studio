@@ -4,6 +4,7 @@ import Hero from "@components/shared/Hero/Hero.astro";
 import OfferCards from "@components/offer/OfferCards/OfferCards.astro";
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import FAQ from "@components/shared/FAQ/FAQ.astro";
+import { NavLinks, SectionIds } from '@constants/navLinks';
 
 const heroProps = {
   preTitle: 'Architekt i projektant wnętrz: Poznaj naszą ofertę i pakiety usług',
@@ -46,7 +47,7 @@ const faqProps = [
 ---
 
 <MainLayout title="Noko Studio" metaDescription="Strona główna Noko Studio">
-  <Hero {...heroProps}>
+  <Hero {...heroProps} id={SectionIds[NavLinks.OFFER].hero}>
   </Hero>
   <OfferCards />
   <FAQ faq={faqProps} />

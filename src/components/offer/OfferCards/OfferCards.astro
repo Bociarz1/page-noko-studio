@@ -4,7 +4,8 @@ import Star from '@assets/icons/icon-star.svg';
 import Diamond from '@assets/icons/icon-diamond.svg';
 import Crown from '@assets/icons/icon-crown.svg';
 import Button from '@components/shared/Button/Button.astro';
-
+import { NavLinks } from '@constants/navLinks';
+import { SectionIds } from '@constants/navLinks';
 
 
 
@@ -69,7 +70,7 @@ const services = [
   @use './OfferCards.scss';
 </style>
 
-<section class="offer-cards">
+<section id={SectionIds[NavLinks.OFFER].offerCards} class="offer-cards">
   <h2 class="offer-cards__pretitle page-pretitle">Poznaj zakres usług, jakie przygotowała nasza pracownia architektoniczna</h2>
   <p class="offer-cards__pretitle-desc section-title">Wybierz pakiet dopasowany do twoich potrzeb</p>
   <div class="offer-cards__container">
@@ -94,6 +95,6 @@ const services = [
   </div>
 
   <div class="offer-cards__footer">
-    <Button title="Skontaktuj się z nami" href="/kontakt" variant="primary" dark/>
+    <Button title="Skontaktuj się z nami" href={NavLinks.CONTACT} variant="primary" dark/>
   </div>
 </section>

@@ -8,6 +8,7 @@ import CTA from '@components/index/CTA/CTA.astro';
 import Reviews from '@components/index/Reviews/Reviews.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import Button from '@components/shared/Button/Button.astro';
+import { NavLinks, SectionIds } from '@constants/navLinks';
 
 
 const heroProps = {
@@ -23,9 +24,9 @@ const heroProps = {
 ---
 
 <MainLayout title="Noko Studio" metaDescription="Strona główna Noko Studio">
-  <Hero {...heroProps}>
-    <Button href="/realizacje" title="Zobacz realizacje" variant="primary" />
-    <Button href="/uslugi" title="Poznaj ofertę" variant="secondary" />
+  <Hero {...heroProps} id={SectionIds[NavLinks.HOME].hero}>
+    <Button href={NavLinks.PORTFOLIO} title="Zobacz realizacje" variant="primary" />
+    <Button href={NavLinks.OFFER} title="Poznaj ofertę" variant="secondary" />
   </Hero>
   <OurServices />
   <Portfolio />

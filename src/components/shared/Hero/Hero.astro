@@ -12,9 +12,10 @@ interface Props {
     sizes: string;
   };
   height?: string;
+  id?: string;
 }
 
-const { preTitle,title, description, image, height } = Astro.props;
+const { preTitle, title, description, image, height, id } = Astro.props;
 const {src, alt, sizes} = image;
 ---
 
@@ -22,7 +23,7 @@ const {src, alt, sizes} = image;
   @use './Hero.scss';
 </style>
 
-<section class="hero" style={height ? `--hero-height: ${height}` : null}>
+<section id={id} class="hero" style={height ? `--hero-height: ${height}` : null}>
   <Image
     src={src}
     alt={alt}

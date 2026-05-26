@@ -1,13 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import Owners from "@assets/images/noko-studio-wlascicielki-sesja-wizerunkowa.webp";
+import { NavLinks, SectionIds } from "@constants/navLinks";
 ---
 
 <style lang="scss">
   @use './AboutUs.scss';
 </style>
 
-<section class="about-us">
+<section id={SectionIds[NavLinks.HOME].aboutUs} class="about-us">
   <div class="about-us__container">
     <div class="about-us__content">
       <h2 class="about-us__pretitle page-pretitle">Architekt wnętrz, którego szukasz</h2>
@@ -26,7 +27,7 @@ import Owners from "@assets/images/noko-studio-wlascicielki-sesja-wizerunkowa.we
       <p class="about-us__desc section-description">
         Każdy projekt traktujemy indywidualnie, dbając o to, by łączył estetykę z funkcjonalnością. Wierzymy, że dobrze zaprojektowane wnętrze to takie, które nie tylko zachwyca wyglądem, ale przede wszystkim odpowiada na codzienne potrzeby jego użytkowników. Realizujemy projekty stacjonarne na terenie Białegostoku i okolic, a współpraca online możliwa jest w całej Polsce.
       </p>
-      <a href="/uslugi" class="about-us__link">
+      <a href={NavLinks.OFFER} class="about-us__link">
         Sprawdź naszą ofertę <span aria-hidden="true">→</span>
       </a>
     </div>

@@ -1,5 +1,6 @@
 ---
 import PortfolioItem from "@components/shared/PortfolioItem/PortfolioItem.astro";
+import { NavLinks, SectionIds } from '@constants/navLinks';
 
 interface ProjectItem {
   slug: string;
@@ -23,7 +24,7 @@ const { projects } = Astro.props;
   @use './PortfolioGrid.scss';
 </style>
 
-<section class="portfolio-grid">
+<section id={SectionIds[NavLinks.PORTFOLIO].grid} class="portfolio-grid">
   <div class="portfolio-grid__container">
     {projects.map((p) => (
       <PortfolioItem

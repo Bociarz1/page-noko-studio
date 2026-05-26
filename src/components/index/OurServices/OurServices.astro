@@ -6,14 +6,14 @@ import Docs from '@assets/icons/icon-docs.svg';
 import SupportAgent from '@assets/icons/icon-support-agent.svg';
 import Home from '@assets/icons/icon-home.svg';
 import Button from '@components/shared/Button/Button.astro';
-
+import { NavLinks, SectionIds } from '@constants/navLinks';
 ---
 
 <style lang="scss">
   @use './OurServices.scss';
 </style>
 
-<section class="our-services">
+<section id={SectionIds[NavLinks.HOME].ourServices} class="our-services">
   <div class="our-services__container">
     <div class="our-services__header">
       <h2 class="our-services__pretitle page-pretitle">
@@ -74,7 +74,7 @@ import Button from '@components/shared/Button/Button.astro';
       </div>
     </div>
     <div class="our-services__button">
-      <Button title="Zacznijmy twój projekt już dziś"/>
+      <Button title="Zacznijmy twój projekt już dziś" href={NavLinks.CONTACT}/>
     </div>
   </div>
 </section>
