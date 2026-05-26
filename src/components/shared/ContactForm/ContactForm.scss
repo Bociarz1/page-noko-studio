@@ -54,6 +54,14 @@
     text-transform: uppercase;
   }
 
+  &__optional {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: $color-cream-muted;
+  }
+
   &__input,
   &__textarea {
     background-color: $color-white;

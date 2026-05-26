@@ -17,10 +17,10 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
-  const { name, email, subject, message } = data;
+  const { name, email, phone, subject, message } = data;
 
   // Walidacja po stronie serwera
-  if (!name?.trim() || !email?.trim() || !subject?.trim() || !message?.trim()) {
+  if (!name?.trim() || !email?.trim() || !phone?.trim() || !subject?.trim() || !message?.trim()) {
     return new Response(
       JSON.stringify({ success: false, message: "Wszystkie pola są wymagane." }),
       { status: 422, headers: { "Content-Type": "application/json" } }
@@ -53,6 +53,10 @@ export const POST: APIRoute = async ({ request }) => {
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #6b7280;">E-mail:</td>
               <td style="padding: 8px 0; color: #111827;"><a href="mailto:${email}" style="color: #2563eb;">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #6b7280;">Telefon:</td>
+              <td style="padding: 8px 0; color: #111827;"><a href="tel:${phone}" style="color: #2563eb;">${phone}</a></td>
             </tr>
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #6b7280;">Temat:</td>

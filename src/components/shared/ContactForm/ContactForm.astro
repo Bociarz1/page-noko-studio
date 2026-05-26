@@ -32,6 +32,18 @@
       </div>
     </div>
     <div class="contact-form__field">
+      <label for="phone" class="contact-form__label">Numer telefonu</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        class="contact-form__input"
+        placeholder="+48 123 456 789"
+        autocomplete="tel"
+        required
+      />
+    </div>
+    <div class="contact-form__field">
       <label for="subject" class="contact-form__label">Temat</label>
       <input
         type="text"
@@ -84,6 +96,7 @@
     const payload = {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
+      phone: (formData.get('phone') as string) || '',
       subject: formData.get('subject') as string,
       message: formData.get('message') as string,
     };
