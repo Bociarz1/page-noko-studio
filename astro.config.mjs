@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,6 +10,7 @@ export default defineConfig({
     adapter: cloudflare({
         imageService: "passthrough",
     }),
+    integrations: [sitemap()],
     build: {
         inlineStylesheets: "always"
     },

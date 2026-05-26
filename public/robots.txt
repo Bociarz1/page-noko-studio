@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noko-studio.pl/sitemap-index.xml

@@ -1,0 +1,3 @@
+Contact: mailto:kontakt@noko-studio.pl
+Preferred-Languages: pl, en
+Canonical: https://noko-studio.pl/.well-known/security.txt

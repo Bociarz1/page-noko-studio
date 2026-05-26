@@ -40,7 +40,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "220 m²",
     year: "2025",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Izabelin.",
+    description: "Odkryj nowoczesną aranżację wnętrza domu w Izabelinie (220 m²). Zobacz stylowy salon, funkcjonalną kuchnię z wyspą i detale zaprojektowane przez NOKO Studio.",
     images: [
       { src: getImg('../assets/portfolio/_1-2025-izabelin-220m2/aranzacja-wnetrza-domu-salon-jadalnia-kuchnia-izabelin.webp'), alt: "Aranzacja wnetrza domu salon jadalnia kuchnia izabelin" },
       { src: getImg('../assets/portfolio/_1-2025-izabelin-220m2/detale-wnetrza-jadalnia-dekoracja-stolu-izabelin.webp'), alt: "Detale wnetrza jadalnia dekoracja stolu izabelin" },
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "100 m²",
     year: "2025",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Warszawa.",
+    description: "Luksusowy projekt apartamentu w Warszawie (100 m²). Zobacz wyjątkowe wnętrze z marmurowymi detalami, złotymi akcentami i nowoczesną strefą wypoczynkową.",
     images: [
       { src: getImg('../assets/portfolio/_2-2025-warszawa-100m2/detale-wykonczenia-kuchni-marmur-zloto-projekt-mieszkania.webp'), alt: "Detale wykonczenia kuchni marmur zloto projekt mieszkania" },
       { src: getImg('../assets/portfolio/_2-2025-warszawa-100m2/elegancka-jadalnia-drewniany-stol-oswietlenie-design.webp'), alt: "Elegancka jadalnia drewniany stol oswietlenie design" },
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "120 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Marki.",
+    description: "Nowoczesny dom w Markach (120 m²). Zobacz aranżację wnętrza łączącą drewniane elementy z eleganckim designem. Otwarta strefa dzienna, jasne kolory i detale.",
     images: [
       { src: getImg('../assets/portfolio/_3-2024-marki-120m2/aranzacja-jadalni-stol-drewniany-lampa-betonowa.webp'), alt: "Aranzacja jadalni stol drewniany lampa betonowa" },
       { src: getImg('../assets/portfolio/_3-2024-marki-120m2/aranzacja-salonu-z-widokiem-przez-szklane-drzwi-loftowe.webp'), alt: "Aranzacja salonu z widokiem przez szklane drzwi loftowe" },
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "60 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Krupniki.",
+    description: "Elegancki apartament w Krupnikach o powierzchni 60 m². Zobacz nowoczesną realizację NOKO Studio z przytulnym salonem, stylową kuchnią i pięknymi detalami.",
     images: [
       { src: getImg('../assets/portfolio/_4-2024-krupniki-60m2/aranzacja-lazienki-umywalka-nablatowa-marmurowa.webp'), alt: "Aranzacja lazienki umywalka nablatowa marmurowa" },
       { src: getImg('../assets/portfolio/_4-2024-krupniki-60m2/aranzacja-salonu-oswietlenie-szynowe-beżowy-naroznik.webp'), alt: "Aranzacja salonu oswietlenie szynowe beżowy naroznik" },
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "52 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Porosly.",
+    description: "Minimalistyczny apartament loftowy w Porosłach (52 m²). Poznaj projekt wnętrza z terrazzo, drewnem i czarnymi akcentami w salonie i eleganckiej łazience.",
     images: [
       { src: getImg('../assets/portfolio/_5-2024-porosly-52m2/biala-kuchnia-z-drewnem-i-blatem-terrazzo.webp'), alt: "Biala kuchnia z drewnem i blatem terrazzo" },
       { src: getImg('../assets/portfolio/_5-2024-porosly-52m2/czarny-grzejnik-drabinkowy-grafiki-scienne.webp'), alt: "Czarny grzejnik drabinkowy grafiki scienne" },
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "140 m²",
     year: "2026",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Krypno Koscielne.",
+    description: "Projekt domu w stylu modern classic (Krypno Kościelne, 140 m²). Odkryj eleganckie wnętrze z luksusową sypialnią, przestronnym salonem i piękną sztukaterią.",
     images: [
       { src: getImg('../assets/portfolio/_6-2026-krypno-koscielne-140m2/detale-lazienka-wc-zlota-armatura.webp'), alt: "Detale lazienka wc zlota armatura" },
       { src: getImg('../assets/portfolio/_6-2026-krypno-koscielne-140m2/elegancki-korytarz-sztukateria-scienna.webp'), alt: "Elegancki korytarz sztukateria scienna" },
@@ -231,7 +231,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "110 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Bialystok.",
+    description: "Przestronne wnętrze domu w Białymstoku (110 m²). Poznaj projekt NOKO Studio łączący nowoczesność i ciepłe detale z drewna. Zobacz stylową strefę dzienną.",
     images: [
       { src: getImg('../assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp'), alt: "Aranzacja salonu naroznik kominek" },
       { src: getImg('../assets/portfolio/_7-2024-bialystok-110m2/detale-wykonczenia-kuchni-marmur-drewno.webp'), alt: "Detale wykonczenia kuchni marmur drewno" },
@@ -251,7 +251,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "28 m²",
     year: "2023",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Warszawa.",
+    description: "Funkcjonalna aranżacja małego apartamentu w Warszawie. Zobacz jak na 28 m² stworzyliśmy stylową, otwartą przestrzeń z aneksem kuchennym i przytulnym salonem.",
     images: [
       { src: getImg('../assets/portfolio/_8-2023-warszawa-28m2/jasny-salon-sciana-tv-tapeta-liscie.webp'), alt: "Jasny salon sciana tv tapeta liscie" },
       { src: getImg('../assets/portfolio/_8-2023-warszawa-28m2/maly-straz-jadalniany-stol-drewniany-nowoczesne-krzesla.webp'), alt: "Maly straz jadalniany stol drewniany nowoczesne krzesla" },
@@ -268,7 +268,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "160 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Wojny Szuby Wloscianskie.",
+    description: "Nowoczesny projekt wnętrza domu (Wojny-Szuby Włościańskie, 160 m²). Drewniana zabudowa, stylowa kuchnia z wyspą i nowoczesna łazienka. Zobacz realizację.",
     images: [
       { src: getImg('../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/kuchnia-zabudowa-drewniana-wyspa.webp'), alt: "Kuchnia zabudowa drewniana wyspa" },
       { src: getImg('../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/lazienka-z-wanna-i-prysznicem-terazzo.webp'), alt: "Lazienka z wanna i prysznicem terazzo" },
@@ -287,7 +287,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "240 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Krosno.",
+    description: "Ekskluzywny dom w Krośnie (240 m²). Odkryj projekt wnętrza z drewnianymi akcentami, przestronnym salonem i nowoczesną strefą wypoczynkową na poddaszu.",
     images: [
       { src: getImg('../assets/portfolio/_10-2024-krosno-240m2/aranzacja-strefy-tv-sciana-z-drewna.webp'), alt: "Aranzacja strefy tv sciana z drewna" },
       { src: getImg('../assets/portfolio/_10-2024-krosno-240m2/czarna-wanna-wolnostojaca-poddasze.webp'), alt: "Czarna wanna wolnostojaca poddasze" },
@@ -326,7 +326,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "45 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Bialystok.",
+    description: "Elegancki apartament w stylu glamour (Białystok, 45 m²). Zobacz nowoczesny projekt z marmurowymi akcentami, złotymi detalami i przytulną strefą wypoczynkową.",
     images: [
       { src: getImg('../assets/portfolio/_11-2024-bialystok-45m2/aneks-kuchenny-z-wyspa-salon-otwarty-projekt.webp'), alt: "Aneks kuchenny z wyspa salon otwarty projekt" },
       { src: getImg('../assets/portfolio/_11-2024-bialystok-45m2/aranzacja-sypialni.webp'), alt: "Aranzacja sypialni" },
@@ -347,7 +347,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "52 m²",
     year: "2025",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Zawady.",
+    description: "Loftowy projekt apartamentu na Zawadach (52 m²). Sprawdź unikalne wnętrze z motywem cegły, nowoczesnym gabinetem i stylowym salonem połączonym z kuchnią.",
     images: [
       { src: getImg('../assets/portfolio/_12-2025-zawady-52m2/kuchnia-z-wyspa-ciemne-meble-drewno.webp'), alt: "Kuchnia z wyspa ciemne meble drewno" },
       { src: getImg('../assets/portfolio/_12-2025-zawady-52m2/nowoczesny-gabinet-sciana-z-cegly.webp'), alt: "Nowoczesny gabinet sciana z cegly" },
@@ -370,7 +370,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "95 m²",
     year: "2024",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Nowodworce.",
+    description: "Jasna i przytulna aranżacja wnętrza domu w Nowodworcach (95 m²). Odkryj nowoczesny salon, beżową kuchnię z wyspą i stylową łazienkę z motywem marmuru.",
     images: [
       { src: getImg('../assets/portfolio/_13-2024-nowodworce-95m2/beżowa-kuchnia-z-wyspa-marmurowy-blat.webp'), alt: "Beżowa kuchnia z wyspa marmurowy blat" },
       { src: getImg('../assets/portfolio/_13-2024-nowodworce-95m2/jasny-salon-strefa-jadalniana-drewno.webp'), alt: "Jasny salon strefa jadalniana drewno" },
@@ -391,7 +391,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "85 m²",
     year: "2025",
-    description: "Nowoczesny projekt wnętrza zlokalizowany w miejscowości Warszawa.",
+    description: "Projekt apartamentu w Warszawie (85 m²) z wyjątkowym motywem terrazzo. Zobacz nowoczesną jadalnię, salon z kominkiem i piękną kuchnię z drewnianymi detalami.",
     images: [
       { src: getImg('../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp'), alt: "Jadalnia stol drewniany okno tarasowe" },
       { src: getImg('../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-zielona-lampa-rosliny-doniczkowe.webp'), alt: "Jadalnia zielona lampa rosliny doniczkowe" },
