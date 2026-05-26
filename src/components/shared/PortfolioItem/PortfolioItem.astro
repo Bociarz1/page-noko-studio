@@ -19,7 +19,7 @@ const { slug, cover, title, location, index, category, area, year } = Astro.prop
   @use './PortfolioItem.scss';
 </style>
 
-<a href={`/realizacje/${slug}`} class="portfolio-card">
+<a href={`/portfolio/${slug}`} class="portfolio-card">
   <div class="portfolio-card__image-wrapper">
     <Image
       src={cover}
@@ -38,7 +38,7 @@ const { slug, cover, title, location, index, category, area, year } = Astro.prop
   <div class="portfolio-card__content">
     <div class="portfolio-card__text">
       <p class="portfolio-card__meta">
-        {index} · {category === "mieszkalne" ? "Mieszkalne" : "Komercyjne"}
+        {index} · {category === "apartament" ? "Apartament" : "Dom"}
       </p>
       <h3 class="portfolio-card__title">{title}</h3>
       <p class="portfolio-card__details">{location} · {area} · {year}</p>
