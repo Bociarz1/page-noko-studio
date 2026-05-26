@@ -6,9 +6,16 @@ import { Font } from 'astro:assets';
 interface Props {
   title: string;
   metaDescription: string;
+  canonicalUrl?: string;
+  ogImage?: string;
 }
 
-const { title = '', metaDescription = '' } = Astro.props;
+const { 
+  title = '', 
+  metaDescription = '', 
+  canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://noko-studio.pl').href,
+  ogImage = new URL('/og-image.jpg', Astro.site || 'https://noko-studio.pl').href
+} = Astro.props;
 ---
 
 <style lang="scss" is:global>
@@ -28,6 +35,23 @@ const { title = '', metaDescription = '' } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:site_name" content="NOKO Studio" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={metaDescription} />
+    <meta property="twitter:image" content={ogImage} />
     <link rel="preload" href="/_astro/fonts/3494249176668fcb.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="preload" href="/_astro/fonts/e714b15c1070f5ec.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <Font cssVariable="--font-montserrat" />

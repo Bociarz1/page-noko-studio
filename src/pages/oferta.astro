@@ -44,9 +44,46 @@ const faqProps = [
     a: "Tak. Profesjonalny projekt wnętrz powstaje zawsze w oparciu o Twoje możliwości finansowe. Architekt dba o to, aby wizja estetyczna była w pełni wykonalna pod względem technicznym i ekonomicznym:<br><br><strong>Projektowanie pod budżet:</strong> Inspiracje są tylko punktem wyjścia – finalne rozwiązania są dopasowane do ustalonego na początku kosztorysu.<br><br><strong>Rozsądne oszczędności:</strong> Dzięki doświadczeniu projektant podpowie Ci, na których elementach wyposażenia warto zainwestować w wyższą jakość, a gdzie można znaleźć tańsze, równie estetyczne zamienniki.<br><br><strong>Brak ukrytych kosztów:</strong> Dokładna lista zakupowa i wyliczenie ilości materiałów pozwalają uniknąć nadmiarowych zakupów i nieprzewidzianych wydatków podczas remontu.<br><br><strong>Realne wyceny:</strong> Współpraca z architektem to dostęp do sprawdzonych dostawców i wiedzy o aktualnych cenach rynkowych."
   }
 ];
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Projektowanie Wnętrz - Konsultacje",
+      "provider": { "@id": "https://noko-studio.pl/#organization" }
+    },
+    {
+      "@type": "Service",
+      "name": "Projektowanie Wnętrz - Pakiet Podstawowy",
+      "provider": { "@id": "https://noko-studio.pl/#organization" }
+    },
+    {
+      "@type": "Service",
+      "name": "Projektowanie Wnętrz - Pakiet Standard",
+      "provider": { "@id": "https://noko-studio.pl/#organization" }
+    },
+    {
+      "@type": "Service",
+      "name": "Projektowanie Wnętrz - Pakiet Premium",
+      "provider": { "@id": "https://noko-studio.pl/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqProps.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    }
+  ]
+};
 ---
 
-<MainLayout title="Noko Studio" metaDescription="Strona główna Noko Studio">
+<MainLayout title="Oferta i Pakiety Usług – NOKO Studio | Architekt Wnętrz Białystok" metaDescription="Sprawdź pakiety usług NOKO Studio: konsultacje, projekt koncepcyjny, standard i premium. Aranżacja wnętrz od 1 koncepcji po nadzór autorski.">
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} id={SectionIds[NavLinks.OFFER].hero}>
   </Hero>
   <OfferCards />

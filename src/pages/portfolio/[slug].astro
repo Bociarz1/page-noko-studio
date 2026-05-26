@@ -14,13 +14,36 @@ export function getStaticPaths() {
 }
 
 const { project } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "@id": `https://noko-studio.pl/portfolio/${project.slug}/#creativework`,
+      "url": `https://noko-studio.pl/portfolio/${project.slug}`,
+      "name": project.title,
+      "description": project.description,
+      "image": project.images.map(img => new URL(img.src.src, Astro.site || 'https://noko-studio.pl').href),
+      "creator": {
+        "@id": "https://noko-studio.pl/#organization"
+      },
+      "dateCreated": project.year
+    }
+  ]
+};
 ---
 
 <style lang="scss">
   @use './slug.scss';
 </style>
 
-<MainLayout title={`${project.title} – NOKO Studio`} metaDescription={project.description}>
+<MainLayout 
+  title={`${project.title} – NOKO Studio`} 
+  metaDescription={project.description}
+  ogImage={new URL(project.cover.src, Astro.site || 'https://noko-studio.pl').href}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero
     preTitle={`${project.index} · ${project.category === "apartament" ? "Apartament" : "Dom"}`}
     title={project.title}

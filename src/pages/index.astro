@@ -21,9 +21,56 @@ const heroProps = {
     sizes: '100vw',
   },
 }
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://noko-studio.pl/#website",
+      "url": "https://noko-studio.pl/",
+      "name": "NOKO Studio",
+      "description": "Profesjonalne projektowanie wnętrz w Białymstoku i całej Polsce.",
+      "publisher": {
+        "@id": "https://noko-studio.pl/#organization"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://noko-studio.pl/#organization",
+      "name": "NOKO Studio",
+      "legalName": "NOKO Studio Pracownia Architektury Wnętrz",
+      "url": "https://noko-studio.pl",
+      "logo": "https://noko-studio.pl/favicon.svg",
+      "image": "https://noko-studio.pl/assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp",
+      "telephone": [
+        "+48455408602",
+        "+48455408601"
+      ],
+      "email": "biuro@noko-studio.pl",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Białystok",
+        "addressRegion": "Podlaskie",
+        "addressCountry": "PL"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Białystok"
+        },
+        {
+          "@type": "Country",
+          "name": "Polska"
+        }
+      ],
+      "priceRange": "$$"
+    }
+  ]
+};
 ---
 
-<MainLayout title="Noko Studio" metaDescription="Strona główna Noko Studio">
+<MainLayout title="NOKO Studio | Projektowanie Wnętrz Białystok – Architektura Wnętrz" metaDescription="NOKO Studio – profesjonalne projektowanie wnętrz w Białymstoku i całej Polsce. Kompleksowa aranżacja domów, mieszkań i apartamentów.">
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} id={SectionIds[NavLinks.HOME].hero}>
     <Button href={NavLinks.PORTFOLIO} title="Zobacz realizacje" variant="primary" />
     <Button href={NavLinks.OFFER} title="Poznaj ofertę" variant="secondary" />

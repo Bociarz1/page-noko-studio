@@ -16,9 +16,33 @@ const heroProps = {
   },
   height: 'auto',
 }
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://noko-studio.pl/portfolio/#webpage",
+      "url": "https://noko-studio.pl/portfolio",
+      "name": "Portfolio – NOKO Studio",
+      "description": "Realizacje i projekty wnętrz NOKO Studio. Projekty domów i apartamentów z pasją i dbałością o detal.",
+      "isPartOf": {
+        "@id": "https://noko-studio.pl/#website"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": projects.map((project, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://noko-studio.pl/portfolio/${project.slug}`
+      }))
+    }
+  ]
+};
 ---
 
 <MainLayout title="Portfolio – NOKO Studio" metaDescription="Realizacje i projekty wnętrz NOKO Studio. Projekty domów i apartamentów z pasją i dbałością o detal.">
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} />
   <PortfolioGrid projects={projects} />
 </MainLayout>
