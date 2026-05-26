@@ -122,7 +122,11 @@
     }
 
     &--success {
-      color: $color-cream;
+      color: $color-green;
+    }
+
+    &--error {
+      color: $color-error;
     }
   }
 }
