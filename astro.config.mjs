@@ -8,7 +8,7 @@ export default defineConfig({
     site: "https://noko-studio.pl",
     output: "static",
     adapter: cloudflare({
-        imageService: "compile",
+        imageService: "passthrough",
     }),
     integrations: [sitemap()],
     build: {
