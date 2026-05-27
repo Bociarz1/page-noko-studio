@@ -1,6 +1,8 @@
 ---
 import Header from '@components/shared/Header/Header.astro';
 import Footer from '@components/shared/Footer/Footer.astro';
+import CookiePopup from '@components/shared/CookiePopup/CookiePopup.astro';
+import FloatingPhone from '@components/shared/FloatingPhone/FloatingPhone.astro';
 import { Font } from 'astro:assets';
 import faviconLight from '@assets/favicon/favicon-light.png';
 import faviconDark from '@assets/favicon/favicon-dark.png';
@@ -61,8 +63,6 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={metaDescription} />
     <meta property="twitter:image" content={ogImage} />
-    <link rel="preload" href="/_astro/fonts/3494249176668fcb.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/_astro/fonts/e714b15c1070f5ec.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <Font cssVariable="--font-montserrat" />
   </head>
   <body>
@@ -71,5 +71,7 @@ const {
       <slot />
     </main>
     <Footer />
+    <CookiePopup />
+    <FloatingPhone />
   </body>
 </html>
