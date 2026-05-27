@@ -20,7 +20,7 @@ export default defineConfig({
         cssVariable: "--font-montserrat",
         weights: [300, 400, 500, 600],
         styles: ["normal"],
-        display: "optional",
+        display: "swap",
         subsets: ["latin", "latin-ext"],
         fallbacks: ["Arial", "Helvetica", "sans-serif"]
     }],

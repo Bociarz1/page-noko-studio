@@ -10,6 +10,7 @@ export enum NavLinks {
   ABOUT_US = `/#o-nas`,
   OFFER = '/oferta',
   CONTACT = '/kontakt',
+  PRIVACY_POLICY = '/polityka-prywatnosci',
 }
 
 export const SectionIds = {
