@@ -1,6 +1,7 @@
 ---
 import Header from '@components/shared/Header/Header.astro';
 import Footer from '@components/shared/Footer/Footer.astro';
+import CookiePopup from '@components/shared/CookiePopup/CookiePopup.astro';
 import { Font } from 'astro:assets';
 import faviconLight from '@assets/favicon/favicon-light.png';
 import faviconDark from '@assets/favicon/favicon-dark.png';
@@ -69,5 +70,6 @@ const {
       <slot />
     </main>
     <Footer />
+    <CookiePopup />
   </body>
 </html>
