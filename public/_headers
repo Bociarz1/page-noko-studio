@@ -8,3 +8,11 @@
 # Cache for static assets
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Cache for Astro-generated assets (fonts, images, JS, CSS)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - always revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

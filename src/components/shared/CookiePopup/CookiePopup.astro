@@ -23,30 +23,37 @@ import { NavLinks } from "@constants/navLinks";
 <script>
   const popup = document.getElementById('cookie-popup');
   const acceptBtn = document.getElementById('cookie-accept');
-  const floatingPhone = document.getElementById('floatingPhone');
 
   if (popup && acceptBtn) {
     const isAccepted = localStorage.getItem('cookie-consent');
-    
-    const updatePhonePosition = () => {
-      if (floatingPhone && popup.classList.contains('is-visible')) {
-        floatingPhone.style.bottom = `calc(${popup.offsetHeight}px + 1rem)`;
-      } else if (floatingPhone) {
-        floatingPhone.style.bottom = '';
+
+    // Use ResizeObserver to track popup height asynchronously,
+    // avoiding forced reflow caused by reading offsetHeight after DOM mutation.
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const h = entry.borderBoxSize?.[0]?.blockSize ?? entry.contentRect.height;
+        document.documentElement.style.setProperty('--cookie-height', `${h}px`);
       }
+    });
+
+    const showPopup = () => {
+      popup.classList.add('is-visible');
+      observer.observe(popup);
+    };
+
+    const hidePopup = () => {
+      popup.classList.remove('is-visible');
+      observer.unobserve(popup);
+      document.documentElement.style.setProperty('--cookie-height', '0px');
     };
 
     if (!isAccepted) {
-      popup.classList.add('is-visible');
-      updatePhonePosition();
-      window.addEventListener('resize', updatePhonePosition);
+      showPopup();
     }
 
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem('cookie-consent', 'accepted');
-      popup.classList.remove('is-visible');
-      updatePhonePosition();
-      window.removeEventListener('resize', updatePhonePosition);
+      hidePopup();
       //TODO: GA script
     });
   }
