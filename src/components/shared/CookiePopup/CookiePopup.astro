@@ -1,5 +1,5 @@
 ---
-import { NavLink } from "@constants/navLinks";
+import { NavLinks } from "@constants/navLinks";
 
 
 ---
@@ -12,7 +12,7 @@ import { NavLink } from "@constants/navLinks";
     <p class="cookie-popup__text">
       Nasza strona korzysta z plików cookies, aby zapewnić Ci najlepszą
       jakość przeglądania oraz analizować ruch. Szczegóły znajdziesz w
-      naszej <a href={NavLink.PRIVACY_POLICY}>Polityce Prywatności</a>.
+      naszej <a href={NavLinks.PRIVACY_POLICY}>Polityce Prywatności</a>.
     </p>
     <button id="cookie-accept" class="cookie-popup__button">
       Akceptuję
@@ -23,17 +23,30 @@ import { NavLink } from "@constants/navLinks";
 <script>
   const popup = document.getElementById('cookie-popup');
   const acceptBtn = document.getElementById('cookie-accept');
+  const floatingPhone = document.getElementById('floatingPhone');
 
   if (popup && acceptBtn) {
     const isAccepted = localStorage.getItem('cookie-consent');
+    
+    const updatePhonePosition = () => {
+      if (floatingPhone && popup.classList.contains('is-visible')) {
+        floatingPhone.style.bottom = `calc(${popup.offsetHeight}px + 1rem)`;
+      } else if (floatingPhone) {
+        floatingPhone.style.bottom = '';
+      }
+    };
+
     if (!isAccepted) {
       popup.classList.add('is-visible');
+      updatePhonePosition();
+      window.addEventListener('resize', updatePhonePosition);
     }
 
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem('cookie-consent', 'accepted');
       popup.classList.remove('is-visible');
-      
+      updatePhonePosition();
+      window.removeEventListener('resize', updatePhonePosition);
       //TODO: GA script
     });
   }

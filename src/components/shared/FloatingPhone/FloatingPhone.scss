@@ -1,0 +1,31 @@
+@use '@styles/_colors.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
+
+.floating-phone {
+  position: fixed;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  width: 6.4rem;
+  height: 6.4rem;
+  background-color: $color-green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  svg {}
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: darken($color-green, 5%);
+  }
+
+  @include mq(tablet) {
+    bottom: 3.2rem;
+    right: 3.2rem;
+  }
+}

@@ -37,6 +37,25 @@
       font-weight: 500;
     }
   }
+
+  &__logo-and-social {
+    display: flex;
+    gap: 1.5rem;
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+      cursor: pointer;
+
+      svg {
+        transition: 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }
 
 li {

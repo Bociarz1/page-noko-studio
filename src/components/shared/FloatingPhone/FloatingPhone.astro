@@ -1,0 +1,12 @@
+---
+import PhoneForwarded from '@assets/icons/icon-phone-forwarded.svg';
+import { COMPANY } from '@constants/site';
+---
+
+<style lang="scss">
+  @use './FloatingPhone.scss';
+</style>
+
+<a id="floatingPhone" href={`tel:${COMPANY.phones.aleksandra.raw}`} class="floating-phone" aria-label={`Zadzwoń do ${COMPANY.phones.aleksandra.name}`}>
+  <PhoneForwarded width={28} height={28} color="#fff"/>
+</a>

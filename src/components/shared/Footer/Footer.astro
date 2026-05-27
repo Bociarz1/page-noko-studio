@@ -4,6 +4,8 @@ import { COMPANY } from '@constants/site';
 import LocationOn from '@assets/icons/icon-location-on.svg';
 import PhoneInTalk from '@assets/icons/icon-phone-in-talk.svg';
 import Mail from '@assets/icons/icon-mail.svg';
+import Facebook from '@assets/icons/icon-facebook.svg';
+import Instagram from '@assets/icons/icon-instagram.svg';
 ---
 
 <style lang="scss">
@@ -51,6 +53,16 @@ import Mail from '@assets/icons/icon-mail.svg';
           {COMPANY.address.fullMap}
         </div>
       </address>
+      <div class="socials">
+        <a href={NavLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer">
+          <Instagram width={20} height={20} />
+          Instagram
+        </a>
+        <a href={NavLinks.FACEBOOK} target="_blank" rel="noopener noreferrer">
+          <Facebook width={20} height={20} />
+          Facebook
+        </a>
+      </div>
     </section>
     <section class="working-hours">
       <p class="title">Godziny pracy</p>
