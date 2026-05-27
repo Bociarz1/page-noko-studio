@@ -39,4 +39,11 @@ export const organizationSchema = {
     { '@type': 'Country', 'name': 'Polska' },
   ],
   'priceRange': '$$',
+  'makesOffer': {
+    '@type': 'Offer',
+    'itemOffered': {
+      '@type': 'Service',
+      'name': 'Kompleksowe projektowanie wnętrz domów i apartamentów',
+    },
+  },
 };
