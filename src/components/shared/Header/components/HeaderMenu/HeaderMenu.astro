@@ -1,10 +1,10 @@
 ---
-import { NAV_ELEMENTS } from 'src/constants/navLinks';
+import { NavLink } from 'src/constants/navLinks';
 
 interface Props {
-  isPathActive: boolean;
+  navElements: NavLink[];
 }
-const { isPathActive } = Astro.props;
+const { navElements = [] } = Astro.props;
 ---
 
 <style lang="scss">
@@ -14,8 +14,8 @@ const { isPathActive } = Astro.props;
 
 <ul class="header-menu-desktop">
   {
-    NAV_ELEMENTS.map((element) => (
-      <li class={isPathActive ? 'link--active' : ''}>
+    navElements.map((element) => (
+      <li class={element?.isPathActive ? 'link--active' : ''}>
         <a href={element.href}>{element.label}</a>
       </li>
     ))

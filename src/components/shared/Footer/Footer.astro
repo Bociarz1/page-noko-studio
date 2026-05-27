@@ -1,5 +1,6 @@
 ---
 import { NAV_ELEMENTS } from 'src/constants/navLinks';
+import { COMPANY } from '@constants/site';
 import LocationOn from '@assets/icons/icon-location-on.svg';
 import PhoneInTalk from '@assets/icons/icon-phone-in-talk.svg';
 import Mail from '@assets/icons/icon-mail.svg';
@@ -35,19 +36,19 @@ import Mail from '@assets/icons/icon-mail.svg';
       <address class="contact-details">
         <div class="email">
           <Mail width={16} height={16} />
-          biuro@noko-studio.com
+          {COMPANY.email}
         </div>
         <div class="phone">
           <PhoneInTalk width={16} height={16} />
-          Paulina +48 455 408 602
+          {COMPANY.phones.aleksandra.name} {COMPANY.phones.aleksandra.formatted}
         </div>
         <div class="phone">
           <PhoneInTalk width={16} height={16} />
-          Aleksandra +48 455 408 601
+          {COMPANY.phones.paulina.name} {COMPANY.phones.paulina.formatted}
         </div>
         <div class="address">
           <LocationOn width={20} height={20} />
-          Białystok, Polska
+          {COMPANY.address.fullMap}
         </div>
       </address>
     </section>

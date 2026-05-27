@@ -4,6 +4,7 @@ import Footer from '@components/shared/Footer/Footer.astro';
 import { Font } from 'astro:assets';
 import faviconLight from '@assets/favicon/favicon-light.png';
 import faviconDark from '@assets/favicon/favicon-dark.png';
+import { BASE_URL } from '@constants/site';
 
 interface Props {
   title: string;
@@ -15,8 +16,8 @@ interface Props {
 const { 
   title = '', 
   metaDescription = '', 
-  canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://noko-studio.pl').href,
-  ogImage = new URL('/og-image.jpg', Astro.site || 'https://noko-studio.pl').href
+  canonicalUrl = new URL(Astro.url.pathname, Astro.site || BASE_URL).href,
+  ogImage = new URL('/og-image.png', Astro.site || BASE_URL).href
 } = Astro.props;
 ---
 
@@ -31,7 +32,12 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io; upgrade-insecure-requests;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io;" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href={faviconLight.src} media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/png" href={faviconDark.src} media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/png" href={faviconLight.src} />

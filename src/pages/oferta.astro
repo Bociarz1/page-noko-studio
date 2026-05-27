@@ -5,6 +5,12 @@ import OfferCards from "@components/offer/OfferCards/OfferCards.astro";
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import FAQ from "@components/shared/FAQ/FAQ.astro";
 import { NavLinks, SectionIds } from '@constants/navLinks';
+import { buildOfferSchema } from '@schemas/offerSchema';
+
+const metaData = {
+  title:"Oferta – Architekt Wnętrz Białystok | NOKO Studio", 
+  metaDescription:"Poznaj cennik i pakiety usług projektowych NOKO Studio: konsultacje, projekt koncepcyjny, standard i premium. Kompleksowa obsługa i nadzór autorski."
+}
 
 const heroProps = {
   preTitle: 'Architekt i projektant wnętrz: Poznaj naszą ofertę i pakiety usług',
@@ -44,45 +50,10 @@ const faqProps = [
     a: "Tak. Profesjonalny projekt wnętrz powstaje zawsze w oparciu o Twoje możliwości finansowe. Architekt dba o to, aby wizja estetyczna była w pełni wykonalna pod względem technicznym i ekonomicznym:<br><br><strong>Projektowanie pod budżet:</strong> Inspiracje są tylko punktem wyjścia – finalne rozwiązania są dopasowane do ustalonego na początku kosztorysu.<br><br><strong>Rozsądne oszczędności:</strong> Dzięki doświadczeniu projektant podpowie Ci, na których elementach wyposażenia warto zainwestować w wyższą jakość, a gdzie można znaleźć tańsze, równie estetyczne zamienniki.<br><br><strong>Brak ukrytych kosztów:</strong> Dokładna lista zakupowa i wyliczenie ilości materiałów pozwalają uniknąć nadmiarowych zakupów i nieprzewidzianych wydatków podczas remontu.<br><br><strong>Realne wyceny:</strong> Współpraca z architektem to dostęp do sprawdzonych dostawców i wiedzy o aktualnych cenach rynkowych."
   }
 ];
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "name": "Projektowanie Wnętrz - Konsultacje",
-      "provider": { "@id": "https://noko-studio.pl/#organization" }
-    },
-    {
-      "@type": "Service",
-      "name": "Projektowanie Wnętrz - Pakiet Podstawowy",
-      "provider": { "@id": "https://noko-studio.pl/#organization" }
-    },
-    {
-      "@type": "Service",
-      "name": "Projektowanie Wnętrz - Pakiet Standard",
-      "provider": { "@id": "https://noko-studio.pl/#organization" }
-    },
-    {
-      "@type": "Service",
-      "name": "Projektowanie Wnętrz - Pakiet Premium",
-      "provider": { "@id": "https://noko-studio.pl/#organization" }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": faqProps.map(f => ({
-        "@type": "Question",
-        "name": f.q,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": f.a
-        }
-      }))
-    }
-  ]
-};
+const schema = buildOfferSchema(faqProps);
 ---
 
-<MainLayout title="Oferta – Architekt Wnętrz Białystok | NOKO Studio" metaDescription="Poznaj cennik i pakiety usług projektowych NOKO Studio: konsultacje, projekt koncepcyjny, standard i premium. Kompleksowa obsługa i nadzór autorski.">
+<MainLayout {...metaData}>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} id={SectionIds[NavLinks.OFFER].hero}>
   </Hero>

@@ -21,7 +21,7 @@ export default defineConfig({
         weights: [300, 400, 500, 600],
         styles: ["normal"],
         display: "optional",
-        subsets: ["latin"],
+        subsets: ["latin", "latin-ext"],
         fallbacks: ["Arial", "Helvetica", "sans-serif"]
     }],
     image: {
