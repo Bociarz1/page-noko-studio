@@ -1,4 +1,5 @@
-import { websiteSchema, organizationSchema } from '@schemas/shared';
+import { websiteSchema } from '@schemas/websiteSchema';
+import { organizationSchema } from '@schemas/organizationSchema';
 
 import { BASE_URL } from '@constants/site';
 

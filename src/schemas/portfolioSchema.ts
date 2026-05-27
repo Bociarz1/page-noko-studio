@@ -1,4 +1,4 @@
-import { websiteSchema } from '@schemas/shared';
+import { websiteSchema } from '@schemas/websiteSchema';
 
 import { BASE_URL } from '@constants/site';
 

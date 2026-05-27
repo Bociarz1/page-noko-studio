@@ -1,1 +1,28 @@
 export const BASE_URL = 'https://noko-studio.pl';
+
+export const COMPANY = {
+  name: 'NOKO Studio',
+  legalName: 'NOKO Studio Pracownia Architektury Wnętrz',
+  email: 'biuro@noko-studio.pl',
+  phones: {
+    aleksandra: {
+      raw: '+48455408601',
+      formatted: '+48 455 408 601',
+      name: 'Aleksandra'
+    },
+    paulina: {
+      raw: '+48455408602',
+      formatted: '+48 455 408 602',
+      name: 'Paulina'
+    }
+  },
+  address: {
+    street: 'Szkolna 4a',
+    city: 'Choroszcz',
+    postalCode: '16-070',
+    region: 'Podlaskie',
+    country: 'PL',
+    fullMap: 'Szkolna 4a, 16-070 Choroszcz'
+  },
+  description: 'Profesjonalna pracownia projektowania i aranżacji wnętrz w Białymstoku. Projektujemy domy, mieszkania i apartamenty w całej Polsce.',
+};
