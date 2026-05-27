@@ -4,6 +4,7 @@ import Footer from '@components/shared/Footer/Footer.astro';
 import { Font } from 'astro:assets';
 import faviconLight from '@assets/favicon/favicon-light.png';
 import faviconDark from '@assets/favicon/favicon-dark.png';
+import { BASE_URL } from '@constants/site';
 
 interface Props {
   title: string;
@@ -15,8 +16,8 @@ interface Props {
 const { 
   title = '', 
   metaDescription = '', 
-  canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://noko-studio.pl').href,
-  ogImage = new URL('/og-image.jpg', Astro.site || 'https://noko-studio.pl').href
+  canonicalUrl = new URL(Astro.url.pathname, Astro.site || BASE_URL).href,
+  ogImage = new URL('/og-image.jpg', Astro.site || BASE_URL).href
 } = Astro.props;
 ---
 

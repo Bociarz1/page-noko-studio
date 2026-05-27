@@ -4,6 +4,12 @@ import Hero from "@components/shared/Hero/Hero.astro";
 import PortfolioGrid from "@components/portfolio/PortfolioGrid/PortfolioGrid.astro";
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import { projects } from "@data/projects";
+import { buildPortfolioSchema } from '@schemas/portfolioSchema';
+
+const metaData = {
+  title:"Portfolio Projektów Wnętrz – Realizacje NOKO Studio",
+  metaDescription:"Odkryj portfolio NOKO Studio. Zobacz nasze zrealizowane projekty i aranżacje wnętrz: domy, mieszkania oraz apartamenty. Zainspiruj się już dzisiaj!"
+}
 
 const heroProps = {
   preTitle: 'Nasze projekty wnętrz.',
@@ -16,32 +22,10 @@ const heroProps = {
   },
   height: 'auto',
 }
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CollectionPage",
-      "@id": "https://noko-studio.pl/portfolio/#webpage",
-      "url": "https://noko-studio.pl/portfolio",
-      "name": "Portfolio – NOKO Studio",
-      "description": "Realizacje i projekty wnętrz NOKO Studio. Projekty domów i apartamentów z pasją i dbałością o detal.",
-      "isPartOf": {
-        "@id": "https://noko-studio.pl/#website"
-      }
-    },
-    {
-      "@type": "ItemList",
-      "itemListElement": projects.map((project, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "url": `https://noko-studio.pl/portfolio/${project.slug}`
-      }))
-    }
-  ]
-};
+const schema = buildPortfolioSchema(projects);
 ---
 
-<MainLayout title="Portfolio Projektów Wnętrz – Realizacje NOKO Studio" metaDescription="Odkryj portfolio NOKO Studio. Zobacz nasze zrealizowane projekty i aranżacje wnętrz: domy, mieszkania oraz apartamenty. Zainspiruj się już dzisiaj!">
+<MainLayout {...metaData}>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} />
   <PortfolioGrid projects={projects} />

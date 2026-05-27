@@ -5,6 +5,8 @@ import { projects } from "@data/projects";
 import Hero from "@components/shared/Hero/Hero.astro";
 import Lightbox from "@components/portfolio/Lightbox/Lightbox.astro";
 import Button from "@components/shared/Button/Button.astro";
+import { buildProjectSchema } from '@schemas/projectSchema';
+import { BASE_URL } from '@constants/site';
 
 export function getStaticPaths() {
   return projects.map((project) => ({
@@ -15,23 +17,13 @@ export function getStaticPaths() {
 
 const { project } = Astro.props;
 
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CreativeWork",
-      "@id": `https://noko-studio.pl/portfolio/${project.slug}/#creativework`,
-      "url": `https://noko-studio.pl/portfolio/${project.slug}`,
-      "name": project.title,
-      "description": project.description,
-      "image": project.images.map(img => new URL(img.src.src, Astro.site || 'https://noko-studio.pl').href),
-      "creator": {
-        "@id": "https://noko-studio.pl/#organization"
-      },
-      "dateCreated": project.year
-    }
-  ]
-};
+const schema = buildProjectSchema({
+  slug: project.slug,
+  title: project.title,
+  description: project.description,
+  year: project.year,
+  imageSrcs: project.images.map(img => new URL(img.src.src, Astro.site || BASE_URL).href),
+});
 ---
 
 <style lang="scss">
@@ -41,7 +33,7 @@ const schema = {
 <MainLayout 
   title={`${project.title} | NOKO Studio`} 
   metaDescription={project.description}
-  ogImage={new URL(project.cover.src, Astro.site || 'https://noko-studio.pl').href}
+  ogImage={new URL(project.cover.src, Astro.site || BASE_URL).href}
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero

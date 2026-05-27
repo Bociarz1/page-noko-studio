@@ -1,22 +1,22 @@
 ---
 import HeaderMenu from '@components/shared/Header/components/HeaderMenu/HeaderMenu.astro';
 import HeaderMenuMobile from '@components/shared/Header/components/HeaderMenuMobile/HeaderMenuMobile.astro';
-
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
-
-const isPathActive = currentPath === pathname;
+import { NAV_ELEMENTS } from 'src/constants/navLinks';
 ---
 
 <style lang="scss">
   @use './Header.scss';
 </style>
 
+<script>
+  import './HeaderMenu.ts';
+</script>
+
 <nav class="navigation">
   <a class="logo" href="/">
     <span class="noko">NOKO</span>
     <span class="studio">STUDIO</span>
   </a>
-  <HeaderMenuMobile isPathActive={isPathActive} />
-  <HeaderMenu isPathActive={isPathActive} />
+  <HeaderMenuMobile navElements={NAV_ELEMENTS} />
+  <HeaderMenu navElements={NAV_ELEMENTS} />
 </nav>

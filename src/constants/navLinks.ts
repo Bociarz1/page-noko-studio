@@ -1,6 +1,7 @@
-interface NavLink {
+export interface NavLink {
   label: string;
   href: NavLinks;
+  isPathActive?: boolean;
 }
 
 export enum NavLinks {

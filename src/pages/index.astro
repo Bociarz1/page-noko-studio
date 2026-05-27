@@ -9,8 +9,13 @@ import Reviews from '@components/index/Reviews/Reviews.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import Button from '@components/shared/Button/Button.astro';
 import { NavLinks, SectionIds } from '@constants/navLinks';
+import { buildHomeSchema } from '@schemas/homeSchema';
 
-
+const metaData = {
+  title: "Projektowanie Wnętrz Białystok | Architekt NOKO Studio",
+  metaDescription: "NOKO Studio – profesjonalne projektowanie wnętrz w Białymstoku i w całej Polsce. Kompleksowa aranżacja i architektura domów, mieszkań i apartamentów.",
+}
+const schema = buildHomeSchema();
 const heroProps = {
   preTitle: 'Architekt i projektant wnętrz: Poznaj naszą ofertę i pakiety usług',
   title: 'Stwórzmy razem Twoje wymarzone wnętrze, bez stresu i niespodzianek',
@@ -21,55 +26,9 @@ const heroProps = {
     sizes: '100vw',
   },
 }
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://noko-studio.pl/#website",
-      "url": "https://noko-studio.pl/",
-      "name": "NOKO Studio",
-      "description": "Profesjonalne projektowanie wnętrz w Białymstoku i całej Polsce.",
-      "publisher": {
-        "@id": "https://noko-studio.pl/#organization"
-      }
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://noko-studio.pl/#organization",
-      "name": "NOKO Studio",
-      "legalName": "NOKO Studio Pracownia Architektury Wnętrz",
-      "url": "https://noko-studio.pl",
-      "logo": "https://noko-studio.pl/favicon.svg",
-      "image": "https://noko-studio.pl/assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp",
-      "telephone": [
-        "+48455408602",
-        "+48455408601"
-      ],
-      "email": "biuro@noko-studio.pl",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Białystok",
-        "addressRegion": "Podlaskie",
-        "addressCountry": "PL"
-      },
-      "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Białystok"
-        },
-        {
-          "@type": "Country",
-          "name": "Polska"
-        }
-      ],
-      "priceRange": "$$"
-    }
-  ]
-};
 ---
 
-<MainLayout title="Projektowanie Wnętrz Białystok | Architekt NOKO Studio" metaDescription="NOKO Studio – profesjonalne projektowanie wnętrz w Białymstoku i w całej Polsce. Kompleksowa aranżacja i architektura domów, mieszkań i apartamentów.">
+<MainLayout {...metaData}>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} id={SectionIds[NavLinks.HOME].hero}>
     <Button href={NavLinks.PORTFOLIO} title="Zobacz realizacje" variant="primary" />

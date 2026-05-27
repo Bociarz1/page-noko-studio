@@ -4,65 +4,19 @@ import Hero from '@components/shared/Hero/Hero.astro';
 import Contact from '@components/contact/Contact/Contact.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import { NavLinks, SectionIds } from '@constants/navLinks';
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "ContactPage",
-      "@id": "https://noko-studio.pl/kontakt/#webpage",
-      "url": "https://noko-studio.pl/kontakt",
-      "name": "Kontakt – NOKO Studio | Pracownia Architektury Wnętrz",
-      "description": "Skontaktuj się z NOKO Studio. Zaprojektujemy Twoje wnętrze w Białymstoku i w całej Polsce. Napisz do nas lub zadzwoń.",
-      "isPartOf": {
-        "@type": "WebSite",
-        "@id": "https://noko-studio.pl/#website",
-        "url": "https://noko-studio.pl/",
-        "name": "NOKO Studio"
-      },
-      "about": {
-        "@id": "https://noko-studio.pl/#organization"
-      }
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://noko-studio.pl/#organization",
-      "name": "NOKO Studio",
-      "legalName": "NOKO Studio Pracownia Architektury Wnętrz",
-      "url": "https://noko-studio.pl",
-      "logo": "https://noko-studio.pl/favicon.svg",
-      "image": "https://noko-studio.pl/assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp",
-      "description": "Profesjonalna pracownia projektowania i aranżacji wnętrz w Białymstoku. Projektujemy domy, mieszkania i apartamenty w całej Polsce.",
-      "telephone": [
-        "+48455408602",
-        "+48455408601"
-      ],
-      "email": "biuro@noko-studio.pl",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Białystok",
-        "addressRegion": "Podlaskie",
-        "addressCountry": "PL"
-      },
-      "areaServed": [
-        {
-          "@type": "AdministrativeArea",
-          "name": "Białystok"
-        },
-        {
-          "@type": "Country",
-          "name": "Polska"
-        }
-      ],
-      "priceRange": "$$"
-    }
-  ]
-};
+import { buildContactSchema } from '@schemas/contactSchema';
+
+const metaData = {
+  title: "Kontakt – Architekt Wnętrz Białystok | NOKO Studio",
+  metaDescription: "Skontaktuj się z pracownią NOKO Studio. Profesjonalny projektant wnętrz (Białystok i cała Polska). Zadzwoń lub napisz i stwórzmy Twoje nowe wnętrze!"
+}
+const schema = buildContactSchema({
+  name: 'Kontakt – NOKO Studio | Pracownia Architektury Wnętrz',
+  description: 'Skontaktuj się z NOKO Studio. Zaprojektujemy Twoje wnętrze w Białymstoku i w całej Polsce. Napisz do nas lub zadzwoń.',
+});
 ---
 
-<MainLayout
-  title="Kontakt – Architekt Wnętrz Białystok | NOKO Studio"
-  metaDescription="Skontaktuj się z pracownią NOKO Studio. Profesjonalny projektant wnętrz (Białystok i cała Polska). Zadzwoń lub napisz i stwórzmy Twoje nowe wnętrze!"
->
+<MainLayout {...metaData}>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero
     id={SectionIds[NavLinks.CONTACT].hero}

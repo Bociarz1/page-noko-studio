@@ -30,6 +30,9 @@
       ],
       "@constants/*": [
         "src/constants/*"
+      ],
+      "@schemas/*": [
+        "src/schemas/*"
       ]
     }
   }
