@@ -7,7 +7,7 @@ export const organizationSchema = {
   'legalName': COMPANY.legalName,
   'url': BASE_URL,
   'logo': `${BASE_URL}/favicon.ico`,
-  'image': `${BASE_URL}/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp`,
+  'image': `${BASE_URL}/og-image.png`,
   'description': COMPANY.description,
   'telephone': COMPANY.phones.aleksandra.raw,
   'contactPoint': [
