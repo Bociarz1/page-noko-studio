@@ -20,5 +20,14 @@ const updateActiveLinks = () => {
         link.closest('li')?.classList.toggle('link--active', isActive);
     });
 };
-updateActiveLinks();
-window.addEventListener('hashchange', updateActiveLinks);
+
+const init = () => {
+    updateActiveLinks();
+    window.addEventListener('hashchange', updateActiveLinks, { passive: true });
+};
+
+if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(init);
+} else {
+    setTimeout(init, 1);
+}
