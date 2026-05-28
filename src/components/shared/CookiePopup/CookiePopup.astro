@@ -21,40 +21,48 @@ import { NavLinks } from "@constants/navLinks";
 </div>
 
 <script>
-  const popup = document.getElementById('cookie-popup');
-  const acceptBtn = document.getElementById('cookie-accept');
+  const initCookiePopup = () => {
+    const popup = document.getElementById('cookie-popup');
+    const acceptBtn = document.getElementById('cookie-accept');
 
-  if (popup && acceptBtn) {
-    const isAccepted = localStorage.getItem('cookie-consent');
+    if (popup && acceptBtn) {
+      const isAccepted = localStorage.getItem('cookie-consent');
 
-    // Use ResizeObserver to track popup height asynchronously,
-    // avoiding forced reflow caused by reading offsetHeight after DOM mutation.
-    const observer = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        const h = entry.borderBoxSize?.[0]?.blockSize ?? entry.contentRect.height;
-        document.documentElement.style.setProperty('--cookie-height', `${h}px`);
+      // Use ResizeObserver to track popup height asynchronously,
+      // avoiding forced reflow caused by reading offsetHeight after DOM mutation.
+      const observer = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          const h = entry.borderBoxSize?.[0]?.blockSize ?? entry.contentRect.height;
+          document.documentElement.style.setProperty('--cookie-height', `${h}px`);
+        }
+      });
+
+      const showPopup = () => {
+        popup.classList.add('is-visible');
+        observer.observe(popup);
+      };
+
+      const hidePopup = () => {
+        popup.classList.remove('is-visible');
+        observer.unobserve(popup);
+        document.documentElement.style.setProperty('--cookie-height', '0px');
+      };
+
+      if (!isAccepted) {
+        showPopup();
       }
-    });
 
-    const showPopup = () => {
-      popup.classList.add('is-visible');
-      observer.observe(popup);
-    };
-
-    const hidePopup = () => {
-      popup.classList.remove('is-visible');
-      observer.unobserve(popup);
-      document.documentElement.style.setProperty('--cookie-height', '0px');
-    };
-
-    if (!isAccepted) {
-      showPopup();
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'accepted');
+        hidePopup();
+        //TODO: GA script
+      }, { passive: true });
     }
+  };
 
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookie-consent', 'accepted');
-      hidePopup();
-      //TODO: GA script
-    });
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(initCookiePopup);
+  } else {
+    setTimeout(initCookiePopup, 1);
   }
 </script>
