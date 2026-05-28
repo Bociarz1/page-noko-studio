@@ -4,7 +4,7 @@
 
 .floating-phone {
   position: fixed;
-  bottom: calc(var(--cookie-height, 0px) + 2.4rem);
+  bottom: 2.4rem;
   right: 2.4rem;
   width: 6.4rem;
   height: 6.4rem;
@@ -17,16 +17,17 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  transform: translateY(calc(var(--cookie-height, 0px) * -1)) scale(var(--hover-scale, 1));
 
   svg {}
 
   &:hover {
-    transform: scale(1.1);
+    --hover-scale: 1.1;
     background-color: color.adjust($color-green, $lightness: -5%);
   }
 
   @include mq(tablet) {
-    bottom: calc(var(--cookie-height, 0px) + 3.2rem);
+    bottom: 3.2rem;
     right: 3.2rem;
   }
 }
