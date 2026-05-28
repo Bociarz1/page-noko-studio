@@ -16,6 +16,7 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/cloudflare": "^13.5.4",
     "@astrojs/sitemap": "^3.7.3",
+    "@fontsource/montserrat": "^5.2.8",
     "astro": "^6.1.9",
     "resend": "^6.12.4",
     "typescript": "^5.9.3"

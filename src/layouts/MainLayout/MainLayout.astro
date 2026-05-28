@@ -3,7 +3,9 @@ import Header from '@components/shared/Header/Header.astro';
 import Footer from '@components/shared/Footer/Footer.astro';
 import CookiePopup from '@components/shared/CookiePopup/CookiePopup.astro';
 import FloatingPhone from '@components/shared/FloatingPhone/FloatingPhone.astro';
-import { Font } from 'astro:assets';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
 import faviconLight from '@assets/favicon/favicon-light.png';
 import faviconDark from '@assets/favicon/favicon-dark.png';
 import { BASE_URL } from '@constants/site';
@@ -34,7 +36,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io; font-src 'self' data: https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io;" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -63,7 +65,6 @@ const {
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={metaDescription} />
     <meta property="twitter:image" content={ogImage} />
-    <Font cssVariable="--font-montserrat" preload />
   </head>
   <body>
     <Header />
