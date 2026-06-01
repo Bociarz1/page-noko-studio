@@ -123,12 +123,23 @@ $space-between-data-rows: 1.2rem;
     font-size: 1.2rem;
     text-align: center;
 
-    a {
-      color: $color-light-gray;
-      text-decoration: underline;
+    .legal-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
-      &:hover {
-        color: $color-white;
+      a {
+        color: $color-light-gray;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+
+      .separator {
+        color: $color-gray;
+        user-select: none;
       }
     }
 

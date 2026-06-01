@@ -11,6 +11,7 @@ export enum NavLinks {
   OFFER = '/oferta',
   CONTACT = '/kontakt',
   PRIVACY_POLICY = '/polityka-prywatnosci',
+  TERMS_OF_SERVICE = '/regulamin',
   INSTAGRAM = 'https://www.instagram.com/noko_studio?igsh=MTg3ZDRhcGFvMGZy',
   FACEBOOK = 'https://www.facebook.com/profile.php?id=61567628939661',
 }
