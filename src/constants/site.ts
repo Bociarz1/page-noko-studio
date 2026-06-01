@@ -1,8 +1,8 @@
 export const BASE_URL = 'https://noko-studio.pl';
 
 export const COMPANY = {
-  name: 'NOKO Studio',
-  legalName: 'NOKO Studio Pracownia Architektury Wnętrz',
+  name: 'NOKO Studio - Projektowanie wnętrz',
+  legalName: 'NOKO STUDIO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ',
   email: 'biuro@noko-studio.pl',
   phones: {
     aleksandra: {
