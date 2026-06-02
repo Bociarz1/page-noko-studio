@@ -1,20 +1,20 @@
 @use '@styles/_breakpoints.scss' as *;
 
-.header-menu-mobile {
-  @include hide-on(tablet, desktop, wide);
+.mobile-nav {
+  @include hide-on('tablet', 'desktop', 'wide');
 
   &[open] {
-    .icon-menu {
+    .mobile-nav__icon {
       transform: rotate(90deg);
     }
   }
 
-  .icon-menu {
+  &__icon {
     transition: 0.3s;
     cursor: pointer;
   }
 
-  summary {
+  &__toggle {
     user-select: none;
     -webkit-user-select: none;
     outline: none;
@@ -27,7 +27,7 @@
     }
   }
 
-  &__link-wrapper {
+  &__list {
     position: absolute;
     width: 100vw;
     left: 0;
@@ -35,21 +35,32 @@
     border-bottom: 1px solid var(--color-transparent);
     z-index: var(--z-header);
     background-color: var(--color-white);
+  }
 
-    li {
-      text-align: center;
-      padding: 10px;
-      border: none;
+  &__item {
+    text-align: center;
+    padding: 1rem;
+    border: none;
+    font-size: 1.4rem;
 
-      &.link--active {
-        color: var(--color-dark);
-        font-weight: 500;
+    &--active {
+      color: var(--color-dark);
+      font-weight: 500;
 
-        a {
-          padding-bottom: 4px;
-          border-bottom: 2px solid var(--color-dark);
-        }
+      .mobile-nav__link {
+        padding-bottom: 0.4rem;
+        border-bottom: 0.2rem solid var(--color-dark);
       }
+    }
+  }
+
+  &__link {
+    color: var(--color-gray);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-dark);
+      transition: 0.3s;
     }
   }
 }

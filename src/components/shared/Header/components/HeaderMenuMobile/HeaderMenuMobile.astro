@@ -9,19 +9,18 @@ const { navElements = [] } = Astro.props;
 ---
 
 <style lang="scss">
-  @use '@components/shared/Header/Header.scss';
   @use './HeaderMenuMobile.scss';
 </style>
 
-<details class="header-menu-mobile">
-  <summary>
-    <Menu class="icon-menu" fill="black" />
+<details class="mobile-nav">
+  <summary class="mobile-nav__toggle">
+    <Menu class="mobile-nav__icon" fill="black" />
   </summary>
-  <ul class="header-menu-mobile__link-wrapper">
+  <ul class="mobile-nav__list">
     {
       navElements.map((element) => (
-        <li class={element?.isPathActive ? 'link--active' : ''}>
-          <a href={element.href}>{element.label}</a>
+        <li class={`mobile-nav__item ${element?.isPathActive ? 'mobile-nav__item--active' : ''}`}>
+          <a class="mobile-nav__link" href={element.href}>{element.label}</a>
         </li>
       ))
     }

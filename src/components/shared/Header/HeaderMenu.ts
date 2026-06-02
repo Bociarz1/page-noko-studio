@@ -1,8 +1,9 @@
 const updateActiveLinks = () => {
     const { origin, hash, pathname, href } = window.location;
 
-    document.querySelectorAll('.navigation a').forEach((link) => {
-        const linkUrl = new URL(link.href, origin);
+    document.querySelectorAll('.header-nav__link, .mobile-nav__link').forEach((link) => {
+        const linkElement = link as HTMLAnchorElement;
+        const linkUrl = new URL(linkElement.href, origin);
         const isLinkHomePage = linkUrl.pathname === "/" && linkUrl.hash === "";
         const isLinkAboutUs = linkUrl.pathname === "/" && linkUrl.hash === "#o-nas";
         let isActive = false;
@@ -17,7 +18,12 @@ const updateActiveLinks = () => {
             isActive = pathname === "/" && hash === "#o-nas";
         }
 
-        link.closest('li')?.classList.toggle('link--active', isActive);
+        // Apply correct BEM modifier depending on which menu it is
+        if (linkElement.classList.contains('header-nav__link')) {
+            linkElement.closest('li')?.classList.toggle('header-nav__item--active', isActive);
+        } else if (linkElement.classList.contains('mobile-nav__link')) {
+            linkElement.closest('li')?.classList.toggle('mobile-nav__item--active', isActive);
+        }
     });
 };
 

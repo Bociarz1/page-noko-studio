@@ -14,17 +14,17 @@ import Instagram from '@assets/icons/icon-instagram.svg';
   import './HeaderMenu.ts';
 </script>
 
-<nav class="navigation">
-  <div class="navigation__logo-and-social">
-    <a class="logo" href="/">
-      <span class="noko">NOKO</span>
-      <span class="studio">STUDIO</span>
+<nav class="header">
+  <div class="header__container">
+    <a class="header__logo" href="/">
+      <span class="header__logo-text">NOKO</span>
+      <span class="header__logo-text header__logo-text--bold">STUDIO</span>
     </a>
-    <div class="socials">
-      <a href={NavLinks.FACEBOOK} target="_blank" aria-label="Facebook">
+    <div class="header__socials">
+      <a class="header__social-link" href={NavLinks.FACEBOOK} target="_blank" aria-label="Facebook">
         <Facebook width="20" height="20" color="gray" aria-hidden="true" />
       </a>
-      <a href={NavLinks.INSTAGRAM} target="_blank" aria-label="Instagram">
+      <a class="header__social-link" href={NavLinks.INSTAGRAM} target="_blank" aria-label="Instagram">
         <Instagram width="20" height="20" color="gray" aria-hidden="true" />
       </a>
     </div>

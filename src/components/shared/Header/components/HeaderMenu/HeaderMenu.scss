@@ -1,10 +1,30 @@
 @use '@styles/_breakpoints.scss' as *;
 
-.header-menu-desktop {
-  @include hide-on(mobile);
-  height: 100%;
-  width: 380px;
-  display: flex;
+.header-nav {
+  display: none;
+  gap: 2.5rem;
   align-items: center;
-  gap: 30px;
+
+  @include mq('tablet') {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 1.4rem;
+
+    &--active {
+      padding-bottom: 0.6rem;
+      border-bottom: 0.2rem solid var(--color-dark);
+      font-weight: 500;
+    }
+  }
+
+  &__link {
+    color: var(--color-gray);
+
+    &:hover {
+      color: var(--color-dark);
+      transition: 0.3s;
+    }
+  }
 }

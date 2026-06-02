@@ -14,59 +14,59 @@ import Instagram from '@assets/icons/icon-instagram.svg';
 
 <footer class="footer">
   <div class="footer__content">
-    <section class="main">
-      <p class="logo">
-        <span class="noko">NOKO</span>
-        <span class="studio">STUDIO</span>
+    <section class="footer__brand">
+      <p class="footer__logo">
+        <span class="footer__logo-text">NOKO</span>
+        <span class="footer__logo-text footer__logo-text--bold">STUDIO</span>
       </p>
-      <p class="description">Projektowanie wnętrz z pasją i dbałością o każdy detal</p>
+      <p class="footer__description">Projektowanie wnętrz z pasją i dbałością o każdy detal</p>
     </section>
-    <section class="menu">
-      <p class="title">Menu</p>
-      <ul>
+    <section class="footer__nav">
+      <p class="footer__title">Menu</p>
+      <ul class="footer__nav-list">
         {
           NAV_ELEMENTS.map((element) => (
-            <li>
-              <a href={element.href}>{element.label}</a>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link" href={element.href}>{element.label}</a>
             </li>
           ))
         }
       </ul>
     </section>
-    <section class="contact">
-      <p class="title">Kontakt</p>
-      <address class="contact-details">
-        <div class="email">
+    <section class="footer__contact">
+      <p class="footer__title">Kontakt</p>
+      <address class="footer__contact-details">
+        <div class="footer__contact-row">
           <Mail width={16} height={16} />
           {COMPANY.email}
         </div>
-        <div class="phone">
+        <div class="footer__contact-row">
           <PhoneInTalk width={16} height={16} />
           {COMPANY.phones.aleksandra.name} {COMPANY.phones.aleksandra.formatted}
         </div>
-        <div class="phone">
+        <div class="footer__contact-row">
           <PhoneInTalk width={16} height={16} />
           {COMPANY.phones.paulina.name} {COMPANY.phones.paulina.formatted}
         </div>
-        <div class="address">
+        <div class="footer__contact-row">
           <LocationOn width={20} height={20} />
           {COMPANY.address.fullMap}
         </div>
       </address>
-      <div class="socials">
-        <a href={NavLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <Instagram width={20} height={20} aria-hidden="true" />
+      <div class="footer__socials">
+        <a class="footer__social-link" href={NavLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <Instagram class="footer__social-icon" width={20} height={20} aria-hidden="true" />
           Instagram
         </a>
-        <a href={NavLinks.FACEBOOK} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <Facebook width={20} height={20} aria-hidden="true" />
+        <a class="footer__social-link" href={NavLinks.FACEBOOK} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <Facebook class="footer__social-icon" width={20} height={20} aria-hidden="true" />
           Facebook
         </a>
       </div>
     </section>
-    <section class="working-hours">
-      <p class="title">Godziny pracy</p>
-      <div class="working-hours-details">
+    <section class="footer__working-hours">
+      <p class="footer__title">Godziny pracy</p>
+      <div class="footer__working-hours-details">
         <p>Pon - Pt: 9:00 - 17:00</p>
         <p>Sob - Nd: Zamknięte</p>
       </div>
@@ -74,10 +74,10 @@ import Instagram from '@assets/icons/icon-instagram.svg';
   </div>
   <div class="footer__copyright">
     <span>© 2026 NOKO STUDIO. Wszystkie prawa zastrzeżone.</span>
-    <div class="legal-links">
-      <a href={NavLinks.PRIVACY_POLICY}>Polityka prywatności</a>
-      <span class="separator">|</span>
-      <a href={NavLinks.TERMS_OF_SERVICE}>Regulamin</a>
+    <div class="footer__legal-links">
+      <a class="footer__legal-link" href={NavLinks.PRIVACY_POLICY}>Polityka prywatności</a>
+      <span class="footer__separator">|</span>
+      <a class="footer__legal-link" href={NavLinks.TERMS_OF_SERVICE}>Regulamin</a>
     </div>
   </div>
 </footer>

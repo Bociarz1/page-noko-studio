@@ -1,75 +1,59 @@
 
-.navigation {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   z-index: var(--z-header);
   border-bottom: 1px solid var(--color-transparent);
-
   height: var(--header-height);
   width: 100%;
   padding: 2rem 2.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background-color: var(--color-white);
 
-  .logo {
+  &__container {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__logo {
     font-size: 1.6rem;
     letter-spacing: 0.3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
     color: var(--color-dark);
+    display: flex;
+    gap: 0.2rem;
 
     &:hover {
       transform: scale(1.1);
     }
+  }
 
-    .noko {
-      font-weight: 300;
-    }
+  &__logo-text {
+    font-weight: 300;
 
-    .studio {
+    &--bold {
       font-weight: 500;
     }
   }
 
-  &__logo-and-social {
+  &__socials {
     display: flex;
-    gap: 1.5rem;
-
-    .socials {
-      display: flex;
-      gap: 1rem;
-      cursor: pointer;
-
-      svg {
-        transition: 0.3s ease;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-}
-
-li {
-  font-size: 1.4rem;
-
-  &.link--active {
-    padding-bottom: 0.6rem;
-    border-bottom: 0.2rem solid var(--color-dark);
-    font-weight: 500;
+    gap: 1rem;
+    align-items: center;
   }
 
-  a {
-    color: var(--color-gray);
+  &__social-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
     &:hover {
-      color: var(--color-dark);
-      transition: 0.3s;
+      transform: scale(1.1);
     }
   }
 }

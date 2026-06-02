@@ -8,15 +8,14 @@ const { navElements = [] } = Astro.props;
 ---
 
 <style lang="scss">
-  @use '@components/shared/Header/Header.scss';
   @use './HeaderMenu.scss';
 </style>
 
-<ul class="header-menu-desktop">
+<ul class="header-nav">
   {
     navElements.map((element) => (
-      <li class={element?.isPathActive ? 'link--active' : ''}>
-        <a href={element.href}>{element.label}</a>
+      <li class={`header-nav__item ${element?.isPathActive ? 'header-nav__item--active' : ''}`}>
+        <a class="header-nav__link" href={element.href}>{element.label}</a>
       </li>
     ))
   }
