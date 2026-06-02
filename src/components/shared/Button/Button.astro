@@ -1,18 +1,43 @@
 ---
+import UiButton from '@libs/ui/shared/UiButton/UiButton.astro';
+import styles from './Button.module.scss';
+
+export enum ButtonVariant {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+}
+
 interface Props {
   href: string;
   title: string;
-  variant?: 'primary' | 'secondary';
+  variant?: ButtonVariant;
   dark?: boolean;
+  class?: string;
 }
 
-const { href, title, variant = 'primary', dark = false } = Astro.props;
+const {
+  href,
+  title,
+  variant = ButtonVariant.PRIMARY,
+  dark = false,
+  class: className = '',
+} = Astro.props;
+
+const variantClasses = {
+  [ButtonVariant.PRIMARY]: styles.primary,
+  [ButtonVariant.SECONDARY]: styles.secondary,
+};
+
+const finalClass =
+  `${styles.base} ${variantClasses[variant]} ${dark ? styles.dark : ''} ${className}`.trim();
 ---
 
-<style lang="scss">
-  @use './Button.scss';
-</style>
-
-<a href={href} class={`btn btn--${variant} ${dark ? 'btn--dark' : ''}`}>
-  {title} {variant === 'primary' && <span aria-hidden="true">→</span>}
-</a>
+<UiButton href={href} title={title} class={finalClass}>
+  {
+    variant === ButtonVariant.PRIMARY && (
+      <span slot="afterIcon" aria-hidden="true">
+        →
+      </span>
+    )
+  }
+</UiButton>

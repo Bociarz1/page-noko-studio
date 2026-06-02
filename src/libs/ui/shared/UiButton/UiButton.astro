@@ -1,0 +1,19 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  class?: string;
+}
+
+const { href, title, class: className = '' } = Astro.props;
+---
+
+<style lang="scss">
+  @use './UiButton.scss';
+</style>
+
+<a href={href} class={`ui-btn ${className}`}>
+  <slot name="beforeIcon" />
+  {title}
+  <slot name="afterIcon" />
+</a>
