@@ -1,4 +1,5 @@
 ---
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { NavLinks, SectionIds } from '@constants/navLinks';
 ---
 <style lang="scss">
@@ -7,9 +8,14 @@ import { NavLinks, SectionIds } from '@constants/navLinks';
 
 <section id={SectionIds[NavLinks.HOME].reviews} class="reviews">
   <div class="reviews__container">
-    <h2 class="page-pretitle">CO MÓWIĄ O NAS INWESTORZY? TWÓJ POLECANY PROJEKTANT WNĘTRZ Z BIAŁEGOSTOKU</h2>
-    <p class="reviews__title section-title">Opinie naszych klientów</p>
-    
+    <SectionHeader
+      pretitle="CO MÓWIĄ O NAS INWESTORZY? TWÓJ POLECANY PROJEKTANT WNĘTRZ Z BIAŁEGOSTOKU"
+      pretitleAs="h2"
+      title="Opinie naszych klientów"
+      titleAs="p"
+      alignment="center"
+      class="reviews__header"
+    />
     <div class="reviews__widget" id="reviews-widget-container">
     </div>
   </div>

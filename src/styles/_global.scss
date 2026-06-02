@@ -1,5 +1,8 @@
 @use '@styles/_breakpoints.scss' as *;
 @use '@styles/_typography.scss' as *;
+@use '@styles/_colors.scss';
+@use '@styles/_variables.scss';
+@use '@styles/_z-indexes.scss';
 
 html,
 body {
@@ -21,24 +24,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-.page-pretitle {
-  letter-spacing: .4rem;
-  font-weight: var(--font-medium);
-  font-size: var(--text-body-lg);
-  line-height: 1.625;
-  text-transform: uppercase;
-}
-
-.section-title {
-  font-size: var(--text-h1);
-  font-weight: var(--font-semibold);
-  line-height: 1.1;
-  letter-spacing: -0.025em;
-}
-
-.section-description {
-  font-size: var(--text-body-lg);
-  line-height: 1.625;
 }

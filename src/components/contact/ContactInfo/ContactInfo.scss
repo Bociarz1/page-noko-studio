@@ -1,18 +1,19 @@
-@use '@styles/_colors.scss' as *;
 @use '@styles/_breakpoints.scss' as *;
 
 .contact-info {
-  color: $color-cream;
+  color: var(--color-cream);
 
   &__eyebrow {
-    color: $color-gray;
+    color: var(--color-gray);
     margin-bottom: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
   }
 
   &__studio-name {
     font-size: 3.2rem;
     font-weight: 600;
-    color: $color-dark;
+    color: var(--color-dark);
     line-height: 1.1;
     margin-bottom: 0.8rem;
 
@@ -23,7 +24,7 @@
 
   &__studio-sub {
     font-size: 1.4rem;
-    color: $color-gray;
+    color: var(--color-gray);
   }
 
   &__list {
@@ -37,7 +38,7 @@
     display: flex;
     align-items: flex-start;
     gap: 1.6rem;
-    color: $color-dark;
+    color: var(--color-dark);
   }
 
   &__icon {
@@ -45,7 +46,7 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background-color: $color-dark;
+    background-color: var(--color-dark);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,16 +66,16 @@
     text-decoration: none;
     line-height: 1.6;
     transition: color 0.2s ease;
-    color: $color-dark;
+    color: var(--color-dark);
 
     &:hover {
-      color: $color-cream-muted;
+      color: var(--color-cream-muted);
     }
   }
 
   &__item-sub {
     font-size: 1.4rem;
-    color: $color-cream-muted;
+    color: var(--color-cream-muted);
     margin-top: 0.4rem;
   }
 }

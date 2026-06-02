@@ -1,5 +1,6 @@
 ---
 import PortfolioItem from "@components/shared/PortfolioItem/PortfolioItem.astro";
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { projects as allProjects } from "@data/projects";
 import { NavLinks, SectionIds } from "@constants/navLinks";
 
@@ -13,16 +14,14 @@ const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
 <section id={SectionIds[NavLinks.HOME].portfolio} class="portfolio">
   <div class="portfolio__container">
     <div class="portfolio__header">
-      <div class="portfolio__header-text">
-        <p class="label-eyebrow portfolio__eyebrow page-pretitle">ZOBACZ PORTFOLIO NASZEGO BIURA PROJEKTOWEGO</p>
-        <h2 class="portfolio__title section-title">
-          Zaprojektowane z pasją, dopracowane w każdym detalu
-        </h2>
-        <p class="portfolio__description section-description">
-          Projekty domów i apartamentów, w których łączymy funkcjonalność
-          z dopracowaną estetyką.
-        </p>
-      </div>
+      <SectionHeader 
+        pretitle="ZOBACZ PORTFOLIO NASZEGO BIURA PROJEKTOWEGO"
+        pretitleAs="p"
+        title="Zaprojektowane z pasją, dopracowane w każdym detalu"
+        titleAs="h2"
+        description="Projekty domów i apartamentów, w których łączymy funkcjonalność z dopracowaną estetyką."
+        class="portfolio__header-text"
+      />
       <a href={NavLinks.PORTFOLIO} class="portfolio__link">
         Zobacz wszystkie <span aria-hidden>→</span>
       </a>

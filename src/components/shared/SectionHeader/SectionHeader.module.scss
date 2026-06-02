@@ -1,0 +1,27 @@
+
+.wrapper {
+  gap: 1.6rem; // Stały, bezpieczny odstęp między elementami nagłówka w tym projekcie
+}
+
+.pretitle {
+  color: var(--section-pretitle-color, var(--color-gray));
+  letter-spacing: 0.4rem;
+  font-weight: var(--font-medium);
+  font-size: var(--text-body-lg);
+  line-height: 1.625;
+  text-transform: uppercase;
+}
+
+.title {
+  color: var(--section-title-color, var(--color-dark));
+  font-size: var(--text-h1);
+  font-weight: var(--font-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.description {
+  color: var(--section-desc-color, var(--color-gray));
+  font-size: var(--text-body-lg);
+  line-height: 1.625;
+}

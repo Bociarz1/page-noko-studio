@@ -1,11 +1,9 @@
 @use '@styles/_breakpoints.scss' as *;
-@use '@styles/_colors.scss' as *;
-@use '@styles/_z-indexes.scss' as *;
 
 .lightbox {
   position: fixed;
   inset: 0;
-  z-index: $z-modal;
+  z-index: var(--z-modal);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,7 +26,7 @@
 
   &__container {
     position: relative;
-    z-index: 1;
+    z-index: var(--z-default);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +52,7 @@
   &__counter {
     font-size: 1.3rem;
     font-weight: 500;
-    color: $color-cream-muted;
+    color: var(--color-cream-muted);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
@@ -65,10 +63,10 @@
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    border: 1px solid $color-hairline;
+    border: 1px solid var(--color-hairline);
     border-radius: 50%;
     background: transparent;
-    color: $color-white;
+    color: var(--color-white);
     cursor: pointer;
     transition: background 200ms ease, border-color 200ms ease;
 
@@ -125,16 +123,16 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
+    z-index: var(--z-elevated);
     display: flex;
     align-items: center;
     justify-content: center;
     width: 4.8rem;
     height: 4.8rem;
     border-radius: 50%;
-    border: 1px solid $color-hairline;
+    border: 1px solid var(--color-hairline);
     background: oklch(6% 0 0 / 0.6);
-    color: $color-white;
+    color: var(--color-white);
     cursor: pointer;
     transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
     backdrop-filter: blur(4px);
@@ -181,14 +179,14 @@
     width: 0.6rem;
     height: 0.6rem;
     border-radius: 50%;
-    background: $color-cream-muted;
+    background: var(--color-cream-muted);
     border: none;
     cursor: pointer;
     padding: 0;
     transition: background 200ms ease, transform 200ms ease;
 
     &--active {
-      background: $color-white;
+      background: var(--color-white);
       transform: scale(1.4);
     }
 

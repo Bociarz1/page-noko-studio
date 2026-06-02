@@ -1,0 +1,19 @@
+.ui-section-header {
+  display: flex;
+  flex-direction: column;
+
+  &.align-left {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  &.align-center {
+    text-align: center;
+    align-items: center;
+  }
+
+  &.align-right {
+    text-align: right;
+    align-items: flex-end;
+  }
+}

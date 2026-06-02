@@ -1,0 +1,34 @@
+---
+import UiSectionHeader from '@libs/ui/shared/UiSectionHeader/UiSectionHeader.astro';
+import styles from './SectionHeader.module.scss';
+
+interface Props {
+  pretitle?: string;
+  title?: string;
+  description?: string;
+  pretitleAs?: 'h1' | 'h2' | 'h3' | 'p' | 'span';
+  titleAs?: 'h1' | 'h2' | 'h3' | 'p';
+  descriptionAs?: 'p' | 'div' | 'span';
+  alignment?: 'left' | 'center' | 'right';
+  class?: string;
+}
+
+const { 
+  pretitle, 
+  title, 
+  description, 
+  pretitleAs: PretitleTag = 'p',
+  titleAs: TitleTag = 'h2', 
+  descriptionAs: DescriptionTag = 'p',
+  alignment = 'left', 
+  class: className = '' 
+} = Astro.props;
+
+const finalClass = `${styles.wrapper} ${className}`.trim();
+---
+
+<UiSectionHeader class={finalClass} alignment={alignment}>
+  {pretitle && <PretitleTag slot="pretitle" class={styles.pretitle}>{pretitle}</PretitleTag>}
+  {title && <TitleTag slot="title" class={styles.title}>{title}</TitleTag>}
+  {description && <DescriptionTag slot="description" class={styles.description}>{description}</DescriptionTag>}
+</UiSectionHeader>

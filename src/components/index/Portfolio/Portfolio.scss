@@ -1,5 +1,4 @@
 @use '@styles/_breakpoints.scss' as *;
-@use '@styles/_colors.scss' as *;
 
 .portfolio {
   padding: 6rem 1.5rem;
@@ -24,25 +23,8 @@
     @include mq('tablet') {}
   }
 
-  &__eyebrow {
-    color: $color-gray;
-  }
-
-  &__title {
-    margin-top: 1rem;
-
-
-    @include mq('tablet') {
-      font-size: 3rem;
-    }
-  }
-
-  &__description {
-    margin-top: 1.25rem;
+  &__header-text {
     max-width: 42rem;
-    color: $color-gray;
-
-    @include mq('tablet') {}
   }
 
   &__link {
@@ -52,7 +34,7 @@
     font-size: 1.4rem;
     font-weight: 500;
     text-underline-offset: 4px;
-    color: $color-dark;
+    color: var(--color-dark);
 
     &:hover {
       text-decoration: underline;

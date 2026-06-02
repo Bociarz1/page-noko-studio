@@ -4,6 +4,7 @@ import Star from '@assets/icons/icon-star.svg';
 import Diamond from '@assets/icons/icon-diamond.svg';
 import Crown from '@assets/icons/icon-crown.svg';
 import Button from '@components/shared/Button/Button.astro';
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { NavLinks } from '@constants/navLinks';
 import { SectionIds } from '@constants/navLinks';
 
@@ -71,8 +72,13 @@ const services = [
 </style>
 
 <section id={SectionIds[NavLinks.OFFER].offerCards} class="offer-cards">
-  <h2 class="offer-cards__pretitle page-pretitle">Poznaj zakres usług, jakie przygotowała nasza pracownia architektoniczna</h2>
-  <p class="offer-cards__pretitle-desc section-title">Wybierz pakiet dopasowany do twoich potrzeb</p>
+  <SectionHeader 
+    pretitle="Poznaj zakres usług, jakie przygotowała nasza pracownia architektoniczna"
+    pretitleAs="h2"
+    title="Wybierz pakiet dopasowany do twoich potrzeb"
+    titleAs="p"
+    class="offer-cards__header"
+  />
   <div class="offer-cards__container">
     {services.map(({ title, desc, items, icon: Icon, isBestseller }) => (
       <article class="offer-card">

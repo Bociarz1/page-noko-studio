@@ -1,10 +1,12 @@
 @use '@styles/_breakpoints.scss' as *;
-@use '@styles/_colors.scss' as *;
-@use '@styles/_variables.scss' as *;
 
 .hero {
+  --section-pretitle-color: rgba(255, 255, 255, 0.85);
+  --section-title-color: #{var(--color-white)};
+  --section-desc-color: rgba(255, 255, 255, 0.85);
+
   position: relative;
-  min-height: var(--hero-height, calc(100dvh - #{$header-height}));
+  min-height: var(--hero-height, calc(100dvh - #{var(--header-height)}));
   width: 100%;
   overflow: hidden;
 
@@ -24,10 +26,10 @@
 
   &__content {
     position: relative;
-    z-index: 10;
-    margin: 0 auto;
+    z-index: var(--z-elevated);
+    margin: 2rem auto;
     display: flex;
-    min-height: var(--hero-height, calc(100dvh - #{$header-height}));
+    min-height: var(--hero-height, calc(100dvh - #{var(--header-height)}));
     max-width: 1600px;
     flex-direction: column;
     align-items: center;
@@ -36,27 +38,13 @@
     text-align: center;
   }
 
-  &__pretitle {
+  &__header {
     margin-top: 6.4rem;
-    color: rgba(255, 255, 255, 0.85);
-  }
 
-  &__title {
-    color: $color-white;
+    // Magia CSS - nadpisujemy zmienną H1 lokalnie, dzięki czemu nagłówek staje się gigantyczny (Display)
+    --text-h1: var(--text-display);
 
-    @include mq('tablet') {
-      font-size: 7.2rem;
-    }
-
-    @include mq('desktop') {
-      font-size: 8rem;
-    }
-  }
-
-  &__desc {
-    margin-top: 3.2rem;
     max-width: 57.6rem;
-    color: rgba(255, 255, 255, 0.85);
   }
 
   &__actions {

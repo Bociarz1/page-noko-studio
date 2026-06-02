@@ -1,5 +1,7 @@
 ---
 import { NavLinks, SectionIds } from '@constants/navLinks';
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
+
 interface FaqItem {
   q: string;
   a: string;
@@ -22,10 +24,12 @@ const { faq = [] } = Astro.props;
 
 <section id={SectionIds[NavLinks.OFFER].faq} class="faq">
   <div class="faq__container">
-    <div class="faq__header">
-      <p class="page-pretitle">FAQ</p>
-      <h2 class="section-title faq__title">Najczęściej zadawane pytania</h2>
-    </div>
+    <SectionHeader 
+      pretitle="FAQ" 
+      title="Najczęściej zadawane pytania" 
+      alignment="center"
+      class="faq__header"
+    />
     <div class="faq__accordion">
       {(faq).map(({ q, a }, i) => (
         <div class="faq__item" data-accordion-item>

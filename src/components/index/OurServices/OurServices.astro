@@ -6,6 +6,7 @@ import Docs from '@assets/icons/icon-docs.svg';
 import SupportAgent from '@assets/icons/icon-support-agent.svg';
 import Home from '@assets/icons/icon-home.svg';
 import Button from '@components/shared/Button/Button.astro';
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { NavLinks, SectionIds } from '@constants/navLinks';
 ---
 
@@ -15,14 +16,13 @@ import { NavLinks, SectionIds } from '@constants/navLinks';
 
 <section id={SectionIds[NavLinks.HOME].ourServices} class="our-services">
   <div class="our-services__container">
-    <div class="our-services__header">
-      <h2 class="our-services__pretitle page-pretitle">
-        Kompleksowe projektowanie wnętrz w białymstoku i na terenie całej polski: od pomysłu po realizację
-      </h2>
-      <p class="our-services__title section-title">
-        Gwarantujemy realizację projektu na najwyższym poziomie
-      </p>
-    </div>
+    <SectionHeader
+      pretitle="Kompleksowe projektowanie wnętrz w białymstoku i na terenie całej polski: od pomysłu po realizację"
+      pretitleAs="h2"
+      title="Gwarantujemy realizację projektu na najwyższym poziomie"
+      titleAs="p"
+      alignment="center"
+    />
 
     <div class="our-services__features">
       <div class="feature">

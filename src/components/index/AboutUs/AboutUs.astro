@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import Owners from "@assets/images/noko-studio-wlascicielki-sesja-wizerunkowa.webp";
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { NavLinks, SectionIds } from "@constants/navLinks";
 ---
 
@@ -11,21 +12,23 @@ import { NavLinks, SectionIds } from "@constants/navLinks";
 <section id={SectionIds[NavLinks.HOME].aboutUs} class="about-us">
   <div class="about-us__container">
     <div class="about-us__content">
-      <h2 class="about-us__pretitle page-pretitle">Architekt wnętrz, którego szukasz</h2>
-      <p class="about-us__title section-title">
-        Poznaj nasz zespół
-      </p>
+      <SectionHeader 
+        pretitle="Architekt wnętrz, którego szukasz"
+        pretitleAs="h2"
+        title="Poznaj nasz zespół"
+        titleAs="p"
+        class="about-us__header"
+      />
       <p class="about-us__desc-pretitle">
         ALEKSANDRA I PAULINA
       </p>
-      <p class="about-us__desc section-description">
+      <p class="about-us__desc text-body-lg" style="line-height: 1.625;">
         Nazywamy się Aleksandra i Paulina. Tworzymy duet, który dba o to, by świetny wygląd wnętrza szedł w parze z rzetelną dokumentacją. Nasza wspólna droga zaczęła się na Politechnice Białostockiej, gdzie szybko zrozumiałyśmy, że w projektowaniu cenimy to samo: brak kompromisów między formą a użytecznością.Każda z nas wnosi do projektu coś innego. Jedna pilnuje milimetrowej precyzji w dokumentacji wykonawczej, druga bezbłędnie optymalizuje układ funkcjonalny. Wspólnie tworzymy przestrzenie, które są logiczne, dopracowane i skrojone dokładnie pod Twój styl życia.
-
       </p>
             <p class="about-us__desc-pretitle">
         JAK PRACUJEMY ?
       </p>
-      <p class="about-us__desc section-description">
+      <p class="about-us__desc text-body-lg" style="line-height: 1.625;">
         Nie tracimy czasu na rozwiązania, które nie sprawdzą się w codziennym użytkowaniu. Dbamy o to, by estetyka wynikała wprost z funkcjonalności. Wierzymy, że najlepszy design to ten, którego nie musisz poprawiać po wprowadzeniu się.Działamy tam, gdzie nas potrzebujesz – stacjonarnie na terenie Białegostoku i województwa podlaskiego oraz w pełni zdalnie w każdym innym zakątku Polski.
 
       </p>

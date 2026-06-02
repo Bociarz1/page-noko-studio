@@ -1,8 +1,11 @@
 @use '@styles/_breakpoints.scss' as *;
-@use '@styles/_colors.scss' as *;
 
 .about-us {
-  background-color: $color-dark-blue;
+  --section-pretitle-color: rgba(255, 255, 255, 0.85);
+  --section-title-color: #{var(--color-white)};
+  --section-desc-color: rgba(255, 255, 255, 0.85);
+
+  background-color: var(--color-dark-blue);
   padding: 9.6rem 2.4rem;
 
   @include mq('tablet') {
@@ -23,24 +26,24 @@
     }
   }
 
-  &__content {
-    color: $color-white;
+  &__header {
+    margin-bottom: 4.8rem;
   }
 
-  &__title {}
+  &__content {
+    color: var(--color-white);
+  }
 
   &__desc {
     margin-top: 1rem;
     max-width: 44ch;
     color: rgba(255, 255, 255, 0.85);
   }
-
   &__desc-pretitle {
     margin-top: 2.4rem;
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: .4rem;
-
   }
 
   &__link {
@@ -50,7 +53,7 @@
     gap: 0.8rem;
     font-size: 1.4rem;
     font-weight: 500;
-    color: $color-white;
+    color: var(--color-white);
     text-underline-offset: 4px;
     text-decoration: none;
 

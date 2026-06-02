@@ -1,26 +1,28 @@
-// Used for elements that must be behind the main content flow.
-// E.g., background decorative shapes, parallax layers, or "under-canvas" patterns.
-$z-below: -1;
+:root {
+  // Used for elements that must be behind the main content flow.
+  // E.g., background decorative shapes, parallax layers, or "under-canvas" patterns.
+  --z-below: -1;
 
-// The standard stacking level for all normal elements.
-// Use this as a baseline to reset or explicitly define the main content area.
-$z-default: 1;
+  // The standard stacking level for all normal elements.
+  // Use this as a baseline to reset or explicitly define the main content area.
+  --z-default: 1;
 
-// Elements that need to pop out slightly, like active cards or hover states.
-$z-elevated: 10;
+  // Elements that need to pop out slightly, like active cards or hover states.
+  --z-elevated: 10;
 
-// Menus, custom select dropdowns, or small contextual popups.
-$z-dropdown: 20;
+  // Menus, custom select dropdowns, or small contextual popups.
+  --z-dropdown: 20;
 
-// Global site header or navigation bars. Often used with position: sticky.
-$z-header: 40;
+  // Global site header or navigation bars. Often used with position: sticky.
+  --z-header: 40;
 
-// Full-screen dimming layers (backdrops) that appear behind modals.
-$z-overlay: 80;
+  // Full-screen dimming layers (backdrops) that appear behind modals.
+  --z-overlay: 80;
 
-// High-level UI components like popups, alerts, and dialog windows.
-$z-modal: 90;
+  // High-level UI components like popups, alerts, and dialog windows.
+  --z-modal: 90;
 
-// The absolute highest priority elements.
-// Tooltips, cookie banners, and critical system-wide notifications.
-$z-critical: 100;
+  // The absolute highest priority elements.
+  // Tooltips, cookie banners, and critical system-wide notifications.
+  --z-critical: 100;
+}

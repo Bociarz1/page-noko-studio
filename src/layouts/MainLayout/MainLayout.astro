@@ -13,16 +13,17 @@ interface Props {
   ogImage?: string;
 }
 
-const { 
-  title = '', 
-  metaDescription = '', 
+const {
+  title = '',
+  metaDescription = '',
   canonicalUrl = new URL(Astro.url.pathname, Astro.site || BASE_URL).href,
-  ogImage = new URL('/og-image.png', Astro.site || BASE_URL).href
+  ogImage = new URL('/og-image.png', Astro.site || BASE_URL).href,
 } = Astro.props;
 ---
 
 <style lang="scss" is:global>
   @use '@styles/_global.scss';
+  @use '@styles/_typography.scss';
 </style>
 <style lang="scss">
   @use './MainLayout.scss';
@@ -32,7 +33,10 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io; font-src 'self' data: https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io;" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io; font-src 'self' data: https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io;"
+    />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -41,7 +45,7 @@ const {
     <title>{title}</title>
     <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />

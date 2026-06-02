@@ -1,9 +1,7 @@
-@use '@styles/_colors.scss' as *;
 @use '@styles/_breakpoints.scss' as *;
-@use '@styles/_variables.scss' as *;
 
 .contact {
-  background-color: $color-light;
+  background-color: var(--color-light);
   padding: 8rem 2.4rem;
 
   @include mq('tablet') {
@@ -28,6 +26,6 @@
   }
 
   &__form-wrapper {
-    border: 1px solid $color-hairline;
+    border: 1px solid var(--color-hairline);
   }
 }

@@ -1,5 +1,4 @@
 @use '@styles/_breakpoints.scss' as *;
-@use '@styles/_colors.scss' as *;
 
 .portfolio-card {
   display: flex;
@@ -33,7 +32,7 @@
 
   &__meta {
     font-size: 1.2rem;
-    color: $color-gray;
+    color: var(--color-gray);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -43,14 +42,14 @@
     margin-top: 0.5rem;
     font-size: 2.4rem;
     font-weight: 600;
-    color: $color-dark;
+    color: var(--color-dark);
 
     @include mq('tablet') {}
   }
 
   &__details {
     margin-top: 0.25rem;
-    color: $color-gray;
+    color: var(--color-gray);
     font-size: 1.2rem;
   }
 

@@ -1,5 +1,3 @@
-@use 'sass:color';
-@use '@styles/_colors.scss' as *;
 @use '@styles/_breakpoints.scss' as *;
 
 .floating-phone {
@@ -8,14 +6,14 @@
   right: 2.4rem;
   width: 6.4rem;
   height: 6.4rem;
-  background-color: $color-green;
+  background-color: var(--color-green);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color-white;
+  color: var(--color-white);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
+  z-index: var(--z-critical);
   transition: transform 0.3s ease, background-color 0.3s ease;
   transform: translateY(calc(var(--cookie-height, 0px) * -1)) scale(var(--hover-scale, 1));
 
@@ -23,7 +21,7 @@
 
   &:hover {
     --hover-scale: 1.1;
-    background-color: color.adjust($color-green, $lightness: -5%);
+    background-color: color-mix(in srgb, var(--color-green), black 10%);
   }
 
   @include mq(tablet) {
