@@ -1,5 +1,5 @@
 ---
-import { NavLinks, SectionIds } from '@constants/navLinks';
+import { NavLinks, SectionIds } from 'src/consts/navLinks';
 import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 
 interface FaqItem {
@@ -24,26 +24,50 @@ const { faq = [] } = Astro.props;
 
 <section id={SectionIds[NavLinks.OFFER].faq} class="faq">
   <div class="faq__container">
-    <SectionHeader 
-      pretitle="FAQ" 
-      title="Najczęściej zadawane pytania" 
+    <SectionHeader
+      pretitle="FAQ"
+      title="Najczęściej zadawane pytania"
       alignment="center"
       class="faq__header"
     />
     <div class="faq__accordion">
-      {(faq).map(({ q, a }, i) => (
-        <div class="faq__item" data-accordion-item>
-          <button class="faq__trigger" aria-expanded="false" aria-controls={`faq-content-${i}`} id={`faq-trigger-${i}`}>
-            <span class="faq__question">{q}</span>
-            <span class="faq__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </span>
-          </button>
-          <div class="faq__content-wrapper" id={`faq-content-${i}`} role="region" aria-labelledby={`faq-trigger-${i}`}>
-            <div class="faq__content" set:html={a} />
+      {
+        faq.map(({ q, a }, i) => (
+          <div class="faq__item" data-accordion-item>
+            <button
+              class="faq__trigger"
+              aria-expanded="false"
+              aria-controls={`faq-content-${i}`}
+              id={`faq-trigger-${i}`}
+            >
+              <span class="faq__question">{q}</span>
+              <span class="faq__icon" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq__content-wrapper"
+              id={`faq-content-${i}`}
+              role="region"
+              aria-labelledby={`faq-trigger-${i}`}
+            >
+              <div class="faq__content" set:html={a} />
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>

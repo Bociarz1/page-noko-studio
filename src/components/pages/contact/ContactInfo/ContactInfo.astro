@@ -1,0 +1,62 @@
+---
+import { COMPANY } from 'src/consts/site';
+import LocationOn from '@assets/icons/icon-location-on.svg';
+import PhoneInTalk from '@assets/icons/icon-phone-in-talk.svg';
+import Mail from '@assets/icons/icon-mail.svg';
+import Home from '@assets/icons/icon-home.svg';
+---
+
+<style lang="scss">
+  @use './ContactInfo.scss';
+</style>
+
+<div class="contact-info">
+  <p class="text-body-lg font-medium contact-info__eyebrow">Pracownia</p>
+  <p class="contact-info__studio-name">NOKO Studio</p>
+  <p class="contact-info__studio-sub">Pracownia Architektury Wnętrz</p>
+
+  <ul class="contact-info__list">
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <Mail width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">E-mail</p>
+        <a href={`mailto:${COMPANY.email}`} class="contact-info__item-value">{COMPANY.email}</a>
+      </div>
+    </li>
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <PhoneInTalk width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">Telefon</p>
+        <a href={`tel:${COMPANY.phones.aleksandra.raw}`} class="contact-info__item-value"
+          >{COMPANY.phones.aleksandra.name} · {COMPANY.phones.aleksandra.formatted}</a
+        >
+        <a href={`tel:${COMPANY.phones.paulina.raw}`} class="contact-info__item-value"
+          >{COMPANY.phones.paulina.name} · {COMPANY.phones.paulina.formatted}</a
+        >
+      </div>
+    </li>
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <Home width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">Siedziba</p>
+        <p class="contact-info__item-value">{COMPANY.address.fullMap}</p>
+      </div>
+    </li>
+    <li class="contact-info__item">
+      <span class="contact-info__icon" aria-hidden="true">
+        <LocationOn width={16} height={16} />
+      </span>
+      <div>
+        <p class="contact-info__item-label">Obszar działania</p>
+        <p class="contact-info__item-value">Białystok i okolice</p>
+        <p class="contact-info__item-sub">zdalnie — cała Polska</p>
+      </div>
+    </li>
+  </ul>
+</div>

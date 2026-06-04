@@ -1,0 +1,1 @@
+export type TSectionIds<T extends string> = Partial<Record<T, any>>;

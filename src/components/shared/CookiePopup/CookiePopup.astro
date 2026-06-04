@@ -1,8 +1,7 @@
 ---
-import { NavLinks } from "@constants/navLinks";
-
-
+import { NavLinks } from 'src/consts/navLinks';
 ---
+
 <style lang="scss">
   @use './CookiePopup.scss';
 </style>
@@ -10,13 +9,12 @@ import { NavLinks } from "@constants/navLinks";
 <div class="cookie-popup" id="cookie-popup">
   <div class="cookie-popup__container">
     <p class="cookie-popup__text">
-      Nasza strona korzysta z plików cookies, aby zapewnić Ci najlepszą
-      jakość przeglądania oraz analizować ruch. Szczegóły znajdziesz w
-      naszej <a href={NavLinks.PRIVACY_POLICY}>Polityce Prywatności</a>.
+      Nasza strona korzysta z plików cookies, aby zapewnić Ci najlepszą jakość przeglądania oraz
+      analizować ruch. Szczegóły znajdziesz w naszej <a href={NavLinks.PRIVACY_POLICY}
+        >Polityce Prywatności</a
+      >.
     </p>
-    <button id="cookie-accept" class="cookie-popup__button">
-      Akceptuję
-    </button>
+    <button id="cookie-accept" class="cookie-popup__button"> Akceptuję </button>
   </div>
 </div>
 
@@ -52,11 +50,15 @@ import { NavLinks } from "@constants/navLinks";
         showPopup();
       }
 
-      acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookie-consent', 'accepted');
-        hidePopup();
-        //TODO: GA script
-      }, { passive: true });
+      acceptBtn.addEventListener(
+        'click',
+        () => {
+          localStorage.setItem('cookie-consent', 'accepted');
+          hidePopup();
+          //TODO: GA script
+        },
+        { passive: true }
+      );
     }
   };
 

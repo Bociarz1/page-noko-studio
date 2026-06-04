@@ -3,27 +3,30 @@ import Header from '@components/shared/Header/Header.astro';
 import Footer from '@components/shared/Footer/Footer.astro';
 import CookiePopup from '@components/shared/CookiePopup/CookiePopup.astro';
 import FloatingPhone from '@components/shared/FloatingPhone/FloatingPhone.astro';
+import SEO from '@libs/ui/components/SEO/SEO.astro';
 import '@fontsource-variable/montserrat';
-import { BASE_URL } from '@constants/site';
 
 interface Props {
   title: string;
   metaDescription: string;
   canonicalUrl?: string;
   ogImage?: string;
+  noindex?: boolean;
+  type?: 'website' | 'article' | 'profile';
 }
 
 const {
   title = '',
   metaDescription = '',
-  canonicalUrl = new URL(Astro.url.pathname, Astro.site || BASE_URL).href,
-  ogImage = new URL('/og-image.png', Astro.site || BASE_URL).href,
+  canonicalUrl,
+  ogImage,
+  noindex = false,
+  type = 'website',
 } = Astro.props;
 ---
 
 <style lang="scss" is:global>
   @use '@styles/_global.scss';
-  @use '@styles/_typography.scss';
 </style>
 <style lang="scss">
   @use './MainLayout.scss';
@@ -31,36 +34,16 @@ const {
 
 <html lang="pl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data: https: http:; style-src 'self' 'unsafe-inline' https://*.trustindex.io; font-src 'self' data: https://*.trustindex.io; script-src 'self' 'unsafe-inline' https://cdn.trustindex.io; connect-src 'self' https:; frame-src 'self' https://*.trustindex.io;"
+    <SEO 
+      title={title}
+      metaDescription={metaDescription}
+      canonicalUrl={canonicalUrl}
+      ogImage={ogImage}
+      siteName="NOKO Studio"
+      noindex={noindex}
+      type={type}
     />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <meta name="description" content={metaDescription} />
-    <link rel="canonical" href={canonicalUrl} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={metaDescription} />
-    <meta property="og:image" content={ogImage} />
-    <meta property="og:locale" content="pl_PL" />
-    <meta property="og:site_name" content="NOKO Studio" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalUrl} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={metaDescription} />
-    <meta property="twitter:image" content={ogImage} />
+    <slot name="head" />
   </head>
   <body>
     <Header />

@@ -1,4 +1,4 @@
-import { websiteSchema } from '@schemas/websiteSchema';
+import { buildGraph, buildService, buildFAQ } from '@libs/ui/schemas';
 import { organizationSchema } from '@schemas/organizationSchema';
 
 interface FaqItem {
@@ -7,40 +7,14 @@ interface FaqItem {
 }
 
 export function buildOfferSchema(faqItems: FaqItem[]) {
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        'name': 'Projektowanie Wnętrz - Konsultacje',
-        'provider': { '@id': organizationSchema['@id'] },
-      },
-      {
-        '@type': 'Service',
-        'name': 'Projektowanie Wnętrz - Pakiet Podstawowy',
-        'provider': { '@id': organizationSchema['@id'] },
-      },
-      {
-        '@type': 'Service',
-        'name': 'Projektowanie Wnętrz - Pakiet Standard',
-        'provider': { '@id': organizationSchema['@id'] },
-      },
-      {
-        '@type': 'Service',
-        'name': 'Projektowanie Wnętrz - Pakiet Premium',
-        'provider': { '@id': organizationSchema['@id'] },
-      },
-      {
-        '@type': 'FAQPage',
-        'mainEntity': faqItems.map((f) => ({
-          '@type': 'Question',
-          'name': f.q,
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': f.a,
-          },
-        })),
-      },
-    ],
-  };
+  const services = [
+    'Projektowanie Wnętrz - Konsultacje',
+    'Projektowanie Wnętrz - Pakiet Podstawowy',
+    'Projektowanie Wnętrz - Pakiet Standard',
+    'Projektowanie Wnętrz - Pakiet Premium',
+  ].map((name) => buildService({ name, providerId: organizationSchema['@id'] }));
+
+  const faqPage = buildFAQ(faqItems);
+
+  return buildGraph(...services, faqPage);
 }

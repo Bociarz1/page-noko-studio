@@ -1,27 +1,56 @@
-@use '@styles/_breakpoints.scss' as *;
-@use '@styles/_typography.scss' as *;
-@use '@styles/_colors.scss';
-@use '@styles/_variables.scss';
-@use '@styles/_z-indexes.scss';
+// 1. Narzędzia z biblioteki (Core)
+@use '@libs/ui/styles/_reset.scss';
+@use '@libs/ui/styles/_typography-utils.scss';
+@use '@libs/ui/styles/_z-indexes.scss'; // Domyślne z-indexy z biblioteki
 
+// 2. Mixiny z konfiguracji (dla ew. globalnych reguł w tym pliku)
+@use './config.scss' as *;
+
+// 3. Główny zbiór wszystkich tokenów (Theme & Variables) w jednym miejscu
+:root {
+  /* --- UKŁAD (Variables) --- */
+  --header-height: 74px;
+  --footer-height: 74px;
+
+  /* --- KOLORY --- */
+  --color-white: #fff;
+  --color-light: oklch(96% 0.005 240);
+  --color-dark: oklch(16% 0 0);
+  --color-gray: oklch(48% 0.005 240);
+  --color-light-gray: oklch(78% 0.005 240);
+  --color-dark-blue: #09131a;
+  --color-transparent: oklch(0.16 0 0 / 0.1);
+  --color-cream: #f5f5f5;
+  --color-cream-muted: #a3a3a3;
+  --color-ink: #000;
+  --color-surface: oklch(96% 0.005 240);
+  --color-dark-foreground: #fff;
+  --color-hairline: rgba(245, 245, 245, 0.1);
+  --color-green: #58a340;
+  --color-error: oklch(55% 0.19 27);
+
+  /* --- TYPOGRAFIA --- */
+  --text-display: clamp(4.8rem, 8vw, 8rem);
+  --text-h1: clamp(3.6rem, 5vw, 4.8rem);
+  --text-h2: clamp(2.4rem, 4vw, 3.2rem);
+  --text-h3: clamp(1.8rem, 3vw, 2.4rem);
+  --text-h4: clamp(1.6rem, 2vw, 1.8rem);
+  --text-body-lg: clamp(1.6rem, 1vw + 1rem, 1.8rem);
+  --text-body: 1.4rem;
+  --text-body-sm: 1.2rem;
+  --text-caption: 1rem;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  
+  /* Jeśli w danym projekcie chcesz nadpisać jakiś z-index, dodajesz go tutaj: */
+  /* --z-critical: 9999; */
+}
+
+// 4. Podstawowe style globalne
 html,
 body {
-  width: 100%;
-  height: 100%;
   font-family: "Montserrat Variable", "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  font-size: 10px;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }

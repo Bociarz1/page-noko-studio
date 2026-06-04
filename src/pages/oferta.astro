@@ -1,62 +1,63 @@
 ---
-import MainLayout from "@layouts/MainLayout/MainLayout.astro";
-import Hero from "@components/shared/Hero/Hero.astro";
-import OfferCards from "@components/offer/OfferCards/OfferCards.astro";
+import MainLayout from '@layouts/MainLayout/MainLayout.astro';
+import Hero from '@components/shared/Hero/Hero.astro';
+import OfferCards from '@components/pages/offer/OfferCards/OfferCards.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
-import FAQ from "@components/shared/FAQ/FAQ.astro";
-import { NavLinks, SectionIds } from '@constants/navLinks';
+import FAQ from '@components/shared/FAQ/FAQ.astro';
+import { NavLinks, SectionIds } from 'src/consts/navLinks';
 import { buildOfferSchema } from '@schemas/offerSchema';
 
 const metaData = {
-  title:"Oferta – Architekt Wnętrz Białystok | NOKO Studio", 
-  metaDescription:"Poznaj cennik i pakiety usług projektowych NOKO Studio: konsultacje, projekt koncepcyjny, standard i premium. Kompleksowa obsługa i nadzór autorski."
-}
+  title: 'Oferta – Architekt Wnętrz Białystok | NOKO Studio',
+  metaDescription:
+    'Poznaj cennik i pakiety usług projektowych NOKO Studio: konsultacje, projekt koncepcyjny, standard i premium. Kompleksowa obsługa i nadzór autorski.',
+};
 
 const heroProps = {
   preTitle: 'Architekt i projektant wnętrz: Poznaj naszą ofertę i pakiety usług',
   title: 'Sprawdź naszą ofertę i pakiety usług',
-  description: 'Oferujemy profesjonalną aranżację wnętrz – od układu funkcjonalnego i fotorealistycznych wizualizacji, aż po nadzór autorski.',
+  description:
+    'Oferujemy profesjonalną aranżację wnętrz – od układu funkcjonalnego i fotorealistycznych wizualizacji, aż po nadzór autorski.',
   image: {
     src: heroImg,
     alt: 'Wnętrze zaprojektowane przez NOKO Studio',
     sizes: '60vw',
   },
   height: 'auto',
-}
+};
 
 const faqProps = [
   {
-    q: "Od czego zależy cena projektu wnętrz?",
-    a: "Cena projektu wnętrz zależy przede wszystkim od metrażu nieruchomości oraz wybranego zakresu opracowania (np. projekt koncepcyjny vs kompleksowy). W przypadku mniejszych mieszkań koszt za m² bywa wyższy, ponieważ wymagają one większej liczby detali i precyzyjnego planowania zabudowy na wymiar. Każda wycena przygotowywana jest indywidualnie, aby dopasować stopień skomplikowania dokumentacji technicznej do potrzeb i budżetu klienta."
+    q: 'Od czego zależy cena projektu wnętrz?',
+    a: 'Cena projektu wnętrz zależy przede wszystkim od metrażu nieruchomości oraz wybranego zakresu opracowania (np. projekt koncepcyjny vs kompleksowy). W przypadku mniejszych mieszkań koszt za m² bywa wyższy, ponieważ wymagają one większej liczby detali i precyzyjnego planowania zabudowy na wymiar. Każda wycena przygotowywana jest indywidualnie, aby dopasować stopień skomplikowania dokumentacji technicznej do potrzeb i budżetu klienta.',
   },
   {
-    q: "Jak wygląda proces współpracy z architektem wnętrz?",
-    a: "Współpraca z architektem wnętrz to proces podzielony na konkretne kroki, które gwarantują spójny efekt i kontrolę nad budżetem:<br><br><strong>Analiza potrzeb:</strong> Zaczynamy od niezobowiązującego spotkania i określenia Twoich oczekiwań.<br><br><strong>Projekt koncepcyjny:</strong> Tworzymy ergonomiczne układy funkcjonalne oraz wizualizacje 3D, które obrazują styl wnętrza.<br><br><strong>Dokumentacja techniczna:</strong> Przygotowujemy precyzyjne rysunki dla wykonawców oraz szczegółową listę zakupową (zestawienie materiałów i wyposażenia).<br><br><strong>Realizacja i wsparcie:</strong> Oferujemy pomoc po zakończeniu projektu, a w ramach nadzoru autorskiego – profesjonalne wsparcie bezpośrednio na budowie."
+    q: 'Jak wygląda proces współpracy z architektem wnętrz?',
+    a: 'Współpraca z architektem wnętrz to proces podzielony na konkretne kroki, które gwarantują spójny efekt i kontrolę nad budżetem:<br><br><strong>Analiza potrzeb:</strong> Zaczynamy od niezobowiązującego spotkania i określenia Twoich oczekiwań.<br><br><strong>Projekt koncepcyjny:</strong> Tworzymy ergonomiczne układy funkcjonalne oraz wizualizacje 3D, które obrazują styl wnętrza.<br><br><strong>Dokumentacja techniczna:</strong> Przygotowujemy precyzyjne rysunki dla wykonawców oraz szczegółową listę zakupową (zestawienie materiałów i wyposażenia).<br><br><strong>Realizacja i wsparcie:</strong> Oferujemy pomoc po zakończeniu projektu, a w ramach nadzoru autorskiego – profesjonalne wsparcie bezpośrednio na budowie.',
   },
   {
-    q: "Ile trwa przygotowanie projektu wnętrza?",
-    a: "Czas realizacji projektu wnętrz zależy od jego zakresu i metrażu, jednak standardowo przyjmuje się następujące ramy czasowe:<br><br><strong>Projekt zmian deweloperskich:</strong> od 2 do 4 tygodni (najszybszy proces, skupiony na układzie ścian i instalacji).<br><br><strong>Projekt koncepcyjny:</strong> ok. 2 miesiące (obejmuje wizualizacje i stylistykę wnętrza).<br><br><strong>Projekt kompleksowy:</strong> zazwyczaj 3–4 miesiące (pełna dokumentacja techniczna, lista zakupowa i detale wykonawcze).<br><br><strong>Co wpływa na czas realizacji?</strong> Termin oddania gotowego projektu zależy przede wszystkim od metrażu nieruchomości, stopnia skomplikowania rozwiązań technicznych oraz tempa podejmowania decyzji przez klienta. Przy większych i bardziej wymagających inwestycjach czas ten może ulec wydłużeniu."
+    q: 'Ile trwa przygotowanie projektu wnętrza?',
+    a: 'Czas realizacji projektu wnętrz zależy od jego zakresu i metrażu, jednak standardowo przyjmuje się następujące ramy czasowe:<br><br><strong>Projekt zmian deweloperskich:</strong> od 2 do 4 tygodni (najszybszy proces, skupiony na układzie ścian i instalacji).<br><br><strong>Projekt koncepcyjny:</strong> ok. 2 miesiące (obejmuje wizualizacje i stylistykę wnętrza).<br><br><strong>Projekt kompleksowy:</strong> zazwyczaj 3–4 miesiące (pełna dokumentacja techniczna, lista zakupowa i detale wykonawcze).<br><br><strong>Co wpływa na czas realizacji?</strong> Termin oddania gotowego projektu zależy przede wszystkim od metrażu nieruchomości, stopnia skomplikowania rozwiązań technicznych oraz tempa podejmowania decyzji przez klienta. Przy większych i bardziej wymagających inwestycjach czas ten może ulec wydłużeniu.',
   },
   {
-    q: "Co zawiera pełna dokumentacja techniczna projektu?",
-    a: "Profesjonalna dokumentacja techniczna to kompletna „instrukcja obsługi” Twojego wnętrza dla ekip wykonawczych. W jej skład wchodzą:<br><br><strong>Rzuty wykonawcze:</strong> układy funkcjonalne, wyburzenia oraz nowe ścianki działowe i montaż drzwi.<br><br><strong>Projekty instalacji:</strong> schematy elektryczne (rozmieszczenie gniazd i włączników), instalacje wodno-kanalizacyjne oraz plany sufitów podwieszanych i oświetlenia.<br><br><strong>Detale wykończeniowe:</strong> precyzyjne układy podłóg oraz rzuty ścian z rozplanowaniem płytek (wraz z docinkami).<br><br><strong>Rysunki wykonawcze mebli:</strong> szczegółowe projekty zabudowy stolarskiej i mebli na wymiar (kuchnie, szafy, garderoby).<br><br><strong>Karty materiałowe:</strong> widoki wszystkich ścian z opisem kolorystyki, okładzin oraz zestawienie konkretnych materiałów wykończeniowych."
+    q: 'Co zawiera pełna dokumentacja techniczna projektu?',
+    a: 'Profesjonalna dokumentacja techniczna to kompletna „instrukcja obsługi” Twojego wnętrza dla ekip wykonawczych. W jej skład wchodzą:<br><br><strong>Rzuty wykonawcze:</strong> układy funkcjonalne, wyburzenia oraz nowe ścianki działowe i montaż drzwi.<br><br><strong>Projekty instalacji:</strong> schematy elektryczne (rozmieszczenie gniazd i włączników), instalacje wodno-kanalizacyjne oraz plany sufitów podwieszanych i oświetlenia.<br><br><strong>Detale wykończeniowe:</strong> precyzyjne układy podłóg oraz rzuty ścian z rozplanowaniem płytek (wraz z docinkami).<br><br><strong>Rysunki wykonawcze mebli:</strong> szczegółowe projekty zabudowy stolarskiej i mebli na wymiar (kuchnie, szafy, garderoby).<br><br><strong>Karty materiałowe:</strong> widoki wszystkich ścian z opisem kolorystyki, okładzin oraz zestawienie konkretnych materiałów wykończeniowych.',
   },
   {
-    q: "Czy projekt ułatwia pracę ekipie wykonawczej?",
-    a: "Tak, profesjonalny projekt to fundament sprawnego remontu. Pełna dokumentacja techniczna eliminuje ryzyko pomyłek i znacznie przyspiesza realizację inwestycji dzięki kilku kluczowym czynnikom:<br><br><strong>Jasna instrukcja wykonawcza:</strong> Fachowcy otrzymują precyzyjne rysunki, co wyklucza improwizację, domysły i konieczność ciągłych konsultacji telefonicznych z inwestorem.<br><br><strong>Oszczędność czasu i budżetu:</strong> Dokładne rozplanowanie instalacji i przyłączy pozwala uniknąć kosztownych poprawek oraz opóźnień na placu budowy.<br><br><strong>Mniej błędów i wyższa jakość:</strong> Dzięki schematom ułożenia płytek, rysunkom detali i opisom materiałów, efekt końcowy jest w 100% zgodny z wizualizacją.<br><br><strong>Efektywna komunikacja:</strong> Dokumentacja stanowi wspólny język dla architekta, klienta i wykonawcy, co gwarantuje płynny przebieg prac wykończeniowych."
+    q: 'Czy projekt ułatwia pracę ekipie wykonawczej?',
+    a: 'Tak, profesjonalny projekt to fundament sprawnego remontu. Pełna dokumentacja techniczna eliminuje ryzyko pomyłek i znacznie przyspiesza realizację inwestycji dzięki kilku kluczowym czynnikom:<br><br><strong>Jasna instrukcja wykonawcza:</strong> Fachowcy otrzymują precyzyjne rysunki, co wyklucza improwizację, domysły i konieczność ciągłych konsultacji telefonicznych z inwestorem.<br><br><strong>Oszczędność czasu i budżetu:</strong> Dokładne rozplanowanie instalacji i przyłączy pozwala uniknąć kosztownych poprawek oraz opóźnień na placu budowy.<br><br><strong>Mniej błędów i wyższa jakość:</strong> Dzięki schematom ułożenia płytek, rysunkom detali i opisom materiałów, efekt końcowy jest w 100% zgodny z wizualizacją.<br><br><strong>Efektywna komunikacja:</strong> Dokumentacja stanowi wspólny język dla architekta, klienta i wykonawcy, co gwarantuje płynny przebieg prac wykończeniowych.',
   },
   {
-    q: "Czy projektant pomaga trzymać się budżetu?",
-    a: "Tak. Profesjonalny projekt wnętrz powstaje zawsze w oparciu o Twoje możliwości finansowe. Architekt dba o to, aby wizja estetyczna była w pełni wykonalna pod względem technicznym i ekonomicznym:<br><br><strong>Projektowanie pod budżet:</strong> Inspiracje są tylko punktem wyjścia – finalne rozwiązania są dopasowane do ustalonego na początku kosztorysu.<br><br><strong>Rozsądne oszczędności:</strong> Dzięki doświadczeniu projektant podpowie Ci, na których elementach wyposażenia warto zainwestować w wyższą jakość, a gdzie można znaleźć tańsze, równie estetyczne zamienniki.<br><br><strong>Brak ukrytych kosztów:</strong> Dokładna lista zakupowa i wyliczenie ilości materiałów pozwalają uniknąć nadmiarowych zakupów i nieprzewidzianych wydatków podczas remontu.<br><br><strong>Realne wyceny:</strong> Współpraca z architektem to dostęp do sprawdzonych dostawców i wiedzy o aktualnych cenach rynkowych."
-  }
+    q: 'Czy projektant pomaga trzymać się budżetu?',
+    a: 'Tak. Profesjonalny projekt wnętrz powstaje zawsze w oparciu o Twoje możliwości finansowe. Architekt dba o to, aby wizja estetyczna była w pełni wykonalna pod względem technicznym i ekonomicznym:<br><br><strong>Projektowanie pod budżet:</strong> Inspiracje są tylko punktem wyjścia – finalne rozwiązania są dopasowane do ustalonego na początku kosztorysu.<br><br><strong>Rozsądne oszczędności:</strong> Dzięki doświadczeniu projektant podpowie Ci, na których elementach wyposażenia warto zainwestować w wyższą jakość, a gdzie można znaleźć tańsze, równie estetyczne zamienniki.<br><br><strong>Brak ukrytych kosztów:</strong> Dokładna lista zakupowa i wyliczenie ilości materiałów pozwalają uniknąć nadmiarowych zakupów i nieprzewidzianych wydatków podczas remontu.<br><br><strong>Realne wyceny:</strong> Współpraca z architektem to dostęp do sprawdzonych dostawców i wiedzy o aktualnych cenach rynkowych.',
+  },
 ];
 const schema = buildOfferSchema(faqProps);
 ---
 
 <MainLayout {...metaData}>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-  <Hero {...heroProps} id={SectionIds[NavLinks.OFFER].hero}>
-  </Hero>
+  <Hero {...heroProps} id={SectionIds[NavLinks.OFFER].hero} />
   <OfferCards />
   <FAQ faq={faqProps} />
 </MainLayout>

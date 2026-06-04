@@ -1,0 +1,197 @@
+@use '@styles/_config.scss' as *;
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+
+  &--open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: oklch(6% 0 0 / 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  &__container {
+    position: relative;
+    z-index: var(--z-default);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+
+    @include mq('tablet') {
+      padding: 2rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  &__counter {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--color-cream-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid var(--color-hairline);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background 200ms ease, border-color 200ms ease;
+
+    &:hover {
+      background: oklch(100% 0 0 / 0.1);
+      border-color: oklch(100% 0 0 / 0.3);
+    }
+
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+
+  &__stage {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  &__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 4px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: var(--z-elevated);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-hairline);
+    background: oklch(6% 0 0 / 0.6);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    &:hover {
+      background: oklch(6% 0 0 / 0.85);
+      border-color: oklch(100% 0 0 / 0.3);
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    &--prev {
+      left: 0;
+
+      @include mq('tablet') {
+        left: 0;
+      }
+    }
+
+    &--next {
+      right: 0;
+
+      @include mq('tablet') {
+        right: 0;
+      }
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  &__dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: var(--color-cream-muted);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 200ms ease, transform 200ms ease;
+
+    &--active {
+      background: var(--color-white);
+      transform: scale(1.4);
+    }
+
+    &:hover:not(#{&}--active) {
+      background: oklch(78% 0.005 240);
+    }
+  }
+}

@@ -1,27 +1,29 @@
 ---
-import MainLayout from "@layouts/MainLayout/MainLayout.astro";
-import Hero from "@components/shared/Hero/Hero.astro";
-import PortfolioGrid from "@components/portfolio/PortfolioGrid/PortfolioGrid.astro";
+import MainLayout from '@layouts/MainLayout/MainLayout.astro';
+import Hero from '@components/shared/Hero/Hero.astro';
+import PortfolioGrid from '@components/pages/portfolio/PortfolioGrid/PortfolioGrid.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
-import { projects } from "@data/projects";
+import { projects } from '@data/projects';
 import { buildPortfolioSchema } from '@schemas/portfolioSchema';
 
 const metaData = {
-  title:"Portfolio Projektów Wnętrz – Realizacje NOKO Studio",
-  metaDescription:"Odkryj portfolio NOKO Studio. Zobacz nasze zrealizowane projekty i aranżacje wnętrz: domy, mieszkania oraz apartamenty. Zainspiruj się już dzisiaj!"
-}
+  title: 'Portfolio Projektów Wnętrz – Realizacje NOKO Studio',
+  metaDescription:
+    'Odkryj portfolio NOKO Studio. Zobacz nasze zrealizowane projekty i aranżacje wnętrz: domy, mieszkania oraz apartamenty. Zainspiruj się już dzisiaj!',
+};
 
 const heroProps = {
   preTitle: 'Nasze projekty wnętrz.',
   title: 'Zainspiruj się naszymi realizacjami',
-  description: 'Przeglądaj wybrane projekty domów, mieszkań i apartamentów. Zobacz nasze podejście do detali, ergonomii i estetyki, które zamieniają wizje w piękne, funkcjonalne wnętrza.',
+  description:
+    'Przeglądaj wybrane projekty domów, mieszkań i apartamentów. Zobacz nasze podejście do detali, ergonomii i estetyki, które zamieniają wizje w piękne, funkcjonalne wnętrza.',
   image: {
     src: heroImg,
     alt: 'Wnętrze zaprojektowane przez NOKO Studio',
     sizes: '60vw',
   },
   height: 'auto',
-}
+};
 const schema = buildPortfolioSchema(projects);
 ---
 

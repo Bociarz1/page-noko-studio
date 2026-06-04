@@ -1,6 +1,6 @@
 ---
-import { NAV_ELEMENTS, NavLinks } from 'src/constants/navLinks';
-import { COMPANY } from '@constants/site';
+import { NAV_ELEMENTS, NavLinks } from 'src/consts/navLinks';
+import { COMPANY } from 'src/consts/site';
 import LocationOn from '@assets/icons/icon-location-on.svg';
 import PhoneInTalk from '@assets/icons/icon-phone-in-talk.svg';
 import Mail from '@assets/icons/icon-mail.svg';
@@ -27,7 +27,9 @@ import Instagram from '@assets/icons/icon-instagram.svg';
         {
           NAV_ELEMENTS.map((element) => (
             <li class="footer__nav-item">
-              <a class="footer__nav-link" href={element.href}>{element.label}</a>
+              <a class="footer__nav-link" href={element.href}>
+                {element.label}
+              </a>
             </li>
           ))
         }
@@ -42,11 +44,13 @@ import Instagram from '@assets/icons/icon-instagram.svg';
         </div>
         <div class="footer__contact-row">
           <PhoneInTalk width={16} height={16} />
-          {COMPANY.phones.aleksandra.name} {COMPANY.phones.aleksandra.formatted}
+          {COMPANY.phones.aleksandra.name}
+          {COMPANY.phones.aleksandra.formatted}
         </div>
         <div class="footer__contact-row">
           <PhoneInTalk width={16} height={16} />
-          {COMPANY.phones.paulina.name} {COMPANY.phones.paulina.formatted}
+          {COMPANY.phones.paulina.name}
+          {COMPANY.phones.paulina.formatted}
         </div>
         <div class="footer__contact-row">
           <LocationOn width={20} height={20} />
@@ -54,11 +58,23 @@ import Instagram from '@assets/icons/icon-instagram.svg';
         </div>
       </address>
       <div class="footer__socials">
-        <a class="footer__social-link" href={NavLinks.INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a
+          class="footer__social-link"
+          href={NavLinks.INSTAGRAM}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <Instagram class="footer__social-icon" width={20} height={20} aria-hidden="true" />
           Instagram
         </a>
-        <a class="footer__social-link" href={NavLinks.FACEBOOK} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a
+          class="footer__social-link"
+          href={NavLinks.FACEBOOK}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
           <Facebook class="footer__social-icon" width={20} height={20} aria-hidden="true" />
           Facebook
         </a>

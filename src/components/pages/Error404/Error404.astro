@@ -1,0 +1,16 @@
+---
+import { NavLinks } from 'src/consts/navLinks';
+---
+
+<main class="error-page">
+  <div class="error-page__code">404</div>
+  <h1 class="error-page__message">Ups... , coś poszło nie tak.</h1>
+  <p class="error-page__description">
+    Strona, której szukasz, mogła zostać usunięta, zmieniła nazwę lub nigdy nie istniała.
+  </p>
+  <a href={NavLinks.HOME} class="error-page__button"> Wróć na stronę główną </a>
+</main>
+
+<style lang="scss">
+  @use './Error404.scss';
+</style>

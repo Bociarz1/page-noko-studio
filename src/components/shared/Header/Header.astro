@@ -1,7 +1,7 @@
 ---
 import HeaderMenu from '@components/shared/Header/components/HeaderMenu/HeaderMenu.astro';
 import HeaderMenuMobile from '@components/shared/Header/components/HeaderMenuMobile/HeaderMenuMobile.astro';
-import { NAV_ELEMENTS, NavLinks } from 'src/constants/navLinks';
+import { NAV_ELEMENTS, NavLinks } from 'src/consts/navLinks';
 import Facebook from '@assets/icons/icon-facebook.svg';
 import Instagram from '@assets/icons/icon-instagram.svg';
 ---
@@ -24,7 +24,12 @@ import Instagram from '@assets/icons/icon-instagram.svg';
       <a class="header__social-link" href={NavLinks.FACEBOOK} target="_blank" aria-label="Facebook">
         <Facebook width="20" height="20" color="gray" aria-hidden="true" />
       </a>
-      <a class="header__social-link" href={NavLinks.INSTAGRAM} target="_blank" aria-label="Instagram">
+      <a
+        class="header__social-link"
+        href={NavLinks.INSTAGRAM}
+        target="_blank"
+        aria-label="Instagram"
+      >
         <Instagram width="20" height="20" color="gray" aria-hidden="true" />
       </a>
     </div>

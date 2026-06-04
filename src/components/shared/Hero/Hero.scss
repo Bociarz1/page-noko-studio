@@ -1,4 +1,4 @@
-@use '@styles/_breakpoints.scss' as *;
+@use '@styles/_config.scss' as *;
 
 .hero {
   --section-pretitle-color: rgba(255, 255, 255, 0.85);
@@ -41,7 +41,7 @@
   &__header {
     margin-top: 6.4rem;
 
-    // Magia CSS - nadpisujemy zmienną H1 lokalnie, dzięki czemu nagłówek staje się gigantyczny (Display)
+    // Magia CSS - nadpisujemy zmiennĂ„â€šĂ˘â‚¬ĹľÄ‚ËĂ˘â€šÂ¬Ă‚Â¦ H1 lokalnie, dziĂ„â€šĂ˘â‚¬ĹľÄ‚ËĂ˘â‚¬ĹľĂ‹Âki czemu nagÄ‚â€žĂ„â€¦Ä‚ËĂ˘â€šÂ¬ÄąË‡Ä‚â€žĂ˘â‚¬ĹˇĂ„Ä…Ă˘â‚¬Ĺˇwek staje siĂ„â€šĂ˘â‚¬ĹľÄ‚ËĂ˘â‚¬ĹľĂ‹Â gigantyczny (Display)
     --text-h1: var(--text-display);
 
     max-width: 57.6rem;

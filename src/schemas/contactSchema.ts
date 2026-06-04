@@ -1,7 +1,7 @@
+import { buildGraph, buildWebPage } from '@libs/ui/schemas';
 import { websiteSchema } from '@schemas/websiteSchema';
 import { organizationSchema } from '@schemas/organizationSchema';
-
-import { BASE_URL } from '@constants/site';
+import { BASE_URL } from 'src/consts/site';
 
 interface ContactSchemaOptions {
   name: string;
@@ -9,26 +9,15 @@ interface ContactSchemaOptions {
 }
 
 export function buildContactSchema({ name, description }: ContactSchemaOptions) {
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'ContactPage',
-        '@id': `${BASE_URL}/kontakt/#webpage`,
-        'url': `${BASE_URL}/kontakt`,
-        name,
-        description,
-        'isPartOf': {
-          '@type': 'WebSite',
-          '@id': websiteSchema['@id'],
-          'url': websiteSchema.url,
-          'name': websiteSchema.name,
-        },
-        'about': {
-          '@id': organizationSchema['@id'],
-        },
-      },
-      organizationSchema,
-    ],
-  };
+  const contactPage = buildWebPage({
+    type: 'ContactPage',
+    id: `${BASE_URL}/kontakt/#webpage`,
+    url: `${BASE_URL}/kontakt`,
+    name,
+    description,
+    isPartOfId: websiteSchema['@id'],
+    aboutId: organizationSchema['@id'],
+  });
+
+  return buildGraph(contactPage, organizationSchema);
 }

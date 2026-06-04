@@ -1,5 +1,5 @@
 ---
-import { NavLink } from 'src/constants/navLinks';
+import { NavLink } from 'src/consts/navLinks';
 
 interface Props {
   navElements: NavLink[];
@@ -15,7 +15,9 @@ const { navElements = [] } = Astro.props;
   {
     navElements.map((element) => (
       <li class={`header-nav__item ${element?.isPathActive ? 'header-nav__item--active' : ''}`}>
-        <a class="header-nav__link" href={element.href}>{element.label}</a>
+        <a class="header-nav__link" href={element.href}>
+          {element.label}
+        </a>
       </li>
     ))
   }

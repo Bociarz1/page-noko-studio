@@ -1,12 +1,9 @@
-import { BASE_URL } from '@constants/site';
+import { BASE_URL } from 'src/consts/site';
+import { buildWebSite } from '@libs/ui/schemas';
 
-export const websiteSchema = {
-  '@type': 'WebSite',
-  '@id': `${BASE_URL}/#website`,
-  'url': `${BASE_URL}/`,
-  'name': 'NOKO Studio',
-  'description': 'Profesjonalne projektowanie wnętrz w Białymstoku i całej Polsce.',
-  'publisher': {
-    '@id': `${BASE_URL}/#organization`,
-  },
-};
+export const websiteSchema = buildWebSite({
+  url: `${BASE_URL}/`,
+  name: 'NOKO Studio',
+  description: 'Profesjonalne projektowanie wnętrz w Białymstoku i całej Polsce.',
+  publisherId: `${BASE_URL}/#organization`,
+});

@@ -1,0 +1,48 @@
+---
+import PortfolioItem from '@components/shared/PortfolioItem/PortfolioItem.astro';
+import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
+import { projects as allProjects } from '@data/projects';
+import { NavLinks, SectionIds } from 'src/consts/navLinks';
+
+const featuredIndexes = ['01', '02', '03', '04'];
+const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
+---
+
+<style lang="scss">
+  @use './Portfolio.scss';
+</style>
+
+<section id={SectionIds[NavLinks.HOME].portfolio} class="portfolio">
+  <div class="portfolio__container">
+    <div class="portfolio__header">
+      <SectionHeader
+        pretitle="ZOBACZ PORTFOLIO NASZEGO BIURA PROJEKTOWEGO"
+        pretitleAs="p"
+        title="Zaprojektowane z pasją, dopracowane w każdym detalu"
+        titleAs="h2"
+        description="Projekty domów i apartamentów, w których łączymy funkcjonalność z dopracowaną estetyką."
+        class="portfolio__header-text"
+      />
+      <a href={NavLinks.PORTFOLIO} class="portfolio__link">
+        Zobacz wszystkie <span aria-hidden>→</span>
+      </a>
+    </div>
+
+    <div class="portfolio__grid">
+      {
+        projects.map((p) => (
+          <PortfolioItem
+            slug={p.slug}
+            cover={p.cover}
+            title={p.title}
+            location={p.location}
+            index={p.index}
+            category={p.category}
+            area={p.area}
+            year={p.year}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

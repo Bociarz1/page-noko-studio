@@ -29,7 +29,7 @@
         "src/data/*"
       ],
       "@constants/*": [
-        "src/constants/*"
+        "src/consts/*"
       ],
       "@schemas/*": [
         "src/schemas/*"

@@ -1,18 +1,20 @@
 ---
 import MainLayout from '@layouts/MainLayout/MainLayout.astro';
 import Hero from '@components/shared/Hero/Hero.astro';
-import Contact from '@components/contact/Contact/Contact.astro';
+import Contact from '@components/pages/contact/Contact/Contact.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
-import { NavLinks, SectionIds } from '@constants/navLinks';
+import { NavLinks, SectionIds } from 'src/consts/navLinks';
 import { buildContactSchema } from '@schemas/contactSchema';
 
 const metaData = {
-  title: "Kontakt – Architekt Wnętrz Białystok | NOKO Studio",
-  metaDescription: "Skontaktuj się z pracownią NOKO Studio. Profesjonalny projektant wnętrz (Białystok i cała Polska). Zadzwoń lub napisz i stwórzmy Twoje nowe wnętrze!"
-}
+  title: 'Kontakt – Architekt Wnętrz Białystok | NOKO Studio',
+  metaDescription:
+    'Skontaktuj się z pracownią NOKO Studio. Profesjonalny projektant wnętrz (Białystok i cała Polska). Zadzwoń lub napisz i stwórzmy Twoje nowe wnętrze!',
+};
 const schema = buildContactSchema({
   name: 'Kontakt – NOKO Studio | Pracownia Architektury Wnętrz',
-  description: 'Skontaktuj się z NOKO Studio. Zaprojektujemy Twoje wnętrze w Białymstoku i w całej Polsce. Napisz do nas lub zadzwoń.',
+  description:
+    'Skontaktuj się z NOKO Studio. Zaprojektujemy Twoje wnętrze w Białymstoku i w całej Polsce. Napisz do nas lub zadzwoń.',
 });
 ---
 

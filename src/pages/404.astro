@@ -1,6 +1,6 @@
 ---
 import MainLayout from '@layouts/MainLayout/MainLayout.astro';
-import { NavLinks } from '@constants/navLinks';
+import Error404 from '@components/Error404/Error404.astro';
 
 const metaData = {
   title: 'Nie znaleziono strony (404) – NOKO Studio',
@@ -9,16 +9,5 @@ const metaData = {
 ---
 
 <MainLayout {...metaData}>
-  <main class="error-page">
-    <div class="error-page__code">404</div>
-    <h1 class="error-page__message">Ups... , coś poszło nie tak.</h1>
-    <p class="error-page__description">
-      Strona, której szukasz, mogła zostać usunięta, zmieniła nazwę lub nigdy nie istniała.
-    </p>
-    <a href={NavLinks.HOME} class="error-page__button"> Wróć na stronę główną </a>
-  </main>
+  <Error404 />
 </MainLayout>
-
-<style lang="scss">
-  @use './notFound404.scss';
-</style>

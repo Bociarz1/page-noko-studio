@@ -1,0 +1,19 @@
+---
+import ContactForm from '@components/shared/ContactForm/ContactForm.astro';
+import ContactInfo from '@components/pages/contact/ContactInfo/ContactInfo.astro';
+import { NavLinks, SectionIds } from 'src/consts/navLinks';
+---
+
+<style lang="scss">
+  @use './Contact.scss';
+</style>
+
+<section id={SectionIds[NavLinks.CONTACT].contact} class="contact">
+  <div class="contact__container">
+    <ContactInfo />
+
+    <div class="contact__form-wrapper">
+      <ContactForm />
+    </div>
+  </div>
+</section>

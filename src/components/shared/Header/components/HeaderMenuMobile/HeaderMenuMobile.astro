@@ -1,6 +1,6 @@
 ---
 import Menu from '@assets/icons/icon-menu.svg';
-import { NavLink, NAV_ELEMENTS } from 'src/constants/navLinks';
+import { NavLink, NAV_ELEMENTS } from 'src/consts/navLinks';
 
 interface Props {
   navElements: NavLink[];
@@ -20,7 +20,9 @@ const { navElements = [] } = Astro.props;
     {
       navElements.map((element) => (
         <li class={`mobile-nav__item ${element?.isPathActive ? 'mobile-nav__item--active' : ''}`}>
-          <a class="mobile-nav__link" href={element.href}>{element.label}</a>
+          <a class="mobile-nav__link" href={element.href}>
+            {element.label}
+          </a>
         </li>
       ))
     }

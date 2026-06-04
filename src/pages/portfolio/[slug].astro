@@ -1,12 +1,9 @@
 ---
-import { Image } from "astro:assets";
-import MainLayout from "@layouts/MainLayout/MainLayout.astro";
-import { projects } from "@data/projects";
-import Hero from "@components/shared/Hero/Hero.astro";
-import Lightbox from "@components/portfolio/Lightbox/Lightbox.astro";
-import Button from "@components/shared/Button/Button.astro";
+import MainLayout from '@layouts/MainLayout/MainLayout.astro';
+import { projects } from '@data/projects';
 import { buildProjectSchema } from '@schemas/projectSchema';
-import { BASE_URL } from '@constants/site';
+import { BASE_URL } from 'src/consts/site';
+import ProjectDetails from '@components/pages/portfolioDetails/ProjectDetails/ProjectDetails.astro';
 
 export function getStaticPaths() {
   return projects.map((project) => ({
@@ -22,61 +19,15 @@ const schema = buildProjectSchema({
   title: project.title,
   description: project.description,
   year: project.year,
-  imageSrcs: project.images.map(img => new URL(img.src.src, Astro.site || BASE_URL).href),
+  imageSrcs: project.images.map((img) => new URL(img.src.src, Astro.site || BASE_URL).href),
 });
 ---
 
-<style lang="scss">
-  @use './slug.scss';
-</style>
-
-<MainLayout 
-  title={`${project.title} | NOKO Studio`} 
+<MainLayout
+  title={`${project.title} | NOKO Studio`}
   metaDescription={project.description}
   ogImage={new URL(project.cover.src, Astro.site || BASE_URL).href}
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-  <Hero
-    preTitle={`${project.index} · ${project.category === "apartament" ? "Apartament" : "Dom"}`}
-    title={project.title}
-    description={project.description}
-    image={{
-      src: project.cover,
-      alt: `${project.title}, ${project.location} – widok główny`,
-      sizes: '100vw'
-    }}
-    height="auto"
-  >
-    <div class="project-hero__details">
-      <span>{project.location}</span>
-      <span aria-hidden>·</span>
-      <span>{project.area}</span>
-      <span aria-hidden>·</span>
-      <span>{project.year}</span>
-    </div>
-  </Hero>
-
-  <section class="project-gallery">
-  <Button dark variant="primary" href="/portfolio" title="Wróć do portfolio"/>
-    <div class="project-gallery__grid">
-      {project.images.map((img) => (
-        <div class="project-gallery__item">
-          <Image
-            src={img.src}
-            alt={img.alt}
-            width={1000}
-            height={1000}
-            class="project-gallery__image"
-            format="webp"
-            loading="lazy"
-            decoding="async"
-            widths={[500, 1000]}
-            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-          />
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <Lightbox images={project.images} />
+  <ProjectDetails project={project} />
 </MainLayout>

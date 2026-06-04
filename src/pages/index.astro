@@ -1,20 +1,21 @@
 ---
 import MainLayout from '@layouts/MainLayout/MainLayout.astro';
 import Hero from '@components/shared/Hero/Hero.astro';
-import OurServices from '@components/index/OurServices/OurServices.astro';
-import AboutUs from '@components/index/AboutUs/AboutUs.astro';
-import Portfolio from '@components/index/Portfolio/Portfolio.astro';
-import CTA from '@components/index/CTA/CTA.astro';
-import Reviews from '@components/index/Reviews/Reviews.astro';
+import OurServices from '@components/pages/index/OurServices/OurServices.astro';
+import AboutUs from '@components/pages/index/AboutUs/AboutUs.astro';
+import Portfolio from '@components/pages/index/Portfolio/Portfolio.astro';
+import CTA from '@components/pages/index/CTA/CTA.astro';
+import Reviews from '@components/pages/index/Reviews/Reviews.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import Button from '@components/shared/Button/Button.astro';
-import { NavLinks, SectionIds } from '@constants/navLinks';
+import { NavLinks, SectionIds } from 'src/consts/navLinks';
 import { buildHomeSchema } from '@schemas/homeSchema';
 
 const metaData = {
-  title: "Architekt Wnętrz Białystok | Projektowanie Wnętrz NOKO Studio",
-  metaDescription: "NOKO Studio – profesjonalne projektowanie wnętrz w Białymstoku i w całej Polsce. Kompleksowa aranżacja i architektura domów, mieszkań i apartamentów.",
-}
+  title: 'Architekt Wnętrz Białystok | Projektowanie Wnętrz NOKO Studio',
+  metaDescription:
+    'NOKO Studio – profesjonalne projektowanie wnętrz w Białymstoku i w całej Polsce. Kompleksowa aranżacja i architektura domów, mieszkań i apartamentów.',
+};
 const schema = buildHomeSchema();
 const heroProps = {
   preTitle: 'NOKO STUDIO - Twój architekt wnętrz z Białegostoku',
@@ -25,7 +26,7 @@ const heroProps = {
     alt: 'Wnętrze zaprojektowane przez NOKO Studio',
     sizes: '100vw',
   },
-}
+};
 ---
 
 <MainLayout {...metaData}>

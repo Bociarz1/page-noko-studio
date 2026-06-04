@@ -1,6 +1,6 @@
+import { buildGraph, buildCreativeWork } from '@libs/ui/schemas';
 import { organizationSchema } from '@schemas/organizationSchema';
-
-import { BASE_URL } from '@constants/site';
+import { BASE_URL } from 'src/consts/site';
 
 interface ProjectSchemaOptions {
   slug: string;
@@ -11,21 +11,15 @@ interface ProjectSchemaOptions {
 }
 
 export function buildProjectSchema({ slug, title, description, year, imageSrcs }: ProjectSchemaOptions) {
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'CreativeWork',
-        '@id': `${BASE_URL}/portfolio/${slug}/#creativework`,
-        'url': `${BASE_URL}/portfolio/${slug}`,
-        name: title,
-        description,
-        'image': imageSrcs,
-        'creator': {
-          '@id': organizationSchema['@id'],
-        },
-        'dateCreated': String(year),
-      },
-    ],
-  };
+  const creativeWork = buildCreativeWork({
+    id: `${BASE_URL}/portfolio/${slug}/#creativework`,
+    url: `${BASE_URL}/portfolio/${slug}`,
+    name: title,
+    description,
+    image: imageSrcs,
+    creatorId: organizationSchema['@id'],
+    dateCreated: String(year),
+  });
+
+  return buildGraph(creativeWork);
 }
