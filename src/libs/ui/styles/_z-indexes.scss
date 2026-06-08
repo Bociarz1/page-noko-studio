@@ -1,10 +1,12 @@
+@use './config.module.scss' as *;
+
 :root {
-  --z-below: -1;
-  --z-default: 1;
-  --z-elevated: 10;
-  --z-dropdown: 20;
-  --z-header: 40;
-  --z-overlay: 80;
-  --z-modal: 90;
-  --z-critical: 100;
+  --#{$lib-prefix}z-below: -1;
+  --#{$lib-prefix}z-default: 1;
+  --#{$lib-prefix}z-elevated: 10;
+  --#{$lib-prefix}z-dropdown: 20;
+  --#{$lib-prefix}z-header: 40;
+  --#{$lib-prefix}z-overlay: 80;
+  --#{$lib-prefix}z-modal: 90;
+  --#{$lib-prefix}z-critical: 100;
 }
