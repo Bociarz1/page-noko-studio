@@ -47,7 +47,7 @@ const reviews = await fetchGoogleReviews();
                 </div>
                 <div class="review-card__meta">
                   <h3 class="review-card__author">{review.author_name}</h3>
-                  <div class="review-card__stars" aria-label={`Ocena: ${review.rating} na 5`}>
+                  <div class="review-card__stars" role="img" aria-label={`Ocena: ${review.rating} na 5`}>
                     {Array.from({ length: 5 }).map((_, i) => (
                       <svg
                         class={`star ${i < review.rating ? 'star--active' : ''}`}
