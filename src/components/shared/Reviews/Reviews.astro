@@ -1,8 +1,7 @@
 ---
-import { fetchGoogleReviews } from '@libs/googlePlaces';
+import { fetchGoogleReviews } from '@libs/googlePlaces/googlePlaces.ts';
 import { Image } from 'astro:assets';
 
-// Odzyskaliśmy tu z powrotem funkcję fetch! Jeśli klucze są puste, funkcja zwróci nam 6 ładnych moków.
 const reviews = await fetchGoogleReviews();
 ---
 <style lang="scss">

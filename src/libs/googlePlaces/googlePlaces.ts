@@ -14,13 +14,10 @@ export interface GoogleReview {
 }
 
 export async function fetchGoogleReviews(): Promise<GoogleReview[]> {
-    // Zabezpieczenie przed strzałami lokalnie (npm run dev, lokalne npm run build / preview).
-    // Serwery Cloudflare Pages podczas budowania zawsze mają włączoną zmienną CF_PAGES="1".
-    // Jeśli jej nie ma, skrypt wie, że jest uruchamiany u Ciebie na komputerze.
-    const isCloudflare = typeof process !== 'undefined' && process.env.CF_PAGES === '1';
+    const isFetchReviewsEnabled = import.meta.env.FETCH_REVIEWS === 'true';
 
-    if (!isCloudflare) {
-        console.log("🛠️ Tryb lokalny: Zwracam zamokowane opinie bez odpytywania Google API.");
+    if (!isFetchReviewsEnabled) {
+        console.log("🛠️ Tryb deweloperski/lokalny: Zwracam zamokowane opinie bez odpytywania Google API.");
         return [
             {
                 author_name: "Anna Kowalska",
