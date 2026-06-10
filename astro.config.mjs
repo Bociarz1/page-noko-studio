@@ -25,6 +25,6 @@ export default defineConfig({
         fallbacks: ["Arial", "Helvetica", "sans-serif"]
     }],
     image: {
-        domains: ["images.unsplash.com"]
+        domains: ["images.unsplash.com", "lh3.googleusercontent.com"]
     }
 });

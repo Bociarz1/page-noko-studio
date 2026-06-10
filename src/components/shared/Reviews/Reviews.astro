@@ -1,0 +1,155 @@
+---
+import { fetchGoogleReviews } from '@libs/googlePlaces';
+import { Image } from 'astro:assets';
+
+// Odzyskaliśmy tu z powrotem funkcję fetch! Jeśli klucze są puste, funkcja zwróci nam 6 ładnych moków.
+const reviews = await fetchGoogleReviews();
+---
+<style lang="scss">
+  @use './Reviews.scss';
+</style>
+
+{reviews.length > 0 && (
+  <section class="reviews-section">
+    <div class="reviews-section__container">
+      
+      <div class="reviews-section__header-row">
+        <h2 class="reviews-section__title">Co mówią o nas klienci</h2>
+        <div class="reviews-slider__controls">
+          <button id="review-prev" class="reviews-slider__btn" aria-label="Poprzednia opinia">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button id="review-next" class="reviews-slider__btn" aria-label="Następna opinia">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="reviews-slider">
+        <div class="reviews-slider__track" id="reviews-track">
+          {reviews.map((review) => (
+            <article class="review-card">
+              <header class="review-card__header">
+                <div class="review-card__avatar">
+                  {review.profile_photo_url ? (
+                    <Image
+                      src={review.profile_photo_url}
+                      alt={`Avatar ${review.author_name}`}
+                      width={48}
+                      height={48}
+                      format="avif"
+                      widths={[48, 96]}
+                      sizes="48px"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div class="review-card__avatar-fallback">{review.author_name.charAt(0)}</div>
+                  )}
+                </div>
+                <div class="review-card__meta">
+                  <h3 class="review-card__author">{review.author_name}</h3>
+                  <div class="review-card__stars" aria-label={`Ocena: ${review.rating} na 5`}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <svg
+                        class={`star ${i < review.rating ? 'star--active' : ''}`}
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="review-card__date">{review.relative_time_description}</span>
+                </div>
+              </header>
+              <blockquote class="review-card__content">
+                <p>"{review.text}"</p>
+              </blockquote>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+<script>
+  const track = document.getElementById('reviews-track');
+  const prevBtn = document.getElementById('review-prev');
+  const nextBtn = document.getElementById('review-next');
+  
+  if (track && prevBtn && nextBtn) {
+    let isTransitioning = false; // Blokada przed klikaniem strzałki w trakcie animacji
+
+    const getSlideWidth = () => {
+      const card = track.firstElementChild as HTMLElement;
+      if (!card) return 0;
+      const gap = parseInt(window.getComputedStyle(track).gap || '32');
+      return card.offsetWidth + gap;
+    };
+
+    const slideNext = () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
+      const slideWidth = getSlideWidth();
+      track.style.transition = 'transform 0.4s ease-in-out';
+      track.style.transform = `translateX(-${slideWidth}px)`;
+
+      const handleTransitionEnd = () => {
+        track.removeEventListener('transitionend', handleTransitionEnd);
+        track.style.transition = 'none'; // Wyłączamy animację do przeskoku
+        track.appendChild(track.firstElementChild as Node); // Przenosimy pierwszy element na koniec
+        track.style.transform = 'translateX(0)'; // Resetujemy pozycję
+        isTransitioning = false;
+      };
+
+      track.addEventListener('transitionend', handleTransitionEnd);
+    };
+
+    const slidePrev = () => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      const slideWidth = getSlideWidth();
+      
+      // Krok 1: Szybko przerzucamy ostatni element na początek bez animacji
+      track.style.transition = 'none';
+      track.prepend(track.lastElementChild as Node);
+      
+      // Krok 2: Ustawiamy "fałszywą" pozycję wstecz, by z niej wjechać
+      track.style.transform = `translateX(-${slideWidth}px)`;
+
+      // Krok 3: Wymuszamy przerysowanie ramki przez przeglądarkę, po czym wracamy do zera Z ANIMACJĄ
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          track.style.transition = 'transform 0.4s ease-in-out';
+          track.style.transform = 'translateX(0)';
+        });
+      });
+
+      const handleTransitionEnd = () => {
+        track.removeEventListener('transitionend', handleTransitionEnd);
+        isTransitioning = false;
+      };
+
+      track.addEventListener('transitionend', handleTransitionEnd);
+    };
+
+    // Podpięcie przycisków
+    nextBtn.addEventListener('click', slideNext);
+    prevBtn.addEventListener('click', slidePrev);
+
+    // Autoplay
+    let autoScroll = setInterval(slideNext, 4000);
+
+    const sliderContainer = track.closest('.reviews-slider');
+    if (sliderContainer) {
+      sliderContainer.addEventListener('mouseenter', () => clearInterval(autoScroll));
+      sliderContainer.addEventListener('mouseleave', () => {
+        autoScroll = setInterval(slideNext, 4000);
+      });
+    }
+  }
+</script>
