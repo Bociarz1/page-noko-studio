@@ -15,8 +15,8 @@ interface SendEmailParams {
 export const sendEmail = async ({ name, email, phone, subject, message }: SendEmailParams) => {
   // Pobieranie kluczy w trybie SSR
   const resendApiKey = import.meta.env.RESEND_API_KEY;
-  const fromEmail = import.meta.env.CONTACT_EMAIL_FROM || 'onboarding@resend.dev';
-  const toEmail = import.meta.env.CONTACT_EMAIL_TO;
+  const fromEmail = import.meta.env.EMAIL_FROM || 'onboarding@resend.dev';
+  const toEmail = import.meta.env.CONTACT_EMAIL;
 
   if (!resendApiKey || !toEmail) {
     throw new Error('Brak konfiguracji zmiennych środowiskowych serwera pocztowego.');
