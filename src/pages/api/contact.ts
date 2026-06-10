@@ -22,9 +22,9 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     // Prosta walidacja "Vanilla TypeScript"
-    if (!name || typeof name !== 'string' || name.trim().length < 2) {
+    if (!name || typeof name !== 'string' || name.trim().length < 1) {
       return new Response(
-        JSON.stringify({ error: 'Proszę podać prawidłowe imię (min. 2 znaki).' }),
+        JSON.stringify({ error: 'Proszę podać prawidłowe imię (min. 1 znak).' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }
@@ -43,16 +43,16 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    if (!subject || typeof subject !== 'string' || subject.trim().length < 2) {
+    if (!subject || typeof subject !== 'string' || subject.trim().length < 1) {
       return new Response(JSON.stringify({ error: 'Proszę podać temat wiadomości.' }), {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
       });
     }
 
-    if (!message || typeof message !== 'string' || message.trim().length < 10) {
+    if (!message || typeof message !== 'string' || message.trim().length < 1) {
       return new Response(
-        JSON.stringify({ error: 'Wiadomość musi mieć minimum 10 znaków.' }),
+        JSON.stringify({ error: 'Wiadomość musi mieć minimum 1 znak.' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }

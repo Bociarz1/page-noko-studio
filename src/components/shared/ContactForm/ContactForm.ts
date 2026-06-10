@@ -1,3 +1,5 @@
+export {};
+
 const form = document.getElementById('contact-form') as HTMLFormElement;
 const status = document.getElementById('contact-status') as HTMLParagraphElement;
 const submit = document.getElementById('contact-submit') as HTMLButtonElement;
@@ -31,14 +33,14 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify(payload),
     });
 
-    const result = await response.json() as { success: boolean; message: string };
+    const result = await response.json() as { success?: boolean; message?: string; error?: string };
 
-    if (result.success) {
-      status.textContent = result.message;
+    if (response.ok && result.success) {
+      status.textContent = result.message || 'Wysłano poprawnie!';
       status.className = 'contact-form__status contact-form__status--success';
       form.reset();
     } else {
-      status.textContent = result.message;
+      status.textContent = result.error || result.message || 'Wystąpił nieznany błąd.';
       status.className = 'contact-form__status contact-form__status--error';
     }
   } catch {
