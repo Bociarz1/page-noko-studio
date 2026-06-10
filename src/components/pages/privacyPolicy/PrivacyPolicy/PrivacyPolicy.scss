@@ -1,4 +1,4 @@
-@use '@styles/_config.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
 
 .privacy-policy {
   padding-top: calc(#{var(--header-height)} + 4rem);

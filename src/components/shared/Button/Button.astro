@@ -1,5 +1,4 @@
 ---
-import UiButton from '@libs/ui/components/Button/Button.astro';
 import styles from './Button.module.scss';
 
 export enum ButtonVariant {
@@ -32,12 +31,12 @@ const finalClass =
   `${styles.base} ${variantClasses[variant]} ${dark ? styles.dark : ''} ${className}`.trim();
 ---
 
-<UiButton href={href} title={title} class={finalClass}>
-  {
-    variant === ButtonVariant.PRIMARY && (
-      <span slot="afterIcon" aria-hidden="true">
-        →
-      </span>
-    )
-  }
-</UiButton>
+<style lang="scss">
+  @use './Button.scss';
+</style>
+
+<a href={href} class={`btn ${finalClass}`}>
+  <slot name="beforeIcon" />
+  {title}
+  <slot name="afterIcon" />
+</a>

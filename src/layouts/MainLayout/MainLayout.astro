@@ -3,8 +3,7 @@ import Header from '@components/shared/Header/Header.astro';
 import Footer from '@components/shared/Footer/Footer.astro';
 import CookiePopup from '@components/shared/CookiePopup/CookiePopup.astro';
 import FloatingPhone from '@components/shared/FloatingPhone/FloatingPhone.astro';
-import SEO from '@libs/ui/components/SEO/SEO.astro';
-import '@fontsource-variable/montserrat';
+import SEO from '@components/shared/SEO/SEO.astro';
 
 interface Props {
   title: string;
@@ -34,7 +33,7 @@ const {
 
 <html lang="pl">
   <head>
-    <SEO 
+    <SEO
       title={title}
       metaDescription={metaDescription}
       canonicalUrl={canonicalUrl}

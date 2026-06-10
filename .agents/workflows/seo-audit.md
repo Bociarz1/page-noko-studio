@@ -33,9 +33,10 @@ Przeanalizuj kontekst biznesowy i treść pliku. Na podstawie tego, co znajduje 
    - Jeśli na stronie znajduje się sekcja pytań i odpowiedzi (FAQ) -> Zaproponuj dodatkowy, niezależny obiekt `FAQPage`.
    - Jeśli to portfolio / realizacja projektu -> Zaproponuj `CreativeWork`.
 
-2. **Generowanie czystego kodu JSON-LD:**
+2. **Generowanie czystego kodu JSON-LD wg Architektury (Crucial!):**
    - Na podstawie przeczytanego pliku (np. nazwy firmy, numeru telefonu, opisów usług) wyciągnij realne dane. Nie używaj placeholderów typu "Twoja Firma Sp. z o.o.". Jeśli jakichś danych brakuje, oznacz je w kodzie komentarzem jako `// DO UZUPEŁNIENIA: [np. cena]`.
-   - Przygotuj gotowy do skopiowania znacznik `<script type="application/ld+json">`.
+   - Zgodnie z bezwzględną regułą z pliku `.agents/rules/schema-org.md`, **NIGDY nie generuj twardego JSON-LD w pliku .astro**. Zamiast tego, przygotuj dla użytkownika "Czystsza Funkcję" (Buildera) w TypeScript, która zostanie umieszczona w `/src/seo/schemas/[nazwa]Schema.ts`.
+   - Następnie zaplanuj dodanie w sekcji `---` wybranego pliku .astro importu tego Buildera i wstrzyknięcie zmiennej używając tagu `<script type="application/ld+json" set:html={...} />`.
 
 ## Krok 4: Raport i Interaktywna Propozycja
 Wygeneruj podsumowanie w czacie, podzielone na sekcje:

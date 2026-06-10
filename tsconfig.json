@@ -28,11 +28,14 @@
       "@data/*": [
         "src/data/*"
       ],
-      "@constants/*": [
+      "@consts/*": [
         "src/consts/*"
       ],
-      "@schemas/*": [
-        "src/schemas/*"
+      "@seo/*": [
+        "src/seo/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
       ],
       "@libs/*": [
         "src/libs/*"

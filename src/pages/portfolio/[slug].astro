@@ -1,8 +1,8 @@
 ---
 import MainLayout from '@layouts/MainLayout/MainLayout.astro';
 import { projects } from '@data/projects';
-import { buildProjectSchema } from '@schemas/projectSchema';
-import { BASE_URL } from 'src/consts/site';
+import { buildProjectSchema } from '@seo/projectSchema';
+import { BASE_URL } from '@consts/site';
 import ProjectDetails from '@components/pages/portfolioDetails/ProjectDetails/ProjectDetails.astro';
 
 export function getStaticPaths() {

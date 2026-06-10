@@ -1,5 +1,4 @@
 ---
-import UiSectionHeader from '@libs/ui/components/SectionHeader/SectionHeader.astro';
 import styles from './SectionHeader.module.scss';
 
 interface Props {
@@ -13,22 +12,26 @@ interface Props {
   class?: string;
 }
 
-const { 
-  pretitle, 
-  title, 
-  description, 
+const {
+  pretitle,
+  title,
+  description,
   pretitleAs: PretitleTag = 'p',
-  titleAs: TitleTag = 'h2', 
+  titleAs: TitleTag = 'h2',
   descriptionAs: DescriptionTag = 'p',
-  alignment = 'left', 
-  class: className = '' 
+  alignment = 'left',
+  class: className = '',
 } = Astro.props;
 
-const finalClass = `${styles.wrapper} ${className}`.trim();
+const finalClass = `section-header align-${alignment} ${styles.wrapper} ${className}`.trim();
 ---
 
-<UiSectionHeader class={finalClass} alignment={alignment}>
-  {pretitle && <PretitleTag slot="pretitle" class={styles.pretitle}>{pretitle}</PretitleTag>}
-  {title && <TitleTag slot="title" class={styles.title}>{title}</TitleTag>}
-  {description && <DescriptionTag slot="description" class={styles.description}>{description}</DescriptionTag>}
-</UiSectionHeader>
+<style lang="scss">
+  @use './SectionHeader.scss';
+</style>
+
+<div class={finalClass}>
+  {pretitle && <PretitleTag class={styles.pretitle}>{pretitle}</PretitleTag>}
+  {title && <TitleTag class={styles.title}>{title}</TitleTag>}
+  {description && <DescriptionTag class={styles.description}>{description}</DescriptionTag>}
+</div>

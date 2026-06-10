@@ -1,4 +1,4 @@
-@use '@styles/_config.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
 
 .about-us {
   --section-pretitle-color: rgba(255, 255, 255, 0.85);
@@ -35,6 +35,8 @@
   }
 
   &__desc {
+    font-size: var(--text-body-lg);
+    line-height: 1.625;
     margin-top: 1rem;
     max-width: 44ch;
     color: rgba(255, 255, 255, 0.85);

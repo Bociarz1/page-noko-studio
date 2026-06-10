@@ -1,5 +1,10 @@
-import type { INavLink } from "@libs/ui/interfaces/NavLink";
-import type { TSectionIds } from "@libs/ui/interfaces/SectionIds";
+interface INavLink<T> {
+  label: string;
+  href: T;
+  isPathActive?: boolean;
+}
+
+type TSectionIds<T extends string> = Partial<Record<T, any>>;
 
 export enum NavLinks {
   HOME = '/',
@@ -42,4 +47,3 @@ export const NAV_ELEMENTS = [
     href: NavLinks.CONTACT,
   },
 ] satisfies INavLink<NavLinks>[];
-

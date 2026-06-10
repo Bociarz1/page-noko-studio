@@ -1,71 +1,80 @@
-import type { APIRoute } from "astro";
-import { sendFormEmail } from "@libs/ui/api/mailer";
+import type { APIRoute } from 'astro';
+import { sendEmail } from '@libs/resend/sendEmail';
 
+// Kluczowe do działania na Cloudflare (jako SSR Endpoint)
 export const prerender = false;
 
+// Czysta funkcja walidacyjna (Vanilla TS)
+const validateEmail = (email: string) => {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(String(email).toLowerCase());
+};
+
 export const POST: APIRoute = async ({ request }) => {
-  // Parsowanie danych z formularza
-  let data: Record<string, string>;
   try {
-    data = await request.json();
-  } catch {
-    return new Response(
-      JSON.stringify({ success: false, message: "Nieprawidłowy format danych." }),
-      { status: 400, headers: { "Content-Type": "application/json" } }
-    );
-  }
+    const data = await request.json();
+    const { name, email, phone, subject, message, honeypot } = data;
 
-  const { name, email, phone, subject, message } = data;
+    // Podstawowa ochrona przed botami spamującymi
+    if (honeypot) {
+      // Udajemy sukces dla bota
+      return new Response(JSON.stringify({ success: true, message: 'Wysłano' }), { status: 200 });
+    }
 
-  // Walidacja po stronie serwera
-  if (!name?.trim() || !email?.trim() || !phone?.trim() || !subject?.trim() || !message?.trim()) {
-    return new Response(
-      JSON.stringify({ success: false, message: "Wszystkie pola są wymagane." }),
-      { status: 422, headers: { "Content-Type": "application/json" } }
-    );
-  }
-
-  // Walidacja formatu e-mail
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return new Response(
-      JSON.stringify({ success: false, message: "Podaj prawidłowy adres e-mail." }),
-      { status: 422, headers: { "Content-Type": "application/json" } }
-    );
-  }
-
-  try {
-    const { error } = await sendFormEmail({
-      to: import.meta.env.CONTACT_EMAIL,
-      replyTo: email,
-      subject: `Nowe zapytanie: ${subject}`,
-      title: "Nowe zapytanie z formularza kontaktowego",
-      fields: {
-        "Imię i nazwisko": name,
-        "E-mail": email,
-        "Telefon": phone,
-        "Temat": subject,
-      },
-      message,
-    });
-
-    if (error) {
-      console.error("Resend API error:", error);
+    // Prosta walidacja "Vanilla TypeScript"
+    if (!name || typeof name !== 'string' || name.trim().length < 2) {
       return new Response(
-        JSON.stringify({ success: false, message: "Nie udało się wysłać wiadomości. Spróbuj ponownie." }),
-        { status: 500, headers: { "Content-Type": "application/json" } }
+        JSON.stringify({ error: 'Proszę podać prawidłowe imię (min. 2 znaki).' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }
 
+    if (!email || typeof email !== 'string' || !validateEmail(email)) {
+      return new Response(
+        JSON.stringify({ error: 'Proszę podać prawidłowy adres e-mail.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!phone || typeof phone !== 'string' || phone.trim().length < 9) {
+      return new Response(
+        JSON.stringify({ error: 'Proszę podać prawidłowy numer telefonu (min. 9 znaków).' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (!subject || typeof subject !== 'string' || subject.trim().length < 2) {
+      return new Response(JSON.stringify({ error: 'Proszę podać temat wiadomości.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
+    if (!message || typeof message !== 'string' || message.trim().length < 10) {
+      return new Response(
+        JSON.stringify({ error: 'Wiadomość musi mieć minimum 10 znaków.' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Wywołanie Czystej Logiki Biznesowej (libs)
+    await sendEmail({
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
+      subject: subject.trim(),
+      message: message.trim(),
+    });
+
     return new Response(
-      JSON.stringify({ success: true, message: "Wiadomość wysłana. Odezwiemy się wkrótce!" }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+      JSON.stringify({ success: true, message: 'Wiadomość została wysłana pomyślnie!' }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
     );
-  } catch (err) {
-    console.error("Unexpected error:", err);
+  } catch (error: any) {
+    console.error('Błąd krytyczny API Kontaktowego:', error);
     return new Response(
-      JSON.stringify({ success: false, message: "Wystąpił nieoczekiwany błąd. Spróbuj ponownie." }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+      JSON.stringify({ error: 'Błąd serwera. Spróbuj ponownie później.' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }
 };

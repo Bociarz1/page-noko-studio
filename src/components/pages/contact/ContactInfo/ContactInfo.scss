@@ -1,9 +1,11 @@
-@use '@styles/_config.scss' as *;
+@use '@styles/_breakpoints.scss' as *;
 
 .contact-info {
   color: var(--color-cream);
 
   &__eyebrow {
+    font-size: var(--text-body-lg);
+    font-weight: var(--font-medium);
     color: var(--color-gray);
     margin-bottom: 1.6rem;
     text-transform: uppercase;
