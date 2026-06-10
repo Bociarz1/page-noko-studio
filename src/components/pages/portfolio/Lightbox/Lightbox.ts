@@ -10,9 +10,20 @@ const dots = document.querySelectorAll<HTMLButtonElement>('.lightbox__dot');
 const total = track.children.length;
 let current = 0;
 
-function goTo(index: number) {
+function goTo(index: number, animate = true) {
   current = (index + total) % total;
+  
+  if (!animate) {
+    track.style.transition = 'none'; // Wyłączamy płynne przesunięcie na czas przeskoku
+  }
+
   track.style.transform = `translateX(-${current * 100}%)`;
+
+  if (!animate) {
+    track.offsetHeight; // Wymuszamy "odświeżenie" ramki przeglądarki, by natychmiast zaaplikowała pozycję
+    track.style.transition = ''; // Zdejmujemy 'none', dzięki czemu cssowy transition znowu działa
+  }
+
   counter.textContent = `${current + 1} / ${total}`;
   dots.forEach((dot, i) => {
     dot.classList.toggle('lightbox__dot--active', i === current);
@@ -20,7 +31,7 @@ function goTo(index: number) {
 }
 
 function open(index: number) {
-  goTo(index);
+  goTo(index, false); // Ważne: false oznacza, że przeskakujemy do zdjęcia BEZ płynnej animacji
   lightbox.classList.add('lightbox--open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
