@@ -133,7 +133,24 @@ $space-between-data-rows: 1.2rem;
     @include mq('tablet') {
       flex-direction: row;
       justify-content: space-between;
+      align-items: flex-end;
     }
+  }
+
+  &__company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+
+    @include mq('tablet') {
+      align-items: flex-start;
+    }
+  }
+
+  &__company-numbers {
+    font-size: 1.1rem;
+    color: var(--color-gray);
   }
 
   &__legal-links {

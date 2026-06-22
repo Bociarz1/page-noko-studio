@@ -1,4 +1,6 @@
 ---
+import { COMPANY } from 'src/consts/site';
+import { NavLinks } from 'src/consts/navLinks';
 ---
 <style lang="scss">
   @use './ContactForm.scss';
@@ -66,6 +68,9 @@
       ></textarea>
     </div>
     <div class="contact-form__footer">
+      <p class="contact-form__rodo">
+        Administratorem Twoich danych osobowych jest {COMPANY.legalName}. Wysyłając wiadomość, akceptujesz naszą <a href={NavLinks.PRIVACY_POLICY} target="_blank">Politykę Prywatności</a>.
+      </p>
       <button type="submit" class="contact-form__submit" id="contact-submit">
         Wyślij wiadomość <span aria-hidden="true">→</span>
       </button>

@@ -1,0 +1,20 @@
+:root {
+  --cc-bg: var(--color-dark-blue);
+  --cc-text: var(--color-white);
+  --cc-btn-primary-bg: var(--color-green);
+  --cc-btn-primary-text: var(--color-white);
+  --cc-btn-primary-hover-bg: color-mix(in srgb, var(--color-green), black 10%);
+  --cc-btn-secondary-bg: oklch(30% 0 0);
+  --cc-btn-secondary-text: var(--color-white);
+  --cc-btn-secondary-hover-bg: oklch(40% 0 0);
+  
+  --cc-toggle-on-bg: var(--color-green);
+  --cc-toggle-off-bg: #667481;
+
+  --cc-primary-color: var(--color-green);
+
+  --cc-font-family: var(--font-montserrat);
+  
+  --cc-border-radius: 12px;
+  --cc-btn-border-radius: 8px;
+}
