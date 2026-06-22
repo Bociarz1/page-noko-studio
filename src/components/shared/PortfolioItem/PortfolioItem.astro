@@ -19,7 +19,7 @@ const { slug, cover, title, location, index, category, area, year } = Astro.prop
   @use './PortfolioItem.scss';
 </style>
 
-<a href={`/portfolio/${slug}`} class="portfolio-card">
+<a href={`/portfolio/${slug}/`} class="portfolio-card">
   <div class="portfolio-card__image-wrapper">
     <Image
       src={cover}

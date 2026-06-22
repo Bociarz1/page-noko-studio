@@ -71,3 +71,6 @@ Jako asystent AI, MUSISZ bezwzględnie przestrzegać poniższych zasad dotycząc
 
 ## 3. Folder `public/`
 - **Zasada:** Przeznaczony wyłącznie na zasoby statyczne, które omijają proces budowania aplikacji (jak `favicon.ico`, `site.webmanifest`, `_headers`). NIGDY nie umieszczaj tutaj kodu źródłowego aplikacji.
+
+## 4. Konwencje Stylowania (CSS/SCSS)
+- **ZAKAZ INLINE STYLES:** Kategorycznie zabrania się używania atrybutu `style="..."` bezpośrednio w znacznikach HTML/Astro (tzw. inline styles). Wszystkie style MUSZĄ być przeniesione do powiązanych plików `.scss` za pomocą klas. Wyjątkiem są wyłącznie sytuacje, w których wartości muszą być dynamicznie wyliczane przez JavaScript w czasie rzeczywistym i nie da się ich obsłużyć zmiennymi CSS.

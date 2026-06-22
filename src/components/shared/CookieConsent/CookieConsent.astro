@@ -1,0 +1,75 @@
+---
+---
+
+<script>
+  import 'vanilla-cookieconsent/dist/cookieconsent.css';
+  import * as CookieConsent from 'vanilla-cookieconsent';
+
+  CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: 'cloud',
+        position: 'bottom left',
+        equalWeightButtons: true,
+        flipButtons: false,
+      },
+      preferencesModal: {
+        layout: 'box',
+        position: 'right',
+        equalWeightButtons: true,
+        flipButtons: false,
+      },
+    },
+    categories: {
+      necessary: {
+        readOnly: true,
+      },
+      analytics: {},
+    },
+    language: {
+      default: 'pl',
+      autoDetect: 'browser',
+      translations: {
+        pl: {
+          consentModal: {
+            title: 'Szanujemy Twoją prywatność',
+            description:
+              'Nasza strona korzysta z plików cookies w celach statystycznych oraz zapewnienia prawidłowego działania serwisu.',
+            acceptAllBtn: 'Akceptuję wszystkie',
+            acceptNecessaryBtn: 'Odrzucam',
+            showPreferencesBtn: 'Zarządzaj opcjami',
+            footer: '<a href="/polityka-prywatnosci/">Polityka Prywatności</a>',
+          },
+          preferencesModal: {
+            title: 'Preferencje plików cookies',
+            acceptAllBtn: 'Akceptuję wszystkie',
+            acceptNecessaryBtn: 'Odrzucam',
+            savePreferencesBtn: 'Zapisz moje preferencje',
+            closeIconLabel: 'Zamknij',
+            serviceCounterLabel: 'Usługi',
+            sections: [
+              {
+                title: 'Wykorzystanie plików cookies',
+                description:
+                  'Ciasteczka to małe pliki tekstowe zapisywane na Twoim urządzeniu. Pomagają nam one w analizie ruchu na stronie i ulepszaniu naszych usług.',
+              },
+              {
+                title:
+                  'Niezbędne pliki cookies <span class="pm__badge">Zawsze aktywne</span>',
+                description:
+                  'Te pliki cookies są niezbędne do prawidłowego funkcjonowania naszej strony internetowej i nie mogą zostać wyłączone w naszych systemach.',
+                linkedCategory: 'necessary',
+              },
+              {
+                title: 'Analityczne pliki cookies',
+                description:
+                  'Te pliki cookies pozwalają nam zliczać wizyty i źródła ruchu, dzięki czemu możemy mierzyć i poprawiać wydajność naszej witryny. Pomagają nam dowiedzieć się, które strony są najbardziej i najmniej popularne oraz zobaczyć, jak odwiedzający poruszają się po witrynie.',
+                linkedCategory: 'analytics',
+              },
+            ],
+          },
+        },
+      },
+    },
+  });
+</script>

@@ -40,7 +40,7 @@ export const projects: Project[] = [
     category: "dom",
     area: "220 m²",
     year: "2025",
-    description: "Kompleksowy projekt wnętrz domu jednorodzinnego. Przestrzeń oparta na jasnej palecie barw, drewnie i minimalistycznym detalu. Połączenie otwartego układu funkcjonalnego ze spójną bazą materiałową i precyzyjnym wykończeniem.",
+    description: "Projekt wnętrz domu w Izabelinie (220 m²). Jasna paleta barw, drewno i minimalistyczne detale połączone w spójnym, otwartym układzie.",
     images: [
       { src: getImg('../assets/portfolio/_1-2025-izabelin-220m2/aranzacja-wnetrza-domu-salon-jadalnia-kuchnia-izabelin.webp'), alt: "Aranzacja wnetrza domu salon jadalnia kuchnia izabelin" },
       { src: getImg('../assets/portfolio/_1-2025-izabelin-220m2/detale-wnetrza-jadalnia-dekoracja-stolu-izabelin.webp'), alt: "Detale wnetrza jadalnia dekoracja stolu izabelin" },
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     category: "apartament",
     area: "120 m²",
     year: "2024",
-    description: "Nowoczesny dom w Markach (120 m²). Zobacz aranżację wnętrza łączącą drewniane elementy z eleganckim designem. Otwarta strefa dzienna, jasne kolory i nietuzinkowe detale.",
+    description: "Nowoczesny apartament w Markach (120 m²). Zobacz aranżację wnętrza łączącą drewniane elementy z eleganckim designem oraz jasnymi kolorami.",
     images: [
       { src: getImg('../assets/portfolio/_3-2024-marki-120m2/aranzacja-jadalni-stol-drewniany-lampa-betonowa.webp'), alt: "Aranzacja jadalni stol drewniany lampa betonowa" },
       { src: getImg('../assets/portfolio/_3-2024-marki-120m2/aranzacja-salonu-z-widokiem-przez-szklane-drzwi-loftowe.webp'), alt: "Aranzacja salonu z widokiem przez szklane drzwi loftowe" },
@@ -262,7 +262,7 @@ export const projects: Project[] = [
   {
     slug: "2024-wojny-szuby-wloscianskie-160m2",
     cover: getImg('../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/kuchnia-zabudowa-drewniana-wyspa.webp'),
-    title: "Nowoczesny Projekt Wnętrza Domu w Wojnach-Szubach Włościańskich",
+    title: "Projekt Domu w Wojnach-Szubach Włościańskich",
     location: "Wojny Szuby Wloscianskie",
     index: "09",
     category: "dom",
@@ -281,7 +281,7 @@ export const projects: Project[] = [
   {
     slug: "2024-krosno-240m2",
     cover: getImg('../assets/portfolio/_10-2024-krosno-240m2/aranzacja-strefy-tv-sciana-z-drewna.webp'),
-    title: "Ekskluzywny Dom w Krośnie – Przestrzeń z Drewnianymi Akcentami",
+    title: "Ekskluzywny Dom w Krośnie z Drewnianymi Akcentami",
     location: "Krosno",
     index: "10",
     category: "dom",

@@ -15,10 +15,15 @@ pnpm-debug.log*
 
 # environment variables
 .env
-.env.production
+.env.*
 
-# macOS-specific files
+# OS-specific files
 .DS_Store
+Thumbs.db
+
+# Hosting / Deployment cache
+.vercel/
+.netlify/
 
 # jetbrains setting folder
 .idea/
@@ -26,4 +31,5 @@ pnpm-debug.log*
 # Wrangler local cache (miniflare, SQLite, tmp files)
 .wrangler/
 
-.agents/drafts/*
+# Agent drafts
+.agents/drafts/

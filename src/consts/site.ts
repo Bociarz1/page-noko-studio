@@ -3,6 +3,11 @@ export const BASE_URL = 'https://noko-studio.pl';
 export const COMPANY = {
   name: 'NOKO Studio - Projektowanie wnętrz',
   legalName: 'NOKO STUDIO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ',
+  nip: '9662220395',
+  regon: '544537983',
+  krs: '0001236163',
+  court: 'Sąd Rejonowy w Białymstoku, XII Wydział Gospodarczy KRS',
+  shareCapital: 'Kapitał zakładowy: 5 000 zł',
   email: 'biuro@noko-studio.pl',
   phones: {
     aleksandra: {

@@ -89,11 +89,17 @@ import Instagram from '@assets/icons/icon-instagram.svg';
     </section>
   </div>
   <div class="footer__copyright">
-    <span>© 2026 NOKO STUDIO. Wszystkie prawa zastrzeżone.</span>
+    <div class="footer__company-info">
+      <span>© 2026 {COMPANY.legalName}. Wszystkie prawa zastrzeżone.</span>
+      <span class="footer__company-numbers">NIP: {COMPANY.nip} | REGON: {COMPANY.regon} | KRS: {COMPANY.krs}</span>
+      <span class="footer__company-numbers">{COMPANY.court} | {COMPANY.shareCapital}</span>
+    </div>
     <div class="footer__legal-links">
       <a class="footer__legal-link" href={NavLinks.PRIVACY_POLICY}>Polityka prywatności</a>
       <span class="footer__separator">|</span>
       <a class="footer__legal-link" href={NavLinks.TERMS_OF_SERVICE}>Regulamin</a>
+      <span class="footer__separator">|</span>
+      <button type="button" class="footer__legal-link" data-cc="show-preferencesModal">Ustawienia ciasteczek</button>
     </div>
   </div>
 </footer>

@@ -15,7 +15,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: var(--z-critical);
   transition: transform 0.3s ease, background-color 0.3s ease;
-  transform: translateY(calc(var(--cookie-height, 0px) * -1)) scale(var(--hover-scale, 1));
+  transform: scale(var(--hover-scale, 1));
 
   svg {}
 
