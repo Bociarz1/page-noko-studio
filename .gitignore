@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 # Wrangler local cache (miniflare, SQLite, tmp files)
 .wrangler/
+
+.agents/drafts/*
