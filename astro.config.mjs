@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
     site: "https://noko-studio.pl",
+    trailingSlash: "always",
     output: "static",
     adapter: cloudflare({
         imageService: "compile",
