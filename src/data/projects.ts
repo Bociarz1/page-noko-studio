@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     slug: "2025-izabelin-220m2",
     cover: getImg('../assets/portfolio/_1-2025-izabelin-220m2/aranzacja-wnetrza-domu-salon-jadalnia-kuchnia-izabelin.webp'),
-    title: "Nowoczesna Aranżacja Wnętrza Domu w Izabelinie",
+    title: "Nowoczesna aranżacja domu w Izabelinie",
     location: "Izabelin",
     index: "01",
     category: "dom",
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   {
     slug: "2024-marki-120m2",
     cover: getImg('../assets/portfolio/_3-2024-marki-120m2/aranzacja-jadalni-stol-drewniany-lampa-betonowa.webp'),
-    title: "Nowoczesny apartament- Aranżacja z elementami drewna",
+    title: "Nowoczesny apartament w Markach",
     location: "Marki",
     index: "03",
     category: "apartament",
@@ -185,7 +185,7 @@ export const projects: Project[] = [
   {
     slug: "2026-krypno-koscielne-140m2",
     cover: getImg('../assets/portfolio/_6-2026-krypno-koscielne-140m2/detale-lazienka-wc-zlota-armatura.webp'),
-    title: "Projekt domu łączącego wiele styli w Krypnie Kościelnym",
+    title: "Projekt domu w Krypnie Kościelnym",
     location: "Krypno Koscielne",
     index: "06",
     category: "dom",
@@ -245,7 +245,7 @@ export const projects: Project[] = [
   {
     slug: "2023-warszawa-28m2",
     cover: getImg('../assets/portfolio/_8-2023-warszawa-28m2/jasny-salon-sciana-tv-tapeta-liscie.webp'),
-    title: "Funkcjonalna aranżacja małego mieszkania w Warszawie",
+    title: "Aranżacja małego mieszkania w Warszawie",
     location: "Warszawa",
     index: "08",
     category: "mieszkanie",
@@ -262,7 +262,7 @@ export const projects: Project[] = [
   {
     slug: "2024-wojny-szuby-wloscianskie-160m2",
     cover: getImg('../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/kuchnia-zabudowa-drewniana-wyspa.webp'),
-    title: "Projekt Domu w Wojnach-Szubach Włościańskich",
+    title: "Projekt domu w Wojnach-Szubach Włościańskich",
     location: "Wojny Szuby Wloscianskie",
     index: "09",
     category: "dom",
@@ -281,7 +281,7 @@ export const projects: Project[] = [
   {
     slug: "2024-krosno-240m2",
     cover: getImg('../assets/portfolio/_10-2024-krosno-240m2/aranzacja-strefy-tv-sciana-z-drewna.webp'),
-    title: "Ekskluzywny Dom w Krośnie z Drewnianymi Akcentami",
+    title: "Dom w Krośnie z drewnianymi akcentami",
     location: "Krosno",
     index: "10",
     category: "dom",
@@ -341,7 +341,7 @@ export const projects: Project[] = [
   {
     slug: "2025-zawady-52m2",
     cover: getImg('../assets/portfolio/_12-2025-zawady-52m2/kuchnia-z-wyspa-ciemne-meble-drewno.webp'),
-    title: "Loftowy Projekt Mieszkania z cegłą w Zawadach",
+    title: "Loftowe mieszkanie z cegłą w Zawadach",
     location: "Zawady",
     index: "12",
     category: "mieszkanie",
@@ -364,7 +364,7 @@ export const projects: Project[] = [
   {
     slug: "2024-nowodworce-95m2",
     cover: getImg('../assets/portfolio/_13-2024-nowodworce-95m2/beżowa-kuchnia-z-wyspa-marmurowy-blat.webp'),
-    title: "Jasna i Przytulna Aranżacja Wnętrza Domu w Nowodworcach",
+    title: "Jasna aranżacja domu w Nowodworcach",
     location: "Nowodworce",
     index: "13",
     category: "dom",
