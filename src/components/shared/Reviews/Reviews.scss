@@ -10,16 +10,27 @@
   &__header-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 4rem;
     flex-wrap: wrap;
     gap: 2rem;
+  }
+
+  &__header-text {
+    max-width: 100rem;
   }
 
   &__title {
     font-size: var(--text-h2);
     font-family: var(--font-sans);
     font-weight: var(--font-bold);
+    margin: 0 0 1rem 0;
+  }
+
+  &__desc {
+    font-size: var(--text-body);
+    line-height: 1.6;
+    color: var(--color-gray);
     margin: 0;
   }
 }

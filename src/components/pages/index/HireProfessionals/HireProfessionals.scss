@@ -1,0 +1,124 @@
+@use '@styles/_breakpoints.scss' as *;
+
+.hire-professionals {
+  padding: 6rem 0;
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+
+  @include mq('tablet') {
+    padding: 10rem 0;
+  }
+
+  &__container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    align-items: center;
+
+    @include mq('tablet') {
+      grid-template-columns: 1fr 1fr;
+      gap: 8rem;
+    }
+  }
+
+  &__visual {
+    position: relative;
+    padding-left: 2rem;
+
+    @include mq('tablet') {
+      padding-left: 4rem;
+      border-left: 1px solid var(--color-hairline);
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
+    width: 100px;
+    height: 100px;
+    z-index: 0;
+    pointer-events: none;
+    color: var(--color-white);
+
+    @include mq('tablet') {
+      top: -5rem;
+      left: -3rem;
+      width: 160px;
+      height: 160px;
+    }
+
+    .abstract-shape {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: var(--text-h2);
+    font-weight: var(--font-bold);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: var(--color-white);
+  }
+
+  &__subtitle {
+    font-size: var(--text-body-lg);
+    font-weight: var(--font-light);
+    color: var(--color-light-gray);
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .quote-icon {
+    position: absolute;
+    top: -1.5rem;
+    left: -1rem;
+    z-index: 0;
+    color: var(--color-white);
+
+    @include mq('tablet') {
+      top: -2.5rem;
+      left: -2.5rem;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__text {
+    font-size: var(--text-body);
+    line-height: 1.7;
+    font-weight: var(--font-light);
+    color: var(--color-light-gray);
+    position: relative;
+    z-index: 1;
+    margin: 0;
+
+    &:first-of-type {
+      font-style: italic;
+      font-size: var(--text-h4);
+      color: var(--color-white);
+      line-height: 1.5;
+    }
+  }
+}

@@ -5,22 +5,48 @@ import OurServices from '@components/pages/index/OurServices/OurServices.astro';
 import AboutUs from '@components/pages/index/AboutUs/AboutUs.astro';
 import Portfolio from '@components/pages/index/Portfolio/Portfolio.astro';
 import CTA from '@components/pages/index/CTA/CTA.astro';
+import HireProfessionals from '@components/pages/index/HireProfessionals/HireProfessionals.astro';
 import Reviews from '@components/shared/Reviews/Reviews.astro';
+import FAQ from '@components/shared/FAQ/FAQ.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import Button from '@components/shared/Button/Button.astro';
 import { NavLinks, SectionIds } from '@consts/navLinks';
 import { buildHomeSchema } from '@seo/homeSchema';
 
 const metaData = {
-  title: 'Architekt Wnętrz Białystok | NOKO Studio',
+  title: 'Architekt wnętrz Białystok | NOKO Studio',
   metaDescription:
     'NOKO Studio – profesjonalny architekt wnętrz w Białymstoku i w całej Polsce. Kompleksowa aranżacja i architektura domów, mieszkań i apartamentów.',
 };
-const schema = buildHomeSchema();
+
+const homeFaq = [
+  {
+    q: 'Ile kosztuje projekt wnętrza?',
+    a: '<p>Koszt projektu wnętrza wyceniamy indywidualnie po wstępnej konsultacji. Wiadomym jest, że projekt domu będzie miał inną cenę niż samodzielny projekt kuchni. Nasz kosztorys projektów wnętrz jest zawsze transparentny — przed podpisaniem umowy wiesz, na co przeznaczasz każdą złotówkę.</p>',
+  },
+  {
+    q: 'Co zawiera projekt?',
+    a: '<p>Zawartość projektu zależy od wybranego przez Ciebie pakietu.</p><br/><ul><li><strong>Pakiet Podstawowy</strong> obejmuje koncepcję aranżacji wnętrz, wizualizacje 3D oraz panoramy 360.</li><li><strong>Pakiet Standard</strong> dodatkowo zawiera rysunki techniczne, pełną dokumentację projektową, indywidualne projekty mebli oraz szczegółowe zestawienia materiałów.</li><li><strong>Pakiet Premium</strong> dorzuca nadzór autorski i kompleksowe wsparcie na etapie realizacji.</li></ul>',
+  },
+  {
+    q: 'Jak wygląda współpraca z architektem wnętrz?',
+    a: '<p>Współpraca zaczyna się od spotkania lub rozmowy online. Ustalamy styl wnętrza, oczekiwania i budżet, a następnie tworzymy przemyślany projekt wnętrza dopasowany do Twoich potrzeb. Podczas realizacji możesz liczyć na pełne wsparcie.</p>',
+  },
+  {
+    q: 'Gdzie realizujecie zlecenia?',
+    a: '<p>Na co dzień działamy głównie w Białymstoku i okolicach, ale odległość nie jest dla nas problemem. Z przyjemnością zaprojektujemy Twoje wymarzone wnętrze całkowicie zdalnie, niezależnie od tego, w jakim zakątku Polski się znajdujesz.</p>',
+  },
+  {
+    q: 'Projekt wnętrza – co wchodzi w skład naszej oferty?',
+    a: '<p>Nasza oferta to kompleksowa usługa: od konsultacji przed projektem, przez koncepcję, wizualizacje wnętrz i dokumentację, aż po nadzór autorski w trakcie realizacji. Możemy zrealizować projekt domu, projekt kuchni, aranżację salonu, sypialni i przestrzeni do odpoczynku. Na życzenie tworzymy też indywidualne projekty mebli, dzięki którym możemy w pełni zagospodarować przestrzenie unikalne i nietypowe.</p>',
+  },
+];
+
+const schema = buildHomeSchema(homeFaq);
 const heroProps = {
-  preTitle: 'NOKO STUDIO - Twój architekt wnętrz z Białegostoku',
-  title: 'Stwórzmy razem Twoje wymarzone wnętrze, bez stresu i niespodzianek',
-  description: 'Specjaliści od wnętrz: od pierwszej koncepcji aż po finalną realizację projektu.',
+  preTitle: 'Architekt wnętrz Białystok – NOKO Studio',
+  title: 'Stwórzmy razem Twoje wymarzone wnętrze, bez stresu i niespodzianek.',
+  description: 'Od pierwszej koncepcji aż po finalną realizację projektu.',
   image: {
     src: heroImg,
     alt: 'Wnętrze zaprojektowane przez NOKO Studio',
@@ -35,9 +61,11 @@ const heroProps = {
     <Button href={NavLinks.PORTFOLIO} title="Zobacz realizacje" variant="primary" />
     <Button href={NavLinks.OFFER} title="Poznaj ofertę" variant="secondary" />
   </Hero>
+  <HireProfessionals />
   <OurServices />
   <Portfolio />
   <AboutUs />
   <CTA />
   <Reviews />
+  <FAQ faq={homeFaq} />
 </MainLayout>
