@@ -9,9 +9,24 @@ interface FaqItem {
 
 interface Props {
   faq: FaqItem[];
+  id?: string;
+  generateSchema?: boolean;
 }
 
-const { faq = [] } = Astro.props;
+const { faq = [], id = SectionIds[NavLinks.OFFER].faq, generateSchema = false } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a,
+    },
+  })),
+};
 ---
 
 <style lang="scss">
@@ -22,7 +37,11 @@ const { faq = [] } = Astro.props;
   import './FAQ.ts';
 </script>
 
-<section id={SectionIds[NavLinks.OFFER].faq} class="faq">
+{generateSchema && faq.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}
+
+<section id={id} class="faq">
   <div class="faq__container">
     <SectionHeader
       pretitle="FAQ"

@@ -1,0 +1,43 @@
+---
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+
+const { headings } = Astro.props;
+
+// Pomiń h1 i weź tylko h2 i h3 do spisu treści
+const filteredHeadings = headings.filter((heading) => heading.depth > 1 && heading.depth < 4);
+---
+
+<style lang="scss">
+  @use './TableOfContents.scss';
+</style>
+
+<script>
+  import './TableOfContents.ts';
+</script>
+
+<aside class="toc" aria-label="Spis treści">
+  <div class="toc__sticky-container">
+    <h3 class="toc__title">Na tej stronie</h3>
+    {filteredHeadings.length > 0 ? (
+      <ul class="toc__list">
+        {filteredHeadings.map((heading) => (
+          <li class={`toc__item toc__item--depth-${heading.depth}`}>
+            <a href={`#${heading.slug}`} class="toc__link" data-toc-link>
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="toc__empty">Brak nagłówków do wyświetlenia.</p>
+    )}
+
+    <div class="toc__actions">
+      <button class="toc__back-to-top" id="backToTop" aria-label="Wróć do góry">
+        ↑ Do góry
+      </button>
+    </div>
+  </div>
+</aside>

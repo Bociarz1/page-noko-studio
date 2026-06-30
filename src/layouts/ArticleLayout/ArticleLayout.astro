@@ -1,0 +1,143 @@
+---
+import MainLayout from '@layouts/MainLayout/MainLayout.astro';
+import TableOfContents from '@components/pages/blog/TableOfContents/TableOfContents.astro';
+import AuthorBio from '@components/shared/AuthorBio/AuthorBio.astro';
+import FAQ from '@components/shared/FAQ/FAQ.astro';
+import ArticleBody from '@components/pages/blog/ArticleBody/ArticleBody.astro';
+import { generateBlogSchema } from '@seo/blogSchema';
+import { getReadingTime } from '@utils/readingTime';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author: {
+    name: string;
+    description: string;
+    avatar: ImageMetadata;
+  };
+  heroImage: ImageMetadata;
+  url: string;
+  headings: { depth: number; slug: string; text: string }[];
+  rawContent: string; // Do wyliczenia czasu czytania
+  faq?: { q: string; a: string }[];
+}
+
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  heroImage,
+  url,
+  headings,
+  rawContent,
+  faq,
+} = Astro.props;
+
+// Wygeneruj schemat JSON-LD
+const [articleSchema, breadcrumbSchema] = generateBlogSchema({
+  title,
+  description,
+  url,
+  pubDate,
+  updatedDate,
+  authorName: author.name,
+  imageUrl: heroImage?.src || heroImage,
+});
+
+const readingTime = getReadingTime(rawContent);
+
+const formattedDate = pubDate.toLocaleDateString('pl-PL', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+<style lang="scss">
+  @use './ArticleLayout.scss';
+</style>
+
+<MainLayout 
+  title={title} 
+  metaDescription={description} 
+  canonicalUrl={url} 
+  ogImage={heroImage}
+  type="article"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <div class="article-layout">
+    <div class="article-layout__container">      
+      <article class="article-layout__content">
+        <header class="article-layout__header">
+          <h1 class="article-layout__title">{title}</h1>
+          
+          <div class="article-layout__meta">
+            {author.avatar && (
+              <Image 
+                src={author.avatar} 
+                alt={author.name} 
+                class="article-layout__meta-avatar" 
+                format="avif"
+                width={48}
+                height={48}
+                widths={[48, 96]}
+                sizes="48px"
+                loading="lazy" 
+              />
+            )}
+            <span class="article-layout__meta-author">{author.name}</span>
+            <div>
+            <time class="article-layout__meta-date" datetime={pubDate.toISOString()}>
+              {formattedDate}
+            </time>
+            <span class="article-layout__meta-separator"></span>
+            <span class="article-layout__meta-reading-time">⏱ {readingTime} min czytania</span>
+              </div>
+          </div>
+        </header>
+
+        {heroImage && (
+          <div class="article-layout__hero">
+            <Image 
+              src={heroImage} 
+              alt={`Obraz do artykułu: ${title}`} 
+              class="article-layout__hero-img" 
+              format="avif"
+              width={1200}
+              height={630}
+              widths={[400, 800, 1200]}
+              sizes="(max-width: 768px) 400px, (max-width: 1024px) 800px, 1200px"
+              loading="eager" 
+              fetchpriority="high"
+            />
+          </div>
+        )}
+
+        <ArticleBody>
+          <slot />
+        </ArticleBody>
+
+        {faq && faq.length > 0 && (
+          <FAQ faq={faq} id="article-faq" generateSchema={true} />
+        )}
+
+        <AuthorBio 
+          name={author.name} 
+          description={author.description} 
+          avatarUrl={author.avatar} 
+        />
+      </article>
+
+      <aside class="article-layout__sidebar">
+        <TableOfContents headings={headings} />
+      </aside>
+      
+    </div>
+  </div>
+</MainLayout>

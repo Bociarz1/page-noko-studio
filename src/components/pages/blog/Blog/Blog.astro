@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BlogItem from '@components/pages/blog/BlogItem/BlogItem.astro';
+import './Blog.scss';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="blog-index">
+  <div class="blog-index__grid">
+    {posts.map((post) => (
+      <BlogItem post={post} />
+    ))}
+  </div>
+</div>

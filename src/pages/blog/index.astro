@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import MainLayout from '@layouts/MainLayout/MainLayout.astro';
+import Hero from '@components/shared/Hero/Hero.astro';
+import Blog from '@components/pages/blog/Blog/Blog.astro';
+import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
+import { buildBlogListingSchema } from '@seo/blogListingSchema';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const title = "Blog | NOKO Studio";
+const description = "Poczytaj o SEO, copywritingu i tworzeniu stron internetowych z NOKO Studio.";
+
+const heroProps = {
+  preTitle: 'Baza wiedzy i nowości',
+  title: 'Blog o architekturze wnętrz',
+  description: 'Odkryj porady, inspiracje oraz ciekawostki ze świata projektowania wnętrz. Dzielimy się naszą wiedzą, doświadczeniem i nowinkami z branży.',
+  image: {
+    src: heroImg,
+    alt: 'Założycielki NOKO Studio',
+    sizes: '60vw',
+  },
+  height: 'auto',
+};
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://noko-studio.pl').href;
+
+const schema = buildBlogListingSchema({
+  title,
+  description,
+  url: canonicalUrl,
+  posts: posts.map((post) => ({
+    title: post.data.title,
+    url: new URL(`/blog/${post.id}/`, Astro.site || 'https://noko-studio.pl').href,
+    pubDate: post.data.pubDate,
+  })),
+});
+---
+
+<MainLayout title={title} metaDescription={description} canonicalUrl={canonicalUrl}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <Hero {...heroProps} />
+  <Blog posts={posts} />
+</MainLayout>

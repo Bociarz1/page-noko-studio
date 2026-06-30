@@ -11,6 +11,7 @@ export enum NavLinks {
   PORTFOLIO = '/portfolio/',
   ABOUT_US = `/#o-nas`,
   OFFER = '/oferta/',
+  BLOG = '/blog/',
   CONTACT = '/kontakt/',
   PRIVACY_POLICY = '/polityka-prywatnosci/',
   TERMS_OF_SERVICE = '/regulamin/',
@@ -41,6 +42,10 @@ export const NAV_ELEMENTS = [
   {
     label: 'Oferta',
     href: NavLinks.OFFER,
+  },
+  {
+    label: 'Blog',
+    href: NavLinks.BLOG,
   },
   {
     label: 'Kontakt',

@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  name: string;
+  description: string;
+  avatarUrl?: any;
+}
+
+const { name, description, avatarUrl } = Astro.props;
+---
+
+<style lang="scss">
+  @use './AuthorBio.scss';
+</style>
+
+<div class="author-bio">
+  <div class="author-bio__avatar-wrapper">
+    {avatarUrl ? (
+      <Image 
+        src={avatarUrl} 
+        alt={`Zdjęcie autora: ${name}`} 
+        class="author-bio__avatar" 
+        format="avif"
+        width={80}
+        height={80}
+        widths={[40, 80, 160]}
+        sizes="80px"
+        loading="lazy" 
+      />
+    ) : (
+      <div class="author-bio__avatar-placeholder">
+        {name.charAt(0)}
+      </div>
+    )}
+  </div>
+  <div class="author-bio__content">
+    <h4 class="author-bio__name">{name}</h4>
+    <p class="author-bio__description">{description}</p>
+    <a href="/blog/" class="author-bio__link">
+      Wszystkie artykuły &rarr;
+    </a>
+  </div>
+</div>
