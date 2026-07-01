@@ -1,0 +1,23 @@
+---
+title: "Projekt domu w Wojnach-Szubach Włościańskich"
+description: "Nowoczesny projekt wnętrza domu (Wojny-Szuby Włościańskie, 160 m²). Drewniana zabudowa, stylowa kuchnia z wyspą i nowoczesna łazienka. Zobacz realizację."
+cover: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/kuchnia-zabudowa-drewniana-wyspa.webp"
+location: "Wojny Szuby Wloscianskie"
+index: "09"
+category: "dom"
+area: "160 m²"
+year: "2024"
+gallery:
+  - src: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/kuchnia-zabudowa-drewniana-wyspa.webp"
+    alt: "Kuchnia zabudowa drewniana wyspa"
+  - src: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/lazienka-z-wanna-i-prysznicem-terazzo.webp"
+    alt: "Lazienka z wanna i prysznicem terazzo"
+  - src: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/mala-lazienka-z-prysznicem-walk-in.webp"
+    alt: "Mala lazienka z prysznicem walk in"
+  - src: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/nowoczesna-biala-kuchnia-z-wyspa.webp"
+    alt: "Nowoczesna biala kuchnia z wyspa"
+  - src: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/nowoczesna-lazienka-drewno-biel-czern.webp"
+    alt: "Nowoczesna lazienka drewno biel czern"
+  - src: "../../assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/projekt-malej-lazienki-wc-podtynkowe.webp"
+    alt: "Projekt malej lazienki wc podtynkowe"
+---

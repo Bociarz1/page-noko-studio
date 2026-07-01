@@ -28,7 +28,26 @@ const blogCollection = defineCollection({
   }),
 });
 
+const portfolioCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/portfolio" }),
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    description: z.string(),
+    cover: image(),
+    location: z.string(),
+    index: z.string(),
+    category: z.enum(["apartament", "mieszkanie", "dom"]),
+    area: z.string(),
+    year: z.string(),
+    gallery: z.array(z.object({
+      src: image(),
+      alt: z.string()
+    })).optional(),
+  }),
+});
+
 export const collections = {
   'blog': blogCollection,
   'authors': authorsCollection,
+  'portfolio': portfolioCollection,
 };

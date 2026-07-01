@@ -1,0 +1,117 @@
+media:
+  input: src/assets/images
+  output: ../../assets/images
+
+content:
+  - name: blog
+    label: Blog
+    type: collection
+    path: src/content/blog
+    format: frontmatter
+    fields:
+      - name: title
+        label: Tytuł
+        type: string
+        required: true
+      - name: description
+        label: Opis SEO
+        type: string
+        required: true
+      - name: pubDate
+        label: Data publikacji
+        type: date
+        required: true
+      - name: updatedDate
+        label: Data aktualizacji
+        type: date
+      - name: author
+        label: Autor
+        type: string
+      - name: image
+        label: Zdjęcie główne
+        type: image
+        required: true
+      - name: tags
+        label: Tagi
+        type: list
+      - name: body
+        label: Treść artykułu
+        type: rich-text
+
+  - name: portfolio
+    label: Portfolio Projekty
+    type: collection
+    path: src/content/portfolio
+    format: frontmatter
+    fields:
+      - name: title
+        label: Tytuł projektu
+        type: string
+        required: true
+      - name: description
+        label: Krótki opis
+        type: string
+        required: true
+      - name: cover
+        label: Miniatura (Okładka)
+        type: image
+        required: true
+      - name: location
+        label: Lokalizacja
+        type: string
+        required: true
+      - name: index
+        label: Numer projektu (np. 01)
+        type: string
+        required: true
+      - name: category
+        label: Kategoria
+        type: select
+        options:
+          - apartament
+          - mieszkanie
+          - dom
+        required: true
+      - name: area
+        label: Metraż (np. 220 m²)
+        type: string
+        required: true
+      - name: year
+        label: Rok realizacji
+        type: string
+        required: true
+      - name: gallery
+        label: Galeria zdjęć
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Zdjęcie
+            type: image
+            required: true
+          - name: alt
+            label: Tekst alternatywny (SEO)
+            type: string
+            required: true
+      - name: body
+        label: Treść dodatkowa
+        type: rich-text
+
+  - name: authors
+    label: Autorzy
+    type: collection
+    path: src/content/authors
+    format: json
+    fields:
+      - name: name
+        label: Imię i Nazwisko
+        type: string
+        required: true
+      - name: description
+        label: Opis (Bio)
+        type: string
+        required: true
+      - name: avatar
+        label: Zdjęcie profilowe
+        type: image
+        required: true
