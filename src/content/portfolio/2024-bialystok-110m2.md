@@ -3,10 +3,10 @@ title: "Przestronne Wnętrze Domu w Białymstoku"
 description: "Przestronne wnętrze domu w Białymstoku (110 m²). Zobacz stylową strefę dzienną z wyrazistym kamieniem i ciemnym drewnem."
 cover: "../../assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp"
 location: "Bialystok"
-index: "07"
+featured: false
+pubDate: 2024-01-23T00:00:00.000Z
 category: "dom"
 area: "110 m²"
-year: "2024"
 gallery:
   - src: "../../assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp"
     alt: "Aranzacja salonu naroznik kominek"

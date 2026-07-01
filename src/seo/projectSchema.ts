@@ -6,7 +6,7 @@ interface ProjectSchemaOptions {
   slug: string;
   title: string;
   description: string;
-  year: string | number;
+  pubDate: Date;
   imageSrcs: string[];
 }
 
@@ -14,7 +14,7 @@ export function buildProjectSchema({
   slug,
   title,
   description,
-  year,
+  pubDate,
   imageSrcs,
 }: ProjectSchemaOptions) {
   const creativeWork = buildCreativeWork({
@@ -24,7 +24,7 @@ export function buildProjectSchema({
     description,
     image: imageSrcs,
     creatorId: organizationSchema['@id'],
-    dateCreated: String(year),
+    dateCreated: pubDate.toISOString(),
   });
 
   return buildGraph(creativeWork);

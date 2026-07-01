@@ -6,13 +6,12 @@ interface Props {
   cover: ImageMetadata;
   title: string;
   location: string;
-  index: string;
   category: string;
   area: string;
   year: string;
 }
 
-const { slug, cover, title, location, index, category, area, year } = Astro.props;
+const { slug, cover, title, location, category, area, year } = Astro.props;
 ---
 
 <style lang="scss">
@@ -37,7 +36,7 @@ const { slug, cover, title, location, index, category, area, year } = Astro.prop
   <div class="portfolio-card__content">
     <div class="portfolio-card__text">
       <p class="portfolio-card__meta">
-        {index} · {category === "apartament" ? "Apartament" : "Dom"}
+        {category === "apartament" ? "Apartament" : "Dom"}
       </p>
       <h3 class="portfolio-card__title">{title}</h3>
       <p class="portfolio-card__details">{location} · {area} · {year}</p>

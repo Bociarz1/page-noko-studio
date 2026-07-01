@@ -3,7 +3,7 @@ import LocalCafe from '@assets/icons/icon-local-cafe.svg';
 import Star from '@assets/icons/icon-star.svg';
 import Diamond from '@assets/icons/icon-diamond.svg';
 import Crown from '@assets/icons/icon-crown.svg';
-import Button from '@components/shared/Button/Button.astro';
+import Button, { ButtonVariant } from '@components/shared/Button/Button.astro';
 import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { NavLinks } from 'src/consts/navLinks';
 import { SectionIds } from 'src/consts/navLinks';
@@ -114,6 +114,6 @@ const services = [
   </div>
 
   <div class="offer-cards__footer">
-    <Button title="Skontaktuj się z nami" href={NavLinks.CONTACT} variant="primary" dark />
+    <Button title="Skontaktuj się z nami" href={NavLinks.CONTACT} variant={ButtonVariant.PRIMARY} dark />
   </div>
 </section>

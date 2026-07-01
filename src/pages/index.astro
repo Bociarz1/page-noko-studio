@@ -9,7 +9,7 @@ import HireProfessionals from '@components/pages/index/HireProfessionals/HirePro
 import Reviews from '@components/shared/Reviews/Reviews.astro';
 import FAQ from '@components/shared/FAQ/FAQ.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
-import Button from '@components/shared/Button/Button.astro';
+import Button, { ButtonVariant } from '@components/shared/Button/Button.astro';
 import { NavLinks, SectionIds } from '@consts/navLinks';
 import { buildHomeSchema } from '@seo/homeSchema';
 
@@ -58,8 +58,8 @@ const heroProps = {
 <MainLayout {...metaData}>
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   <Hero {...heroProps} id={SectionIds[NavLinks.HOME].hero}>
-    <Button href={NavLinks.PORTFOLIO} title="Zobacz realizacje" variant="primary" />
-    <Button href={NavLinks.OFFER} title="Poznaj ofertę" variant="secondary" />
+    <Button href={NavLinks.PORTFOLIO} title="Zobacz realizacje" variant={ButtonVariant.PRIMARY} />
+    <Button href={NavLinks.OFFER} title="Poznaj ofertę" variant={ButtonVariant.SECONDARY} />
   </Hero>
   <HireProfessionals />
   <OurServices />

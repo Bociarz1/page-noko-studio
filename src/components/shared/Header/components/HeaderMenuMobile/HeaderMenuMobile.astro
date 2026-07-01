@@ -1,9 +1,10 @@
 ---
 import Menu from '@assets/icons/icon-menu.svg';
-import { NavLink, NAV_ELEMENTS } from 'src/consts/navLinks';
+import type { INavLink } from 'src/consts/navLinks';
+
 
 interface Props {
-  navElements: NavLink[];
+  navElements: INavLink<any>[];
 }
 const { navElements = [] } = Astro.props;
 ---

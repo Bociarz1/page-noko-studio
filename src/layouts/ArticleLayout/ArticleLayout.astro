@@ -49,7 +49,7 @@ const [articleSchema, breadcrumbSchema] = generateBlogSchema({
   pubDate,
   updatedDate,
   authorName: author.name,
-  imageUrl: heroImage?.src || heroImage,
+  imageUrl: heroImage.src,
 });
 
 const readingTime = getReadingTime(rawContent);
@@ -68,7 +68,7 @@ const formattedDate = pubDate.toLocaleDateString('pl-PL', {
   title={metaTitle || title} 
   metaDescription={description} 
   canonicalUrl={url} 
-  ogImage={heroImage}
+  ogImage={heroImage.src}
   type="article"
 >
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />

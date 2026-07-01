@@ -4,10 +4,12 @@ import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro'
 import { getCollection } from 'astro:content';
 import { NavLinks, SectionIds } from 'src/consts/navLinks';
 
-const featuredIndexes = ['01', '02', '03', '04'];
 const rawProjects = await getCollection('portfolio');
 const allProjects = rawProjects.map(p => ({ slug: p.id, ...p.data }));
-const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
+const projects = allProjects
+  .filter((p) => p.featured)
+  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf())
+  .slice(0, 4);
 ---
 
 <style lang="scss">
@@ -38,10 +40,9 @@ const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
             cover={p.cover}
             title={p.title}
             location={p.location}
-            index={p.index}
             category={p.category}
             area={p.area}
-            year={p.year}
+            year={p.pubDate.getFullYear().toString()}
           />
         ))
       }

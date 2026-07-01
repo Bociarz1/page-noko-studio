@@ -3,10 +3,10 @@ title: "Luksusowy Projekt Apartamentu w Warszawie"
 description: "Aranżacja 100-metrowego apartamentu. Przestrzeń łączy jasną bazę kolorystyczną z mocnymi akcentami w postaci kamiennych okładzin i szczotkowanego złota."
 cover: "../../assets/portfolio/_2-2025-warszawa-100m2/detale-wykonczenia-kuchni-marmur-zloto-projekt-mieszkania.webp"
 location: "Warszawa"
-index: "02"
+featured: true
+pubDate: 2025-01-28T00:00:00.000Z
 category: "apartament"
 area: "100 m²"
-year: "2025"
 gallery:
   - src: "../../assets/portfolio/_2-2025-warszawa-100m2/detale-wykonczenia-kuchni-marmur-zloto-projekt-mieszkania.webp"
     alt: "Detale wykonczenia kuchni marmur zloto projekt mieszkania"

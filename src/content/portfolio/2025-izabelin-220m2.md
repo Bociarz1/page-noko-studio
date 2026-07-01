@@ -3,10 +3,10 @@ title: "Nowoczesna aranżacja domu w Izabelinie"
 description: "Projekt wnętrz domu w Izabelinie (220 m²). Jasna paleta barw, drewno i minimalistyczne detale połączone w spójnym, otwartym układzie."
 cover: "../../assets/portfolio/_1-2025-izabelin-220m2/aranzacja-wnetrza-domu-salon-jadalnia-kuchnia-izabelin.webp"
 location: "Izabelin"
-index: "01"
+featured: true
+pubDate: 2025-01-29T00:00:00.000Z
 category: "dom"
 area: "220 m²"
-year: "2025"
 gallery:
   - src: "../../assets/portfolio/_1-2025-izabelin-220m2/aranzacja-wnetrza-domu-salon-jadalnia-kuchnia-izabelin.webp"
     alt: "Aranzacja wnetrza domu salon jadalnia kuchnia izabelin"

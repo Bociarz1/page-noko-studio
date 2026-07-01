@@ -3,11 +3,14 @@ import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import './BlogItem.scss';
 
+import { getEntry } from 'astro:content';
+
 interface Props {
   post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
+const author = await getEntry(post.data.author);
 ---
 
 <a href={`/blog/${post.id}/`} class="blog-card">
@@ -40,7 +43,7 @@ const { post } = Astro.props;
             day: 'numeric',
           })}
         </time>
-        {' · '}{post.data.author.name}
+        {' · '}{author?.data.name}
       </p>
       <h2 class="blog-card__title">{post.data.title}</h2>
       <p class="blog-card__details">{post.data.description}</p>

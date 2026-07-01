@@ -3,7 +3,7 @@ import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 const authorsCollection = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "./src/content/authors" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/authors" }),
   schema: ({ image }) => z.object({
     name: z.string(),
     description: z.string(),
@@ -36,10 +36,10 @@ const portfolioCollection = defineCollection({
     description: z.string(),
     cover: image(),
     location: z.string(),
-    index: z.string(),
+    featured: z.boolean().default(false),
+    pubDate: z.date(),
     category: z.enum(["apartament", "mieszkanie", "dom"]),
     area: z.string(),
-    year: z.string(),
     gallery: z.array(z.object({
       src: image(),
       alt: z.string()

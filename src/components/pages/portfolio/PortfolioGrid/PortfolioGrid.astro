@@ -7,10 +7,9 @@ interface ProjectItem {
   cover: ImageMetadata;
   title: string;
   location: string;
-  index: string;
   category: string;
   area: string;
-  year: string;
+  pubDate: Date;
 }
 
 interface Props {
@@ -33,10 +32,9 @@ const { projects } = Astro.props;
           cover={p.cover}
           title={p.title}
           location={p.location}
-          index={p.index}
           category={p.category}
           area={p.area}
-          year={p.year}
+          year={p.pubDate.getFullYear().toString()}
         />
       ))
     }

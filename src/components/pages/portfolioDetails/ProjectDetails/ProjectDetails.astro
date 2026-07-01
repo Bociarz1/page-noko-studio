@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import Hero from '@components/shared/Hero/Hero.astro';
 import Lightbox from '@components/pages/portfolio/Lightbox/Lightbox.astro';
-import Button from '@components/shared/Button/Button.astro';
+import Button, { ButtonVariant } from '@components/shared/Button/Button.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -13,7 +13,7 @@ const { project } = Astro.props;
 ---
 
 <Hero
-  preTitle={`${project.index} · ${project.category === 'apartament' ? 'Apartament' : 'Dom'}`}
+  preTitle={project.category === 'apartament' ? 'Apartament' : 'Dom'}
   title={project.title}
   description={project.description}
   image={{
@@ -28,12 +28,12 @@ const { project } = Astro.props;
     <span aria-hidden>·</span>
     <span>{project.area}</span>
     <span aria-hidden>·</span>
-    <span>{project.year}</span>
+    <span>{project.pubDate.getFullYear().toString()}</span>
   </div>
 </Hero>
 
 <section class="project-gallery">
-  <Button dark variant="primary" href="/portfolio/" title="Wróć do portfolio" />
+  <Button dark variant={ButtonVariant.PRIMARY} href="/portfolio/" title="Wróć do portfolio" />
   <div class="project-gallery__grid">
     {
       (project.gallery || []).map((img) => (

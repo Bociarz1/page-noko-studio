@@ -1,8 +1,8 @@
 ---
-import { NavLink } from 'src/consts/navLinks';
+import type { INavLink } from 'src/consts/navLinks';
 
 interface Props {
-  navElements: NavLink[];
+  navElements: INavLink<any>[];
 }
 const { navElements = [] } = Astro.props;
 ---

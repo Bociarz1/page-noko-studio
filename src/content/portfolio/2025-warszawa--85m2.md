@@ -3,10 +3,10 @@ title: "Projekt Domu w stylu retro w Warszawie"
 description: "Projekt domu w Warszawie (85 m²) w stylu retro. Zobacz nowoczesną jadalnię, salon z kominkiem i piękną kuchnię z drewnianymi detalami."
 cover: "../../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp"
 location: "Warszawa"
-index: "14"
+featured: false
+pubDate: 2025-01-16T00:00:00.000Z
 category: "dom"
 area: "85 m²"
-year: "2025"
 gallery:
   - src: "../../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp"
     alt: "Jadalnia stol drewniany okno tarasowe"

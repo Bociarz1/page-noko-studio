@@ -20,7 +20,7 @@ const schema = buildProjectSchema({
   slug: project.slug,
   title: project.title,
   description: project.description,
-  year: project.year,
+  pubDate: project.pubDate,
   imageSrcs: (project.gallery || []).map((img) => new URL(img.src.src, Astro.site || BASE_URL).href),
 });
 ---

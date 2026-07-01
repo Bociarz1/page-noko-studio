@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import Button from '@components/shared/Button/Button.astro';
 import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
   title: string;
   description: string;
   image: {
-    src: ImageMetadata | string;
+    src: ImageMetadata;
     alt: string;
     sizes: string;
   };
