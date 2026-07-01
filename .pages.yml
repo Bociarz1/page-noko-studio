@@ -1,15 +1,22 @@
 media:
-  input: src/assets/images
-  output: ../../assets/images
+  - name: images
+    input: src/assets/images
+    output: ../../assets/images
+  - name: blog
+    input: src/assets/blog
+    output: ../../assets/blog
+  - name: portfolio
+    input: src/assets/portfolio
+    output: ../../assets/portfolio
+  - name: authors
+    input: src/assets/blog/authors
+    output: ../../assets/blog/authors
 
 content:
   - name: blog
     label: Blog
     type: collection
     path: src/content/blog
-    media:
-      input: src/assets/blog
-      output: ../../assets/blog
     view:
       sort: [pubDate, title]
       default:
@@ -48,9 +55,10 @@ content:
           - aleksandra
           - paulina
       - name: image
-        label: Zdjęcie główne
+        label: Okładka wpisu
         type: image
-        description: 'Miniaturka na liście i główna grafika na górze artykułu.'
+        media: blog
+        description: 'Główne zdjęcie artykułu (najlepiej poziome).'
         required: true
       - name: tags
         label: Tagi
@@ -78,12 +86,9 @@ content:
         description: 'Główna treść artykułu. Możesz dodawać akapity, listy i pogrubienia.'
 
   - name: portfolio
-    label: Portfolio Projekty
+    label: Portfolio
     type: collection
     path: src/content/portfolio
-    media:
-      input: src/assets/portfolio
-      output: ../../assets/portfolio
     view:
       sort: [pubDate, title]
       default:
@@ -103,6 +108,7 @@ content:
       - name: cover
         label: Miniatura (Okładka)
         type: image
+        media: portfolio
         description: 'Zdjęcie reprezentujące projekt na stronie głównej i na liście.'
         required: true
       - name: location
@@ -143,6 +149,7 @@ content:
           - name: src
             label: Zdjęcie
             type: image
+            media: portfolio
             description: 'Dodaj zdjęcie do galerii.'
             required: true
           - name: alt
@@ -159,9 +166,6 @@ content:
     label: Autorzy
     type: collection
     path: src/content/authors
-    media:
-      input: src/assets/blog/authors
-      output: ../../assets/blog/authors
     fields:
       - name: name
         label: Imię i Nazwisko
@@ -176,5 +180,6 @@ content:
       - name: avatar
         label: Zdjęcie profilowe
         type: image
+        media: authors
         description: 'Zdjęcie awatara.'
         required: true
