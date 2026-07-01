@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry, render } from 'astro:content';
 import ArticleLayout from '@layouts/ArticleLayout/ArticleLayout.astro';
+import { blogImages, authorImages, resolveImage } from '@utils/imageImports';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -15,8 +16,8 @@ const { Content, headings } = await render(post);
 const author = await getEntry(post.data.author);
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site || 'https://noko-studio.pl').href;
-const heroImageMeta = post.data.image;
-const authorAvatarMeta = author.data.avatar;
+const heroImageMeta = await resolveImage(blogImages, post.data.image);
+const authorAvatarMeta = await resolveImage(authorImages, author.data.avatar);
 ---
 
 <ArticleLayout

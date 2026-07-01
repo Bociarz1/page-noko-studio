@@ -5,9 +5,19 @@ import PortfolioGrid from '@components/pages/portfolio/PortfolioGrid/PortfolioGr
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
 import { getCollection } from 'astro:content';
 import { buildPortfolioSchema } from '@seo/portfolioSchema';
+import { portfolioImages, resolveImage } from '@utils/imageImports';
+import type { ImageMetadata } from 'astro';
 
 const rawProjects = await getCollection('portfolio');
-const projects = rawProjects.map(p => ({ slug: p.id, ...p.data }));
+const projects = await Promise.all(
+  rawProjects
+    .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+    .map(async (p) => ({
+      slug: p.id,
+      ...p.data,
+      cover: await resolveImage(portfolioImages, p.data.cover) as ImageMetadata,
+    }))
+);
 
 const metaData = {
   title: 'Portfolio Projektów Wnętrz – Realizacje NOKO Studio',
@@ -27,7 +37,7 @@ const heroProps = {
   },
   height: 'auto',
 };
-const schema = buildPortfolioSchema(projects);
+const schema = buildPortfolioSchema(rawProjects.map(p => ({ slug: p.id, ...p.data })));
 ---
 
 <MainLayout {...metaData}>

@@ -1,25 +1,25 @@
 ---
 title: "Projekt Domu w stylu retro w Warszawie"
 description: "Projekt domu w Warszawie (85 m²) w stylu retro. Zobacz nowoczesną jadalnię, salon z kominkiem i piękną kuchnię z drewnianymi detalami."
-cover: "../../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp"
+cover: "/src/assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp"
 location: "Warszawa"
 featured: false
 pubDate: 2025-01-16T00:00:00.000Z
 category: "dom"
 area: "85 m²"
 gallery:
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/jadalnia-stol-drewniany-okno-tarasowe.webp"
     alt: "Jadalnia stol drewniany okno tarasowe"
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/jadalnia-zielona-lampa-rosliny-doniczkowe.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/jadalnia-zielona-lampa-rosliny-doniczkowe.webp"
     alt: "Jadalnia zielona lampa rosliny doniczkowe"
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/kuchnia-z-wyspa-terrazzo-drewno.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/kuchnia-z-wyspa-terrazzo-drewno.webp"
     alt: "Kuchnia z wyspa terrazzo drewno"
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/salon-z-kominkiem-sciana-drewniana.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/salon-z-kominkiem-sciana-drewniana.webp"
     alt: "Salon z kominkiem sciana drewniana"
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/wyspa-kuchenna-lastryko-hoker-rozowy.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/wyspa-kuchenna-lastryko-hoker-rozowy.webp"
     alt: "Wyspa kuchenna lastryko hoker rozowy"
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/zabudowa-kuchenna-drewno-czarne-szklo.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/zabudowa-kuchenna-drewno-czarne-szklo.webp"
     alt: "Zabudowa kuchenna drewno czarne szklo"
-  - src: "../../assets/portfolio/_14-2025-warszawa--85m2/zielony-kominek-kaflowy-salon-design.webp"
+  - src: "/src/assets/portfolio/_14-2025-warszawa--85m2/zielony-kominek-kaflowy-salon-design.webp"
     alt: "Zielony kominek kaflowy salon design"
 ---

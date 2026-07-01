@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import './BlogItem.scss';
-
 import { getEntry } from 'astro:content';
+import { blogImages, resolveImage } from '@utils/imageImports';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -11,13 +11,14 @@ interface Props {
 
 const { post } = Astro.props;
 const author = await getEntry(post.data.author);
+const postImage = post.data.image ? await resolveImage(blogImages, post.data.image) : null;
 ---
 
 <a href={`/blog/${post.id}/`} class="blog-card">
   <div class="blog-card__image-wrapper">
-    {post.data.image ? (
+    {postImage ? (
       <Image 
-        src={post.data.image} 
+        src={postImage} 
         alt={post.data.title} 
         class="blog-card__image"
         width={780}

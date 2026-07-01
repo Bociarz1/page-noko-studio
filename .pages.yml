@@ -1,16 +1,20 @@
 media:
   - name: images
     input: src/assets/images
-    output: ../../assets/images
+    output: /src/assets/images
+    extensions: [jpg, jpeg, png]
   - name: blog
     input: src/assets/blog
-    output: ../../assets/blog
+    output: /src/assets/blog
+    extensions: [jpg, jpeg, png]
   - name: portfolio
     input: src/assets/portfolio
-    output: ../../assets/portfolio
+    output: /src/assets/portfolio
+    extensions: [jpg, jpeg, png]
   - name: authors
     input: src/assets/blog/authors
-    output: ../../assets/blog/authors
+    output: /src/assets/blog/authors
+    extensions: [jpg, jpeg, png]
 
 content:
   - name: blog

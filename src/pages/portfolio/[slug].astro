@@ -3,6 +3,7 @@ import MainLayout from '@layouts/MainLayout/MainLayout.astro';
 import { buildProjectSchema } from '@seo/projectSchema';
 import { BASE_URL } from '@consts/site';
 import ProjectDetails from '@components/pages/portfolioDetails/ProjectDetails/ProjectDetails.astro';
+import { portfolioImages, resolveImage } from '@utils/imageImports';
 
 import { getCollection } from 'astro:content';
 
@@ -16,20 +17,29 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 
+// Rozwiązujemy okładkę i galerię przez glob
+const coverMeta = await resolveImage(portfolioImages, project.cover);
+const galleryMeta = await Promise.all(
+  (project.gallery || []).map(async (img) => ({
+    src: await resolveImage(portfolioImages, img.src),
+    alt: img.alt,
+  }))
+);
+
 const schema = buildProjectSchema({
   slug: project.slug,
   title: project.title,
   description: project.description,
   pubDate: project.pubDate,
-  imageSrcs: (project.gallery || []).map((img) => new URL(img.src.src, Astro.site || BASE_URL).href),
+  imageSrcs: [coverMeta.src],
 });
 ---
 
 <MainLayout
   title={`${project.title} | NOKO Studio`}
   metaDescription={project.description}
-  ogImage={new URL(project.cover.src, Astro.site || BASE_URL).href}
+  ogImage={coverMeta.src}
 >
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
-  <ProjectDetails project={project} />
+  <ProjectDetails project={{ ...project, cover: coverMeta, gallery: galleryMeta }} />
 </MainLayout>

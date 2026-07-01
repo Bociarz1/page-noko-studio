@@ -3,13 +3,21 @@ import PortfolioItem from '@components/shared/PortfolioItem/PortfolioItem.astro'
 import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
 import { getCollection } from 'astro:content';
 import { NavLinks, SectionIds } from 'src/consts/navLinks';
+import { portfolioImages, resolveImage } from '@utils/imageImports';
+import type { ImageMetadata } from 'astro';
 
 const rawProjects = await getCollection('portfolio');
-const allProjects = rawProjects.map(p => ({ slug: p.id, ...p.data }));
-const projects = allProjects
-  .filter((p) => p.featured)
-  .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf())
-  .slice(0, 4);
+const featuredProjects = await Promise.all(
+  rawProjects
+    .filter((p) => p.data.featured)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 4)
+    .map(async (p) => ({
+      slug: p.id,
+      ...p.data,
+      cover: await resolveImage(portfolioImages, p.data.cover) as ImageMetadata,
+    }))
+);
 ---
 
 <style lang="scss">
@@ -34,7 +42,7 @@ const projects = allProjects
 
     <div class="portfolio__grid">
       {
-        projects.map((p) => (
+        featuredProjects.map((p) => (
           <PortfolioItem
             slug={p.slug}
             cover={p.cover}
