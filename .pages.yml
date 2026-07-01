@@ -7,66 +7,108 @@ content:
     label: Blog
     type: collection
     path: src/content/blog
-    format: frontmatter
+    media:
+      input: src/assets/blog
+      output: ../../assets/blog
     fields:
       - name: title
-        label: Tytuł
+        label: Główny Tytuł (H1)
         type: string
+        description: "Główny tytuł wyświetlany na samej górze artykułu. Może być nieco dłuższy."
         required: true
+      - name: metaTitle
+        label: Tytuł SEO (Meta Title)
+        type: string
+        description: "Tytuł, który wyświetla się w zakładce przeglądarki i w Google (do 65 znaków). Jeśli zostawisz puste, użyty zostanie Główny Tytuł."
+        required: false
       - name: description
         label: Opis SEO
         type: string
+        description: "Krótkie streszczenie (Meta Description). Zachęca do kliknięcia w Google (150-160 znaków)."
         required: true
       - name: pubDate
         label: Data publikacji
         type: date
+        description: "Data, od której artykuł jest widoczny."
         required: true
       - name: updatedDate
         label: Data aktualizacji
         type: date
+        description: "(Opcjonalnie) Data ostatniej edycji artykułu."
       - name: author
         label: Autor
-        type: string
+        type: select
+        description: "Wybierz autora, który wyświetli się pod tytułem."
+        options:
+          - aleksandra
+          - paulina
       - name: image
         label: Zdjęcie główne
         type: image
+        description: "Miniaturka na liście i główna grafika na górze artykułu."
         required: true
       - name: tags
         label: Tagi
         type: list
+        description: "Słowa kluczowe artykułu (np. Sypialnia, Porady)."
+      - name: faq
+        label: Sekcja FAQ (Pytania i Odpowiedzi)
+        type: object
+        list: true
+        description: "Sekcja Pytań i Odpowiedzi widoczna na samym dole artykułu (dobra pod SEO)."
+        fields:
+          - name: q
+            label: Pytanie
+            type: string
+            description: "Krótkie pytanie (np. Jak wybrać łóżko?)."
+            required: true
+          - name: a
+            label: Odpowiedź
+            type: rich-text
+            description: "Odpowiedź na pytanie."
+            required: true
       - name: body
         label: Treść artykułu
         type: rich-text
+        description: "Główna treść artykułu. Możesz dodawać akapity, listy i pogrubienia."
 
   - name: portfolio
     label: Portfolio Projekty
     type: collection
     path: src/content/portfolio
-    format: frontmatter
+    media:
+      input: src/assets/portfolio
+      output: ../../assets/portfolio
     fields:
       - name: title
         label: Tytuł projektu
         type: string
+        description: "Pełna nazwa projektu wyświetlana na stronie."
         required: true
       - name: description
         label: Krótki opis
         type: string
+        description: "Krótkie streszczenie (Meta Description pod SEO w Google)."
         required: true
       - name: cover
         label: Miniatura (Okładka)
         type: image
+        description: "Zdjęcie reprezentujące projekt na stronie głównej i na liście."
         required: true
       - name: location
         label: Lokalizacja
         type: string
+        description: "Miasto lub region (np. Warszawa, Białystok)."
         required: true
       - name: index
         label: Numer projektu (np. 01)
         type: string
+        description: "Dwucyfrowy numer wyświetlany nad tytułem."
         required: true
       - name: category
         label: Kategoria
         type: select
+        description: "Typ nieruchomości."
         options:
           - apartament
           - mieszkanie
@@ -75,43 +117,51 @@ content:
       - name: area
         label: Metraż (np. 220 m²)
         type: string
+        description: "Dokładna wielkość (np. 120 m²). Pamiętaj o jednostce."
         required: true
       - name: year
         label: Rok realizacji
         type: string
+        description: "Rok zakończenia projektu (np. 2024)."
         required: true
       - name: gallery
         label: Galeria zdjęć
         type: object
         list: true
+        description: "Zdjęcia wyświetlane w siatce pod głównym opisem projektu."
         fields:
           - name: src
             label: Zdjęcie
             type: image
+            description: "Dodaj zdjęcie do galerii."
             required: true
           - name: alt
             label: Tekst alternatywny (SEO)
             type: string
+            description: "Krótki opis tego co jest na zdjęciu (dla wyszukiwarek i niewidomych)."
             required: true
       - name: body
         label: Treść dodatkowa
         type: rich-text
+        description: "Dodatkowy opis (opcjonalnie)."
 
   - name: authors
     label: Autorzy
     type: collection
     path: src/content/authors
-    format: json
     fields:
       - name: name
         label: Imię i Nazwisko
         type: string
+        description: "Imię (musi pasować do opcji w blogu: 'aleksandra' lub 'paulina')."
         required: true
       - name: description
         label: Opis (Bio)
         type: string
+        description: "Krótka notka biograficzna."
         required: true
       - name: avatar
         label: Zdjęcie profilowe
         type: image
+        description: "Zdjęcie awatara."
         required: true

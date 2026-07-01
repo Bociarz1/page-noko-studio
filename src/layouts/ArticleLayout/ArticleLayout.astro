@@ -11,6 +11,7 @@ import type { ImageMetadata } from 'astro';
 
 interface Props {
   title: string;
+  metaTitle?: string;
   description: string;
   pubDate: Date;
   updatedDate?: Date;
@@ -28,6 +29,7 @@ interface Props {
 
 const {
   title,
+  metaTitle,
   description,
   pubDate,
   updatedDate,
@@ -63,7 +65,7 @@ const formattedDate = pubDate.toLocaleDateString('pl-PL', {
 </style>
 
 <MainLayout 
-  title={title} 
+  title={metaTitle || title} 
   metaDescription={description} 
   canonicalUrl={url} 
   ogImage={heroImage}

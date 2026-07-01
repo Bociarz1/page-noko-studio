@@ -14,7 +14,8 @@ const authorsCollection = defineCollection({
 const blogCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
   schema: ({ image }) => z.object({
-    title: z.string().max(65, "Tytuł powinien mieć maksymalnie 65 znaków dla lepszego SEO."),
+    title: z.string().max(100, "Główny tytuł (H1) powinien mieć do 100 znaków."),
+    metaTitle: z.string().max(65, "Tytuł SEO powinien mieć do 65 znaków.").optional(),
     description: z.string().min(50).max(160, "Opis powinien mieć od 50 do 160 znaków."),
     pubDate: z.date(),
     updatedDate: z.date().optional(),

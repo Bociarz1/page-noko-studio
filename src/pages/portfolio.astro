@@ -3,8 +3,11 @@ import MainLayout from '@layouts/MainLayout/MainLayout.astro';
 import Hero from '@components/shared/Hero/Hero.astro';
 import PortfolioGrid from '@components/pages/portfolio/PortfolioGrid/PortfolioGrid.astro';
 import heroImg from '@assets/images/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp';
-import { projects } from '@data/projects';
+import { getCollection } from 'astro:content';
 import { buildPortfolioSchema } from '@seo/portfolioSchema';
+
+const rawProjects = await getCollection('portfolio');
+const projects = rawProjects.map(p => ({ slug: p.id, ...p.data }));
 
 const metaData = {
   title: 'Portfolio Projektów Wnętrz – Realizacje NOKO Studio',

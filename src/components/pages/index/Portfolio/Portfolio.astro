@@ -1,10 +1,12 @@
 ---
 import PortfolioItem from '@components/shared/PortfolioItem/PortfolioItem.astro';
 import SectionHeader from '@components/shared/SectionHeader/SectionHeader.astro';
-import { projects as allProjects } from '@data/projects';
+import { getCollection } from 'astro:content';
 import { NavLinks, SectionIds } from 'src/consts/navLinks';
 
 const featuredIndexes = ['01', '02', '03', '04'];
+const rawProjects = await getCollection('portfolio');
+const allProjects = rawProjects.map(p => ({ slug: p.id, ...p.data }));
 const projects = allProjects.filter((p) => featuredIndexes.includes(p.index));
 ---
 

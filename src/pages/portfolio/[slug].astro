@@ -1,14 +1,16 @@
 ---
 import MainLayout from '@layouts/MainLayout/MainLayout.astro';
-import { projects } from '@data/projects';
 import { buildProjectSchema } from '@seo/projectSchema';
 import { BASE_URL } from '@consts/site';
 import ProjectDetails from '@components/pages/portfolioDetails/ProjectDetails/ProjectDetails.astro';
 
-export function getStaticPaths() {
-  return projects.map((project) => ({
-    params: { slug: project.slug },
-    props: { project },
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const rawProjects = await getCollection('portfolio');
+  return rawProjects.map((project) => ({
+    params: { slug: project.id },
+    props: { project: { slug: project.id, ...project.data } },
   }));
 }
 
@@ -19,7 +21,7 @@ const schema = buildProjectSchema({
   title: project.title,
   description: project.description,
   year: project.year,
-  imageSrcs: project.images.map((img) => new URL(img.src.src, Astro.site || BASE_URL).href),
+  imageSrcs: (project.gallery || []).map((img) => new URL(img.src.src, Astro.site || BASE_URL).href),
 });
 ---
 
