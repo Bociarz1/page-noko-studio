@@ -1,5 +1,5 @@
 ---
-name: "Aleksandra"
-description: "Architekt wnętrz, dla której najważniejszy jest człowiek i jego potrzeby. W Noko Studio odpowiada za kontakt z inwestorami, dbając o to, by każda przestrzeń była nie tylko piękna, ale i skrojona na miarę. Uważa, że estetyka musi iść w parze z funkcjonalnością."
-avatar: "/src/assets/blog/authors/aleksandra-zalozycielka-noko-studio.png"
+name: 'Aleksandra'
+description: 'Architekt wnętrz, dla której najważniejszy jest człowiek i jego potrzeby. W Noko Studio odpowiada za kontakt z inwestorami, dbając o to, by każda przestrzeń była nie tylko piękna, ale i skrojona na miarę. Uważa, że estetyka musi iść w parze z funkcjonalnością.'
+avatar: '/src/assets/authors/aleksandra-zalozycielka-noko-studio.png'
 ---

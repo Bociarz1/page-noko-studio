@@ -1,10 +1,12 @@
 ---
 title: "Eleganckie mieszkanie w Krupnikach"
+metaTitle: "Eleganckie mieszkanie w Krupnikach"
+metaDescription: "Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej odsłonie."
 description: "Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej odsłonie."
 cover: "/src/assets/portfolio/_4-2024-krupniki-60m2/aranzacja-lazienki-umywalka-nablatowa-marmurowa.webp"
 location: "Krupniki"
 featured: true
-pubDate: 2024-01-26T00:00:00.000Z
+pubDate: 2024-01-26
 category: "mieszkanie"
 area: "60 m²"
 gallery:

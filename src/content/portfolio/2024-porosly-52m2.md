@@ -1,10 +1,12 @@
 ---
 title: "Kontrastowe mieszkanie w Porosłach"
+metaTitle: "Kontrastowe mieszkanie w Porosłach"
+metaDescription: "Aranżacja mieszkania w Porosłach (52 m²). Projekt oparty na spójnym zestawieniu drewna, terrazzo i kontrastujących elementów w odcieniach czerni oraz rudości."
 description: "Aranżacja mieszkania w Porosłach (52 m²). Projekt oparty na spójnym zestawieniu drewna, terrazzo i kontrastujących elementów w odcieniach czerni oraz rudości."
 cover: "/src/assets/portfolio/_5-2024-porosly-52m2/biala-kuchnia-z-drewnem-i-blatem-terrazzo.webp"
 location: "Porosły"
 featured: false
-pubDate: 2024-01-25T00:00:00.000Z
+pubDate: 2024-01-25
 category: "mieszkanie"
 area: "52 m²"
 gallery:

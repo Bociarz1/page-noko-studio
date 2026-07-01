@@ -16,7 +16,8 @@ const blogCollection = defineCollection({
   schema: z.object({
     title: z.string().max(100, "Główny tytuł (H1) powinien mieć do 100 znaków."),
     metaTitle: z.string().max(65, "Tytuł SEO powinien mieć do 65 znaków.").optional(),
-    description: z.string().min(50).max(160, "Opis powinien mieć od 50 do 160 znaków."),
+    metaDescription: z.string().max(160, "Opis SEO powinien mieć do 160 znaków.").optional(),
+    description: z.string(),
     pubDate: z.date(),
     updatedDate: z.date().optional(),
     author: reference('authors'),
@@ -33,6 +34,8 @@ const portfolioCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/portfolio" }),
   schema: z.object({
     title: z.string(),
+    metaTitle: z.string().max(65, "Tytuł SEO powinien mieć do 65 znaków.").optional(),
+    metaDescription: z.string().max(160, "Opis SEO powinien mieć do 160 znaków.").optional(),
     description: z.string(),
     cover: z.string(),
     location: z.string(),

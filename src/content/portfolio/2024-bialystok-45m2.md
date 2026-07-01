@@ -1,10 +1,12 @@
 ---
 title: "Mieszkanie w beżowych tonach w Białymstoku"
+metaTitle: "Mieszkanie w beżowych tonach w Białymstoku"
+metaDescription: "Eleganckie mieszkanie w beżowych tonach (Białystok, 45 m²). Zobacz nowoczesny projekt z marmurowymi akcentami, złotymi detalami i przytulną strefą wypoczynkową."
 description: "Eleganckie mieszkanie w beżowych tonach (Białystok, 45 m²). Zobacz nowoczesny projekt z marmurowymi akcentami, złotymi detalami i przytulną strefą wypoczynkową."
 cover: "/src/assets/portfolio/_11-2024-bialystok-45m2/aneks-kuchenny-z-wyspa-salon-otwarty-projekt.webp"
 location: "Bialystok"
 featured: false
-pubDate: 2024-01-19T00:00:00.000Z
+pubDate: 2024-01-19
 category: "mieszkanie"
 area: "45 m²"
 gallery:

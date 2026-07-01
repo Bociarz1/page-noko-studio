@@ -1,10 +1,12 @@
 ---
 title: "Projekt domu w Wojnach-Szubach Włościańskich"
+metaTitle: "Projekt domu w Wojnach-Szubach Włościańskich"
+metaDescription: "Nowoczesny projekt wnętrza domu (Wojny-Szuby Włościańskie, 160 m²). Drewniana zabudowa, stylowa kuchnia z wyspą i nowoczesna łazienka. Zobacz realizację."
 description: "Nowoczesny projekt wnętrza domu (Wojny-Szuby Włościańskie, 160 m²). Drewniana zabudowa, stylowa kuchnia z wyspą i nowoczesna łazienka. Zobacz realizację."
 cover: "/src/assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/kuchnia-zabudowa-drewniana-wyspa.webp"
 location: "Wojny Szuby Wloscianskie"
 featured: false
-pubDate: 2024-01-21T00:00:00.000Z
+pubDate: 2024-01-21
 category: "dom"
 area: "160 m²"
 gallery:

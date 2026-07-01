@@ -1,20 +1,13 @@
 media:
-  - name: images
-    input: src/assets/images
-    output: /src/assets/images
-    extensions: [jpg, jpeg, png]
   - name: blog
     input: src/assets/blog
     output: /src/assets/blog
-    extensions: [jpg, jpeg, png]
   - name: portfolio
     input: src/assets/portfolio
     output: /src/assets/portfolio
-    extensions: [jpg, jpeg, png]
   - name: authors
-    input: src/assets/blog/authors
-    output: /src/assets/blog/authors
-    extensions: [jpg, jpeg, png]
+    input: src/assets/authors
+    output: /src/assets/authors
 
 content:
   - name: blog
@@ -36,11 +29,16 @@ content:
         label: Tytuł SEO (Meta Title)
         type: string
         description: 'Tytuł, który wyświetla się w zakładce przeglądarki i w Google (do 65 znaków). Jeśli zostawisz puste, użyty zostanie Główny Tytuł.'
-        required: false
-      - name: description
-        label: Opis SEO
+        required: true
+      - name: metaDescription
+        label: Opis SEO (Meta Description)
         type: string
-        description: 'Krótkie streszczenie (Meta Description). Zachęca do kliknięcia w Google (150-160 znaków).'
+        description: 'Krótkie streszczenie pod SEO w Google (150-160 znaków). Jeśli zostawisz puste, użyty zostanie Opis (Zajawka).'
+        required: true
+      - name: description
+        label: Opis / Zajawka (Hero Section)
+        type: string
+        description: 'Tekst, który będzie widoczny na górze strony we wstępie (w Hero Section).'
         required: true
       - name: pubDate
         label: Data publikacji
@@ -56,12 +54,14 @@ content:
         type: select
         description: 'Wybierz autora, który wyświetli się pod tytułem.'
         options:
-          - aleksandra
-          - paulina
+          values:
+            - aleksandra
+            - paulina
       - name: image
         label: Okładka wpisu
         type: image
-        media: blog
+        options:
+          media: blog
         description: 'Główne zdjęcie artykułu (najlepiej poziome).'
         required: true
       - name: tags
@@ -87,6 +87,8 @@ content:
       - name: body
         label: Treść artykułu
         type: rich-text
+        options:
+          media: blog
         description: 'Główna treść artykułu. Możesz dodawać akapity, listy i pogrubienia.'
 
   - name: portfolio
@@ -100,71 +102,78 @@ content:
         order: desc
     fields:
       - name: title
-        label: Tytuł projektu
+        label: Tytuł projektu (H1)
         type: string
-        description: 'Pełna nazwa projektu wyświetlana na stronie.'
+        description: 'Pełna nazwa projektu wyświetlana na stronie (oraz jako tytuł SEO, jeśli nie podano innego).'
+        required: true
+      - name: metaTitle
+        label: Tytuł SEO (Meta Title)
+        type: string
+        description: 'Tytuł, który wyświetla się w zakładce przeglądarki i w Google (do 65 znaków). Jeśli zostawisz puste, użyty zostanie Tytuł projektu.'
+        required: true
+      - name: metaDescription
+        label: Opis SEO (Meta Description)
+        type: string
+        description: 'Krótkie streszczenie pod SEO w Google. Jeśli zostawisz puste, Google użyje pierwszych zdań strony.'
         required: true
       - name: description
-        label: Krótki opis
+        label: Krótki opis (Hero Section)
         type: string
-        description: 'Krótkie streszczenie (Meta Description pod SEO w Google).'
-        required: true
-      - name: cover
-        label: Miniatura (Okładka)
-        type: image
-        media: portfolio
-        description: 'Zdjęcie reprezentujące projekt na stronie głównej i na liście.'
+        description: 'Tekst wyświetlający się na samej górze podstrony projektu.'
         required: true
       - name: location
         label: Lokalizacja
         type: string
-        description: 'Miasto lub region (np. Warszawa, Białystok).'
+        description: 'Gdzie zrealizowano projekt (np. Warszawa).'
+        required: true
+      - name: pubDate
+        label: Data publikacji (określa też rok projektu)
+        type: date
+        description: 'Sortowanie w portfolio od najnowszych.'
         required: true
       - name: featured
-        label: Wyróżnij na Stronie Głównej
+        label: Wyróżniony projekt
         type: boolean
-        description: 'Zaznacz, aby ten projekt pokazał się w sekcji Portfolio na stronie głównej.'
-        required: false
-      - name: pubDate
-        label: Data Publikacji
-        type: date
-        description: 'Data, według której CMS sortuje projekty (od najnowszego).'
-        required: true
+        description: 'Zaznacz to, aby projekt wyświetlił się na Stronie Głównej.'
       - name: category
         label: Kategoria
         type: select
-        description: 'Typ nieruchomości.'
+        description: 'Wybierz typ nieruchomości.'
         options:
-          - apartament
-          - mieszkanie
-          - dom
+          values:
+            - apartament
+            - mieszkanie
+            - dom
         required: true
       - name: area
-        label: Metraż (np. 220 m²)
+        label: Powierzchnia
         type: string
-        description: 'Dokładna wielkość (np. 120 m²). Pamiętaj o jednostce.'
+        description: 'Metraż projektu (np. 100m²).'
+        required: true
+      - name: cover
+        label: Zdjęcie główne (Okładka)
+        type: image
+        options:
+          media: portfolio
+        description: 'Miniatura widoczna na liście projektów.'
         required: true
       - name: gallery
-        label: Galeria zdjęć
+        label: Galeria zdjęć projektu
         type: object
         list: true
-        description: 'Zdjęcia wyświetlane w siatce pod głównym opisem projektu.'
+        description: 'Dodaj kolejne zdjęcia do galerii na podstronie.'
         fields:
           - name: src
-            label: Zdjęcie
+            label: Plik zdjęcia
             type: image
-            media: portfolio
-            description: 'Dodaj zdjęcie do galerii.'
+            options:
+              media: portfolio
             required: true
           - name: alt
-            label: Tekst alternatywny (SEO)
+            label: Tekst alternatywny (Alt)
             type: string
-            description: 'Krótki opis tego co jest na zdjęciu (dla wyszukiwarek i niewidomych).'
+            description: 'Opis dla niewidomych i wyszukiwarki (np. "Jasny salon z narożnikiem").'
             required: true
-      - name: body
-        label: Treść dodatkowa
-        type: rich-text
-        description: 'Dodatkowy opis (opcjonalnie).'
 
   - name: authors
     label: Autorzy
@@ -174,16 +183,17 @@ content:
       - name: name
         label: Imię i Nazwisko
         type: string
-        description: "Imię (musi pasować do opcji w blogu: 'aleksandra' lub 'paulina')."
+        description: 'Imię i nazwisko autora.'
         required: true
       - name: description
-        label: Opis (Bio)
+        label: Krótki biogram
         type: string
-        description: 'Krótka notka biograficzna.'
+        description: 'Zwięzły opis na 1-2 zdania.'
         required: true
       - name: avatar
         label: Zdjęcie profilowe
         type: image
-        media: authors
+        options:
+          media: authors
         description: 'Zdjęcie awatara.'
         required: true

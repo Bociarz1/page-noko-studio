@@ -1,10 +1,12 @@
 ---
 title: "Projekt domu w Krypnie Kościelnym"
+metaTitle: "Projekt domu w Krypnie Kościelnym"
+metaDescription: "Aranżacja 140-metrowego domu w Krypnie Kościelnym. Projekt oparty na wielu detalach z wykorzystaniem rozbudowanej sztukaterii ściennej i elementów zdobniczych."
 description: "Aranżacja 140-metrowego domu w Krypnie Kościelnym. Projekt oparty na wielu detalach z wykorzystaniem rozbudowanej sztukaterii ściennej i elementów zdobniczych."
 cover: "/src/assets/portfolio/_6-2026-krypno-koscielne-140m2/detale-lazienka-wc-zlota-armatura.webp"
 location: "Krypno Koscielne"
 featured: false
-pubDate: 2026-01-24T00:00:00.000Z
+pubDate: 2026-01-24
 category: "dom"
 area: "140 m²"
 gallery:

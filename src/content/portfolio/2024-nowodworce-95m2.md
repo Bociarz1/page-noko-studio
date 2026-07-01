@@ -1,10 +1,12 @@
 ---
 title: "Jasna aranżacja domu w Nowodworcach"
+metaTitle: "Jasna aranżacja domu w Nowodworcach"
+metaDescription: "Jasna i przytulna aranżacja wnętrza domu w Nowodworcach (95 m²). Odkryj nowoczesny salon, beżową kuchnię z wyspą i stylową łazienkę z motywem marmuru."
 description: "Jasna i przytulna aranżacja wnętrza domu w Nowodworcach (95 m²). Odkryj nowoczesny salon, beżową kuchnię z wyspą i stylową łazienkę z motywem marmuru."
 cover: "/src/assets/portfolio/_13-2024-nowodworce-95m2/beżowa-kuchnia-z-wyspa-marmurowy-blat.webp"
 location: "Nowodworce"
 featured: false
-pubDate: 2024-01-17T00:00:00.000Z
+pubDate: 2024-01-17
 category: "dom"
 area: "95 m²"
 gallery:
