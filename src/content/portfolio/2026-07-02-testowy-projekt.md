@@ -10,8 +10,8 @@ category: mieszkanie
 area: 245 m²
 cover: /src/assets/portfolio/_4-2024-krupniki-60m2/salon-z-lamelemi-i-drzewkiem-oliwnym-designerskie-wnetrze.webp
 gallery:
-  - src: /src/assets/portfolio/_11-2024-bialystok-45m2/nowoczesny-salon-bezowa-sofa-oswietlenie-led.webp
-    alt: dsadasdas
   - src: /src/assets/portfolio/_9-2024-wojny-szuby-wloscianskie-160m2/projekt-malej-lazienki-wc-podtynkowe.webp
     alt: dsadasdasd
+  - src: /src/assets/portfolio/_11-2024-bialystok-45m2/nowoczesny-salon-bezowa-sofa-oswietlenie-led.webp
+    alt: dsadasdas
 ---
