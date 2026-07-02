@@ -59,6 +59,7 @@ content:
         label: Autor
         type: select
         description: 'Wybierz autora, który wyświetli się pod tytułem.'
+        required: true
         options:
           values:
             - aleksandra
