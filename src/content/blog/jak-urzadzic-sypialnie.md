@@ -1,26 +1,37 @@
 ---
-slug: 'jak-urzadzic-sypialnie'
-title: 'Jak urządzić sypialnię? Praktyczny przewodnik krok po kroku'
-metaTitle: 'Jak urządzić sypialnię? Praktyczny poradnik'
-metaDescription: 'Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną trzecią swojego życia. Zobacz kompletny poradnik, jak urządzić sypialnię.'
-description: 'Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną trzecią swojego życia. Zobacz kompletny poradnik, jak urządzić sypialnię.'
+title: Jak urządzić sypialnię? Praktyczny przewodnik krok po kroku
+slug: jak-urzadzic-sypialnie
+metaTitle: Jak urządzić sypialnię? Praktyczny poradnik
+metaDescription: Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną
+  trzecią swojego życia. Zobacz kompletny poradnik, jak urządzić sypialnię.
+description: Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną
+  trzecią swojego życia. Zobacz kompletny poradnik, jak urządzić sypialnię.
 pubDate: 2026-06-30
 updatedDate: 2026-06-30
-image: '/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg'
-author: 'aleksandra'
+author: paulina
+image: /src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg
 articleCategory:
   - sypialnia
 faq:
-  - q: 'Jak urządzić małą kwadratową sypialnię?'
-    a: 'Ustaw łóżko przy najdłuższej ścianie, szafę na wymiar wzdłuż przeciwległej. Zrezygnuj ze standardowych szafek nocnych na rzecz wiszących półek. Jasne kolory ścian i lustrzane fronty szafy optycznie rozszerzą przestrzeń.'
-  - q: 'Jak zaaranżować małą sypialnię bez okna?'
-    a: 'Zainwestuj w oświetlenie imitujące naturalne (zimne świetlówki dzienne lub lampa budzik wschód słońca). Lustra i jasna kolorystyka są tu niezbędne. Utrzymuj szczególny porządek - bez naturalnego światła przestrzeń szybciej wydaje się przytłaczająca.'
-  - q: 'Jak dobrać kolory ścian do małej sypialni?'
-    a: 'Jasne, stonowane odcienie - biel, ciepła szarość, delikatna zieleń lub błękit - rozświetlają i powiększają małe wnętrza. Jeden ciemny akcent (np. ściana za łóżkiem) jest dozwolony, reszta powinna pozostać jasna.'
-  - q: 'Jak urządzić sypialnię z dodatkami przy małym budżecie?'
-    a: 'Skup się na trzech elementach: dobry materac, jakościowa pościel i przemyślane oświetlenie. Taśmy LED za wezgłowiem kosztują kilkadziesiąt złotych i robią ogromną różnicę nastrojową. Dekoracje ze skandynawskich sieciówek wyglądają dobrze przy spójnej kolorystyce.'
+  - q: Jak urządzić małą kwadratową sypialnię?
+    a: Ustaw łóżko przy najdłuższej ścianie, szafę na wymiar wzdłuż przeciwległej.
+      Zrezygnuj ze standardowych szafek nocnych na rzecz wiszących półek. Jasne
+      kolory ścian i lustrzane fronty szafy optycznie rozszerzą przestrzeń.
+  - q: Jak zaaranżować małą sypialnię bez okna?
+    a: Zainwestuj w oświetlenie imitujące naturalne (zimne świetlówki dzienne lub
+      lampa budzik wschód słońca). Lustra i jasna kolorystyka są tu niezbędne.
+      Utrzymuj szczególny porządek - bez naturalnego światła przestrzeń szybciej
+      wydaje się przytłaczająca.
+  - q: Jak dobrać kolory ścian do małej sypialni?
+    a: Jasne, stonowane odcienie - biel, ciepła szarość, delikatna zieleń lub błękit
+      - rozświetlają i powiększają małe wnętrza. Jeden ciemny akcent (np. ściana
+      za łóżkiem) jest dozwolony, reszta powinna pozostać jasna.
+  - q: Jak urządzić sypialnię z dodatkami przy małym budżecie?
+    a: "Skup się na trzech elementach: dobry materac, jakościowa pościel i
+      przemyślane oświetlenie. Taśmy LED za wezgłowiem kosztują kilkadziesiąt
+      złotych i robią ogromną różnicę nastrojową. Dekoracje ze skandynawskich
+      sieciówek wyglądają dobrze przy spójnej kolorystyce."
 ---
-
 Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną trzecią swojego życia. **Chcesz wiedzieć jak urządzić sypialnię? Zacznij od układu.** Przekonasz się, że **dobra aranżacja sypialni sprawi, że zasypiasz szybciej**, a całe wnętrze uspokaja, regeneruje i sprawia, że każdy ranek zaczyna się lepiej.
 
 Z kolei źle urządzona przestrzeń to codzienne zmęczenie, ból pleców i wrażenie, że czegoś w niej brakuje. W tym artykule zebrałam wszystko, co faktycznie działa: konkretne wymiary, odpowiednie kolory, zasady doboru mebli i pomysły, które świetnie sprawdzają się zarówno w dużych, jak i małych wnętrzach.
