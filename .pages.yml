@@ -1,13 +1,13 @@
 media:
   - name: blog
     input: src/assets/blog
-    output: /src/assets/blog
+    output: ../../assets/blog
   - name: portfolio
     input: src/assets/portfolio
-    output: /src/assets/portfolio
+    output: ../../assets/portfolio
   - name: authors
     input: src/assets/authors
-    output: /src/assets/authors
+    output: ../../assets/authors
 
 content:
   - name: blog

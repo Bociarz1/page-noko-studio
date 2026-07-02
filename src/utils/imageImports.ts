@@ -27,10 +27,15 @@ export async function resolveImage(
   graph: Record<string, () => Promise<{ default: ImageMetadata }>>,
   path: string
 ): Promise<ImageMetadata> {
-  const loader = graph[path];
+  // Normalize relative paths from CMS back to absolute root paths for import.meta.glob
+  const normalizedPath = path.startsWith('../../assets/') 
+    ? path.replace('../../assets/', '/src/assets/') 
+    : path;
+
+  const loader = graph[normalizedPath];
   if (!loader) {
     throw new Error(
-      `[imageImports] Obraz "${path}" nie istnieje w repozytorium. ` +
+      `[imageImports] Obraz "${normalizedPath}" (oryginalnie: "${path}") nie istnieje w repozytorium. ` +
       `Sprawdź ścieżkę w frontmatter pliku Markdown.`
     );
   }
