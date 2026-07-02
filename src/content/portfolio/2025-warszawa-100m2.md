@@ -1,4 +1,5 @@
 ---
+slug: '2025-warszawa-100m2'
 title: "Luksusowy Projekt Apartamentu w Warszawie"
 metaTitle: "Luksusowy Projekt Apartamentu w Warszawie"
 metaDescription: "Aranżacja 100-metrowego apartamentu. Przestrzeń łączy jasną bazę kolorystyczną z mocnymi akcentami w postaci kamiennych okładzin i szczotkowanego złota."

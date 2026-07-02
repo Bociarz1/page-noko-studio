@@ -11,9 +11,10 @@ media:
 
 content:
   - name: blog
-    label: Blog
+    label: Blog (Artykuły)
     type: collection
     path: src/content/blog
+    filename: '{slug}.md'
     view:
       sort: [pubDate, title]
       default:
@@ -24,6 +25,11 @@ content:
         label: Główny Tytuł (H1)
         type: string
         description: 'Główny tytuł wyświetlany na samej górze artykułu. Może być nieco dłuższy.'
+        required: true
+      - name: slug
+        label: Custom URL Slug
+        type: string
+        description: 'Własny adres URL (np. "super-wpis"). Jeśli puste, użyta zostanie nazwa pliku.'
         required: true
       - name: metaTitle
         label: Tytuł SEO (Meta Title)
@@ -64,10 +70,15 @@ content:
           media: blog
         description: 'Główne zdjęcie artykułu (najlepiej poziome).'
         required: true
-      - name: tags
-        label: Tagi
-        type: list
-        description: 'Słowa kluczowe artykułu (np. Sypialnia, Porady).'
+      - name: articleCategory
+        label: Kategoria (Wybierz z listy)
+        type: reference
+        list: true
+        description: 'Wybierz kategorię z dostępnych.'
+        options:
+          collection: articleCategories
+          search: [name]
+          label: '{name}'
       - name: faq
         label: Sekcja FAQ (Pytania i Odpowiedzi)
         type: object
@@ -95,6 +106,7 @@ content:
     label: Portfolio
     type: collection
     path: src/content/portfolio
+    filename: '{slug}.md'
     view:
       sort: [pubDate, title]
       default:
@@ -105,6 +117,11 @@ content:
         label: Tytuł projektu (H1)
         type: string
         description: 'Pełna nazwa projektu wyświetlana na stronie (oraz jako tytuł SEO, jeśli nie podano innego).'
+        required: true
+      - name: slug
+        label: Custom URL Slug
+        type: string
+        description: 'Własny adres URL (np. "super-projekt"). Jeśli puste, użyta zostanie nazwa pliku.'
         required: true
       - name: metaTitle
         label: Tytuł SEO (Meta Title)
@@ -197,3 +214,19 @@ content:
           media: authors
         description: 'Zdjęcie awatara.'
         required: true
+
+  - name: articleCategories
+    label: Kategorie Bloga
+    type: collection
+    path: src/content/articleCategories
+    fields:
+      - name: name
+        label: Nazwa kategorii
+        type: string
+        description: 'Pojawi się na stronie (np. Wnętrza).'
+        required: true
+      - name: description
+        label: Opis kategorii
+        type: string
+        description: 'Krótki opis SEO dla podstrony kategorii (np. do 160 znaków).'
+        required: false

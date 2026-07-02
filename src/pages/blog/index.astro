@@ -33,7 +33,7 @@ const schema = buildBlogListingSchema({
   url: canonicalUrl,
   posts: posts.map((post) => ({
     title: post.data.title,
-    url: new URL(`/blog/${post.id}/`, Astro.site || 'https://noko-studio.pl').href,
+    url: new URL(`/blog/${post.data.slug || post.id}/`, Astro.site || 'https://noko-studio.pl').href,
     pubDate: post.data.pubDate,
   })),
 });

@@ -1,4 +1,5 @@
 ---
+slug: '2023-warszawa-28m2'
 title: "Aranżacja małego mieszkania w Warszawie"
 metaTitle: "Aranżacja małego mieszkania w Warszawie"
 metaDescription: "Funkcjonalna aranżacja małego mieszkania w Warszawie. Zobacz jak na 28 m² stworzyliśmy stylową, otwartą przestrzeń z aneksem kuchennym i przytulnym salonem."

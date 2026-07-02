@@ -1,4 +1,5 @@
 ---
+slug: '2025-izabelin-220m2'
 title: "Nowoczesna aranżacja domu w Izabelinie"
 metaTitle: "Nowoczesna aranżacja domu w Izabelinie"
 metaDescription: "Projekt wnętrz domu w Izabelinie (220 m²). Jasna paleta barw, drewno i minimalistyczne detale połączone w spójnym, otwartym układzie."

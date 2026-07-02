@@ -14,7 +14,7 @@ const author = await getEntry(post.data.author);
 const postImage = post.data.image ? await resolveImage(blogImages, post.data.image) : null;
 ---
 
-<a href={`/blog/${post.id}/`} class="blog-card">
+<a href={`/blog/${post.data.slug || post.id}/`} class="blog-card">
   <div class="blog-card__image-wrapper">
     {postImage ? (
       <Image 

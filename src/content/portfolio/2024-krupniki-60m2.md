@@ -1,4 +1,5 @@
 ---
+slug: '2024-krupniki-60m2'
 title: "Eleganckie mieszkanie w Krupnikach"
 metaTitle: "Eleganckie mieszkanie w Krupnikach"
 metaDescription: "Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej odsłonie."

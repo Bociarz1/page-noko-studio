@@ -1,4 +1,5 @@
 ---
+slug: '2025-warszawa--85m2'
 title: "Projekt Domu w stylu retro w Warszawie"
 metaTitle: "Projekt Domu w stylu retro w Warszawie"
 metaDescription: "Projekt domu w Warszawie (85 m²) w stylu retro. Zobacz nowoczesną jadalnię, salon z kominkiem i piękną kuchnię z drewnianymi detalami."

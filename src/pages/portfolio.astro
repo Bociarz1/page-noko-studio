@@ -13,8 +13,8 @@ const projects = await Promise.all(
   rawProjects
     .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
     .map(async (p) => ({
-      slug: p.id,
       ...p.data,
+      slug: p.data.slug || p.id,
       cover: await resolveImage(portfolioImages, p.data.cover) as ImageMetadata,
     }))
 );
@@ -37,7 +37,7 @@ const heroProps = {
   },
   height: 'auto',
 };
-const schema = buildPortfolioSchema(rawProjects.map(p => ({ slug: p.id, ...p.data })));
+const schema = buildPortfolioSchema(rawProjects.map(p => ({ ...p.data, slug: p.data.slug || p.id })));
 ---
 
 <MainLayout {...metaData}>

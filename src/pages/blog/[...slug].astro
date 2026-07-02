@@ -6,7 +6,7 @@ import { blogImages, authorImages, resolveImage } from '@utils/imageImports';
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map(post => ({
-    params: { slug: post.id },
+    params: { slug: post.data.slug || post.id },
     props: { post },
   }));
 }

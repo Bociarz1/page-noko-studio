@@ -1,4 +1,5 @@
 ---
+slug: '2024-bialystok-45m2'
 title: "Mieszkanie w beżowych tonach w Białymstoku"
 metaTitle: "Mieszkanie w beżowych tonach w Białymstoku"
 metaDescription: "Eleganckie mieszkanie w beżowych tonach (Białystok, 45 m²). Zobacz nowoczesny projekt z marmurowymi akcentami, złotymi detalami i przytulną strefą wypoczynkową."

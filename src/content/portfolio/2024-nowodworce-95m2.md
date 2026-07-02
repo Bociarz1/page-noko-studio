@@ -1,4 +1,5 @@
 ---
+slug: '2024-nowodworce-95m2'
 title: "Jasna aranżacja domu w Nowodworcach"
 metaTitle: "Jasna aranżacja domu w Nowodworcach"
 metaDescription: "Jasna i przytulna aranżacja wnętrza domu w Nowodworcach (95 m²). Odkryj nowoczesny salon, beżową kuchnię z wyspą i stylową łazienkę z motywem marmuru."

@@ -13,8 +13,8 @@ const featuredProjects = await Promise.all(
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .slice(0, 4)
     .map(async (p) => ({
-      slug: p.id,
       ...p.data,
+      slug: p.data.slug || p.id,
       cover: await resolveImage(portfolioImages, p.data.cover) as ImageMetadata,
     }))
 );

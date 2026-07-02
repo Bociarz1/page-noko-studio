@@ -1,4 +1,5 @@
 ---
+slug: 'jak-urzadzic-sypialnie'
 title: 'Jak urządzić sypialnię? Praktyczny przewodnik krok po kroku'
 metaTitle: 'Jak urządzić sypialnię? Praktyczny poradnik'
 metaDescription: 'Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną trzecią swojego życia. Zobacz kompletny poradnik, jak urządzić sypialnię.'
@@ -7,7 +8,8 @@ pubDate: 2026-06-30
 updatedDate: 2026-06-30
 image: '/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg'
 author: 'aleksandra'
-tags: ['Sypialnia', 'Wnętrza', 'Aranżacja']
+articleCategory:
+  - sypialnia
 faq:
   - q: 'Jak urządzić małą kwadratową sypialnię?'
     a: 'Ustaw łóżko przy najdłuższej ścianie, szafę na wymiar wzdłuż przeciwległej. Zrezygnuj ze standardowych szafek nocnych na rzecz wiszących półek. Jasne kolory ścian i lustrzane fronty szafy optycznie rozszerzą przestrzeń.'

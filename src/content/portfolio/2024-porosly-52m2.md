@@ -1,4 +1,5 @@
 ---
+slug: '2024-porosly-52m2'
 title: "Kontrastowe mieszkanie w Porosłach"
 metaTitle: "Kontrastowe mieszkanie w Porosłach"
 metaDescription: "Aranżacja mieszkania w Porosłach (52 m²). Projekt oparty na spójnym zestawieniu drewna, terrazzo i kontrastujących elementów w odcieniach czerni oraz rudości."

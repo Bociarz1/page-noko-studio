@@ -1,4 +1,5 @@
 ---
+slug: '2024-bialystok-110m2'
 title: "Przestronne Wnętrze Domu w Białymstoku"
 metaTitle: "Przestronne Wnętrze Domu w Białymstoku"
 metaDescription: "Przestronne wnętrze domu w Białymstoku (110 m²). Zobacz stylową strefę dzienną z wyrazistym kamieniem i ciemnym drewnem."
