@@ -21,15 +21,21 @@ asdasdsa
 
 adsdasdasdasd
 
-![](/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/mala-kwadratowa-sypialnia-z-praktyczna-zabudowa.jpg)
+![](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/mala-kwadratowa-sypialnia-z-praktyczna-zabudowa.jpg)
 
 asdasdasd
 
 asdasdas
 
-![](/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg)
+![](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg)
 
 ## asdasdasdas
 
 asdsadasdas
+
+
+
+moje naprawione zdjecie:
+
+![](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jasna-sypialnia-w-stonowanych-kolorach-bezu-i-bieli.jpg)
 
