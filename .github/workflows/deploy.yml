@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
 
 # TA LINIJKA TO MAGIA: Automatycznie anuluje wcześniejsze, zakolejkowane buildy
 concurrency:
@@ -27,17 +28,38 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: 'npm'
+
+      - name: Cache Astro modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            node_modules/.cache
+            node_modules/.astro
+            .astro
+          key: ${{ runner.os }}-astro-${{ hashFiles('**/package-lock.json') }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-astro-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-astro-
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Workers (Production)
+        if: github.ref_name == 'main'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=page-noko-studio
+          command: deploy
 
+      - name: Deploy to Cloudflare Workers (Develop)
+        if: github.ref_name == 'develop'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --env develop
