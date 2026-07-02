@@ -15,7 +15,7 @@ export const portfolioImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 export const authorImages = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/blog/authors/*.{jpeg,jpg,png,webp,avif}'
+  '/src/assets/authors/*.{jpeg,jpg,png,webp,avif}'
 );
 
 /**

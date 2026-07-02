@@ -43,7 +43,7 @@ Wybór materaca to kwestia zdrowotna, nie estetyczna - dobry materac służy 8�
 
 ## Kolory do sypialni - spokój i relaks zamiast chaosu
 
-![Jasna sypialnia w stonowanych kolorach beżu i bieli sprzyjająca relaksowi](/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jasna-sypialnia-w-stonowanych-kolorach-bezu-i-bieli.jpg)
+![Jasna sypialnia w stonowanych kolorach beżu i bieli sprzyjająca relaksowi](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jasna-sypialnia-w-stonowanych-kolorach-bezu-i-bieli.jpg)
 
 Aby urządzić przytulną sypialnie musisz zwrócić uwagę na odpowiedni kolor ścian. To jeden z kluczowych elementów wystroju sypialni, który wpływa bezpośrednio na jakość snu. Kolory do sypialni powinny być stonowane i desaturowane - odcienie beżu, ciepłej szarości, bieli z nutą ecru, zieleni (szałwia, oliwka), delikatnego błękitu lub lawendy działają wyciszająco na układ nerwowy.
 
@@ -73,7 +73,7 @@ Wszystkie źródła światła w sypialni warto wyposażyć w ściemniacz lub kil
 
 ## Style aranżacji sypialni
 
-![Przytulna sypialnia w stylu skandynawskim z jasnym drewnem i roślinami](/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/aranzacja-sypialni-w-stylu-skandynawskim-z-drewnianym-lozkiem.jpg)
+![Przytulna sypialnia w stylu skandynawskim z jasnym drewnem i roślinami](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/aranzacja-sypialni-w-stylu-skandynawskim-z-drewnianym-lozkiem.jpg)
 
 Aranżując sypialnię, warto wybrać jeden spójny styl i trzymać się go konsekwentnie - mieszanie zbyt wielu estetyk tworzy chaos, który nie sprzyja wyciszeniu.
 
@@ -91,7 +91,7 @@ Aranżując sypialnię, warto wybrać jeden spójny styl i trzymać się go kons
 
 ## Jak urządzić małą sypialnię - sprawdzone wskazówki
 
-![Mała kwadratowa sypialnia z funkcjonalnym łóżkiem i jasnymi ścianami](/src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/mala-kwadratowa-sypialnia-z-praktyczna-zabudowa.jpg)
+![Mała kwadratowa sypialnia z funkcjonalnym łóżkiem i jasnymi ścianami](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/mala-kwadratowa-sypialnia-z-praktyczna-zabudowa.jpg)
 
 Urządzić niewielką sypialnię tak, by była funkcjonalna i przytulna, to jedno z częstszych wyzwań. Mała kwadratowa sypialnia wymaga szczególnej uwagi przy ustawianiu mebli - bez wyraźnie dłuższej ściany trudno zachować dostęp do łóżka z obu stron. Rozwiązanie: dosuń jeden bok do ściany, zachowując 60–80 cm ciągu po drugiej stronie.
 
