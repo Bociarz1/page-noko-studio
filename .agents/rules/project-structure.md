@@ -30,8 +30,8 @@ Jako asystent AI, MUSISZ bezwzględnie przestrzegać poniższych zasad dotycząc
 - **Zasada:** W tym folderze MUSZĄ znajdować się wyłącznie statyczne pliki konfiguracyjne zawierające stałe dane używane w aplikacji. Absolutnie zakazane jest umieszczanie tutaj logiki biznesowej.
 - **Zastosowanie:** Plik `site.ts` (dane klienta, linki social media, adresy e-mail).
 
-### `src/data/` (Dane Lokalne)
-- **Zasada:** W tym folderze MUSZĄ znajdować się pliki przechowujące twarde dane, najczęściej w formacie JSON lub jako lokalne bazy danych plików Markdown. Wykorzystywane do generowania treści bez używania zewnętrznego systemu CMS.
+### `src/content/` (Kolekcje Treści)
+- **Zasada:** W tym folderze MUSZĄ znajdować się kolekcje Astro (np. artykuły na bloga, portfolio, autorzy) przechowywane jako pliki `.md` lub `.mdx`. Schematy walidacji (Zod) dla tych kolekcji muszą być definiowane w pliku `src/content.config.ts`. Używane do generowania treści bez używania zewnętrznego systemu CMS.
 
 ### `src/layouts/` (Szkielety Stron)
 - **Zasada Główna:** Komponenty nadrzędne (wrappery), które określają globalny wygląd HTML i sekcji `<head>`. Podpinamy do nich globalne arkusze stylów oraz meta tagi. To tutaj leży fundament strony.

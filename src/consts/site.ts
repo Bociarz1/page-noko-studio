@@ -9,7 +9,7 @@ export const COMPANY = {
   krs: '0001236163',
   court: 'Sąd Rejonowy w Białymstoku, XII Wydział Gospodarczy KRS',
   shareCapital: 'Kapitał zakładowy: 5 000 zł',
-  email: 'biuro@noko-studio.pl',
+  email: 'biuro@noko-studio.com',
   phones: {
     aleksandra: {
       raw: '+48455408601',
