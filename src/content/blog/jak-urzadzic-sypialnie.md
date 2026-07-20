@@ -8,7 +8,7 @@ description: Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną
   trzecią swojego życia. Zobacz kompletny poradnik, jak urządzić sypialnię.
 pubDate: 2026-06-30
 updatedDate: 2026-06-30
-author: paulina
+author: aleksandra
 image: /src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg
 articleCategory:
   - sypialnia
