@@ -1,42 +1,46 @@
 ---
-slug: '2024-krupniki-60m2'
-title: "Eleganckie mieszkanie w Krupnikach"
-metaTitle: "Eleganckie mieszkanie w Krupnikach"
-metaDescription: "Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej odsłonie."
-description: "Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej odsłonie."
-cover: "/src/assets/portfolio/_4-2024-krupniki-60m2/aranzacja-lazienki-umywalka-nablatowa-marmurowa.webp"
-location: "Krupniki"
-featured: true
+title: Eleganckie mieszkanie w Krupnikach
+slug: 2024-krupniki-60m2
+metaTitle: Eleganckie mieszkanie w Krupnikach
+metaDescription: Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz
+  nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej
+  odsłonie.
+description: Eleganckie mieszkanie w Krupnikach o powierzchni 60 m². Zobacz
+  nowoczesny projekt  z przytulnym salonem, stylową kuchnią w mocno kontrastowej
+  odsłonie.
+location: Krupniki
 pubDate: 2024-01-26
-category: "mieszkanie"
-area: "60 m²"
+featured: true
+category: mieszkanie
+area: 60 m²
+cover: ../../assets/portfolio/_4-2024-krupniki-60m2/salon-z-lamelemi-i-drzewkiem-oliwnym-designerskie-wnetrze.webp
 gallery:
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/aranzacja-lazienki-umywalka-nablatowa-marmurowa.webp"
-    alt: "Aranzacja lazienki umywalka nablatowa marmurowa"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/aranzacja-salonu-oswietlenie-szynowe-beżowy-naroznik.webp"
-    alt: "Aranzacja salonu oswietlenie szynowe beżowy naroznik"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/detale-wnetrza-salon-lamele-oswietlenie-led-sciana-tv.webp"
-    alt: "Detale wnetrza salon lamele oswietlenie led sciana tv"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/kuchnia-na-wymiar-ciemne-fronty-marmurowy-fartuch.webp"
-    alt: "Kuchnia na wymiar ciemne fronty marmurowy fartuch"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesna-jadalnia-z-kuchnia-czarny-stol-marmur.webp"
-    alt: "Nowoczesna jadalnia z kuchnia czarny stol marmur"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesna-lazienka-zlota-armatura-marmu.webp"
-    alt: "Nowoczesna lazienka zlota armatura marmu"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesna-toaletka-z-lustrem-sypialnia-marmurowy-blat.webp"
-    alt: "Nowoczesna toaletka z lustrem sypialnia marmurowy blat"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesny-pokoj-mlodziezowy-meble-na-wymiar.webp"
-    alt: "Nowoczesny pokoj mlodziezowy meble na wymiar"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesny-salon-z-aneksme-kuchennym-lamele-szary-naroznik.webp"
-    alt: "Nowoczesny salon z aneksme kuchennym lamele szary naroznik"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/projekt-lazienki-prysznic-walk-in-ciemne-drewno.webp"
-    alt: "Projekt lazienki prysznic walk in ciemne drewno"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/projekt-pokoju-dziecka-biurko-przy-oknie-beze.webp"
-    alt: "Projekt pokoju dziecka biurko przy oknie beze"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/projekt-strefy-dziennej-stol-jadalniany-industrialna-lampa.webp"
-    alt: "Projekt strefy dziennej stol jadalniany industrialna lampa"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/projekt-sypialni-tapicerowany-zaglowek-szafa-pod-sufit.webp"
-    alt: "Projekt sypialni tapicerowany zaglowek szafa pod sufit"
-  - src: "/src/assets/portfolio/_4-2024-krupniki-60m2/salon-z-lamelemi-i-drzewkiem-oliwnym-designerskie-wnetrze.webp"
-    alt: "Salon z lamelemi i drzewkiem oliwnym designerskie wnetrze"
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/aranzacja-salonu-oswietlenie-szynowe-beżowy-naroznik.webp
+    alt: Aranzacja salonu oswietlenie szynowe beżowy naroznik
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/salon-z-lamelemi-i-drzewkiem-oliwnym-designerskie-wnetrze.webp
+    alt: Salon z lamelemi i drzewkiem oliwnym designerskie wnetrze
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesny-salon-z-aneksme-kuchennym-lamele-szary-naroznik.webp
+    alt: Nowoczesny salon z aneksme kuchennym lamele szary naroznik
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/detale-wnetrza-salon-lamele-oswietlenie-led-sciana-tv.webp
+    alt: Detale wnetrza salon lamele oswietlenie led sciana tv
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/projekt-strefy-dziennej-stol-jadalniany-industrialna-lampa.webp
+    alt: Projekt strefy dziennej stol jadalniany industrialna lampa
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesna-jadalnia-z-kuchnia-czarny-stol-marmur.webp
+    alt: Nowoczesna jadalnia z kuchnia czarny stol marmur
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/kuchnia-na-wymiar-ciemne-fronty-marmurowy-fartuch.webp
+    alt: Kuchnia na wymiar ciemne fronty marmurowy fartuch
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/projekt-sypialni-tapicerowany-zaglowek-szafa-pod-sufit.webp
+    alt: Projekt sypialni tapicerowany zaglowek szafa pod sufit
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesna-toaletka-z-lustrem-sypialnia-marmurowy-blat.webp
+    alt: Nowoczesna toaletka z lustrem sypialnia marmurowy blat
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/projekt-pokoju-dziecka-biurko-przy-oknie-beze.webp
+    alt: Projekt pokoju dziecka biurko przy oknie beze
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesny-pokoj-mlodziezowy-meble-na-wymiar.webp
+    alt: Nowoczesny pokoj mlodziezowy meble na wymiar
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/aranzacja-lazienki-umywalka-nablatowa-marmurowa.webp
+    alt: Aranzacja lazienki umywalka nablatowa marmurowa
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/nowoczesna-lazienka-zlota-armatura-marmu.webp
+    alt: Nowoczesna lazienka zlota armatura marmu
+  - src: /src/assets/portfolio/_4-2024-krupniki-60m2/projekt-lazienki-prysznic-walk-in-ciemne-drewno.webp
+    alt: Projekt lazienki prysznic walk in ciemne drewno
 ---
