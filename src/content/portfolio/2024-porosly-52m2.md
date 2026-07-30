@@ -13,7 +13,7 @@ pubDate: 2024-01-25
 featured: false
 category: mieszkanie
 area: 52 m²
-cover: /src/assets/portfolio/_5-2024-porosly-52m2/biala-kuchnia-z-drewnem-i-blatem-terrazzo.webp
+cover: ../../assets/portfolio/_5-2024-porosly-52m2/nowoczesny-salon-z-aneksem-kuchennym-terrazzo.webp
 gallery:
   - src: /src/assets/portfolio/_5-2024-porosly-52m2/wnetrze-apartamentu-salon-kuchnia-loft.webp
     alt: Wnetrze apartamentu salon kuchnia loft
