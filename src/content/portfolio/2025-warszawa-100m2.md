@@ -1,52 +1,54 @@
 ---
-slug: '2025-warszawa-100m2'
-title: "Luksusowy Projekt Apartamentu w Warszawie"
-metaTitle: "Luksusowy Projekt Apartamentu w Warszawie"
-metaDescription: "Aranżacja 100-metrowego apartamentu. Przestrzeń łączy jasną bazę kolorystyczną z mocnymi akcentami w postaci kamiennych okładzin i szczotkowanego złota."
-description: "Aranżacja 100-metrowego apartamentu. Przestrzeń łączy jasną bazę kolorystyczną z mocnymi akcentami w postaci kamiennych okładzin i szczotkowanego złota."
-cover: "/src/assets/portfolio/_2-2025-warszawa-100m2/detale-wykonczenia-kuchni-marmur-zloto-projekt-mieszkania.webp"
-location: "Warszawa"
-featured: true
+title: Luksusowy Projekt Apartamentu w Warszawie
+slug: 2025-warszawa-100m2
+metaTitle: Luksusowy Projekt Apartamentu w Warszawie
+metaDescription: Aranżacja 100-metrowego apartamentu. Przestrzeń łączy jasną
+  bazę kolorystyczną z mocnymi akcentami w postaci kamiennych okładzin i
+  szczotkowanego złota.
+description: Aranżacja 100-metrowego apartamentu. Przestrzeń łączy jasną bazę
+  kolorystyczną z mocnymi akcentami w postaci kamiennych okładzin i
+  szczotkowanego złota.
+location: Warszawa
 pubDate: 2025-01-28
-category: "apartament"
-area: "100 m²"
+featured: true
+category: apartament
+area: 100 m²
+cover: ../../assets/portfolio/kuchnia 2.jpg
 gallery:
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/detale-wykonczenia-kuchni-marmur-zloto-projekt-mieszkania.webp"
-    alt: "Detale wykonczenia kuchni marmur zloto projekt mieszkania"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/elegancka-jadalnia-drewniany-stol-oswietlenie-design.webp"
-    alt: "Elegancka jadalnia drewniany stol oswietlenie design"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/elegancka-lazienka-sztukateria-scienna-projekt-wnetrza.webp"
-    alt: "Elegancka lazienka sztukateria scienna projekt wnetrza"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/gabinet-w-mieszkaniu-100m2-biurko-wnetrza-warszawa.webp"
-    alt: "Gabinet w mieszkaniu 100m2 biurko wnetrza warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/kuchnia-z-wyspa-marmurowy-blat-wnetrza-premium-warszawa.webp"
-    alt: "Kuchnia z wyspa marmurowy blat wnetrza premium warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp"
-    alt: "Kuchnia z wyspa widok na salon apartament warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/lazienka-100m2-mieszkanie-warszawa-płytki-marmurowe.webp"
-    alt: "Lazienka 100m2 mieszkanie warszawa płytki marmurowe"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/luksusowa-kuchnia-z-wyspa-zlote-fronty-projekt-warszawa.webp"
-    alt: "Luksusowa kuchnia z wyspa zlote fronty projekt warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesna-strefa-umywalkowa-lustro-led-projekt-lazienki.webp"
-    alt: "Nowoczesna strefa umywalkowa lustro led projekt lazienki"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesny-salon-otwarty-projekt-wnetrza-warszawa.webp"
-    alt: "Nowoczesny salon otwarty projekt wnetrza warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesny-salon-sciana-tv-kamien-projektant-warszawa.webp"
-    alt: "Nowoczesny salon sciana tv kamien projektant warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-kuchni-zlote-fronty-marmurowy-blat-warszawa.webp"
-    alt: "Projekt kuchni zlote fronty marmurowy blat warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-lazienki-warszawa-wolnostojaca-wanna-marmur.webp"
-    alt: "Projekt lazienki warszawa wolnostojaca wanna marmur"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-mieszkania-warszawa-100m2-salon-z-aneksem.webp"
-    alt: "Projekt mieszkania warszawa 100m2 salon z aneksem"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-salonu-warszawa-sciana-tv-oswietlenie-led.webp"
-    alt: "Projekt salonu warszawa sciana tv oswietlenie led"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-salonu-warszawa-widok-na-okno-apartament-100m2.webp"
-    alt: "Projekt salonu warszawa widok na okno apartament 100m2"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-salonu-z-jadalnia-apartament-100m2-warszawa.webp"
-    alt: "Projekt salonu z jadalnia apartament 100m2 warszawa"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/projekt-sypialni-lamiele-sciana-warszawa-architekt.webp"
-    alt: "Projekt sypialni lamiele sciana warszawa architekt"
-  - src: "/src/assets/portfolio/_2-2025-warszawa-100m2/szafa-pod-wymiar-sypialnia-projekt-wnetrz-warszawa.webp"
-    alt: "Szafa pod wymiar sypialnia projekt wnetrz warszawa"
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesny-salon-sciana-tv-kamien-projektant-warszawa.webp
+    alt: Nowoczesny salon sciana tv kamien projektant warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/projekt-salonu-warszawa-widok-na-okno-apartament-100m2.webp
+    alt: Projekt salonu warszawa widok na okno apartament 100m2
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/kuchnia-z-wyspa-widok-na-salon-apartament-warszawa.webp
+    alt: Kuchnia z wyspa widok na salon apartament warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesny-salon-otwarty-projekt-wnetrza-warszawa.webp
+    alt: Nowoczesny salon otwarty projekt wnetrza warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/projekt-mieszkania-warszawa-100m2-salon-z-aneksem.webp
+    alt: Projekt mieszkania warszawa 100m2 salon z aneksem
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/elegancka-jadalnia-drewniany-stol-oswietlenie-design.webp
+    alt: Elegancka jadalnia drewniany stol oswietlenie design
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/projekt-kuchni-zlote-fronty-marmurowy-blat-warszawa.webp
+    alt: Projekt kuchni zlote fronty marmurowy blat warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/kuchnia-z-wyspa-marmurowy-blat-wnetrza-premium-warszawa.webp
+    alt: Kuchnia z wyspa marmurowy blat wnetrza premium warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/luksusowa-kuchnia-z-wyspa-zlote-fronty-projekt-warszawa.webp
+    alt: Luksusowa kuchnia z wyspa zlote fronty projekt warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/detale-wykonczenia-kuchni-marmur-zloto-projekt-mieszkania.webp
+    alt: Detale wykonczenia kuchni marmur zloto projekt mieszkania
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/gabinet-w-mieszkaniu-100m2-biurko-wnetrza-warszawa.webp
+    alt: Gabinet w mieszkaniu 100m2 biurko wnetrza warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/projekt-sypialni-lamiele-sciana-warszawa-architekt.webp
+    alt: Projekt sypialni lamiele sciana warszawa architekt
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/szafa-pod-wymiar-sypialnia-projekt-wnetrz-warszawa.webp
+    alt: Szafa pod wymiar sypialnia projekt wnetrz warszawa
+  - src: ../../assets/portfolio/SYPIALNIA 3.jpg
+    alt: sypialnia łóżko tapicerowane zasłony żaluzje obrazy warszawa
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesna-strefa-umywalkowa-lustro-led-projekt-lazienki.webp
+    alt: Nowoczesna strefa umywalkowa lustro led projekt lazienki
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/elegancka-lazienka-sztukateria-scienna-projekt-wnetrza.webp
+    alt: Elegancka lazienka sztukateria scienna projekt wnetrza
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/lazienka-100m2-mieszkanie-warszawa-płytki-marmurowe.webp
+    alt: Lazienka 100m2 mieszkanie warszawa płytki marmurowe
+  - src: /src/assets/portfolio/_2-2025-warszawa-100m2/projekt-lazienki-warszawa-wolnostojaca-wanna-marmur.webp
+    alt: Projekt lazienki warszawa wolnostojaca wanna marmur
 ---

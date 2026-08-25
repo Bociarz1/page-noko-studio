@@ -1,28 +1,30 @@
 ---
-slug: '2024-bialystok-110m2'
-title: "Przestronne Wnętrze Domu w Białymstoku"
-metaTitle: "Przestronne Wnętrze Domu w Białymstoku"
-metaDescription: "Przestronne wnętrze domu w Białymstoku (110 m²). Zobacz stylową strefę dzienną z wyrazistym kamieniem i ciemnym drewnem."
-description: "Przestronne wnętrze domu w Białymstoku (110 m²). Zobacz stylową strefę dzienną z wyrazistym kamieniem i ciemnym drewnem."
-cover: "/src/assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp"
-location: "Bialystok"
-featured: false
+title: Przestronne Wnętrze Domu w Białymstoku
+slug: 2024-bialystok-110m2
+metaTitle: Przestronne Wnętrze Domu w Białymstoku
+metaDescription: Przestronne wnętrze domu w Białymstoku (110 m²). Zobacz stylową
+  strefę dzienną z wyrazistym kamieniem i ciemnym drewnem.
+description: Przestronne wnętrze domu w Białymstoku (110 m²). Zobacz stylową
+  strefę dzienną z wyrazistym kamieniem i ciemnym drewnem.
+location: Bialystok
 pubDate: 2024-01-23
-category: "dom"
-area: "110 m²"
+featured: false
+category: dom
+area: 110 m²
+cover: /src/assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp
 gallery:
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp"
-    alt: "Aranzacja salonu naroznik kominek"
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/detale-wykonczenia-kuchni-marmur-drewno.webp"
-    alt: "Detale wykonczenia kuchni marmur drewno"
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/minimalistyczna-kuchnia-marmurowy-fartuch.webp"
-    alt: "Minimalistyczna kuchnia marmurowy fartuch"
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/nowoczesna-jadalnia-stol-marmurowy-oswietlenie.webp"
-    alt: "Nowoczesna jadalnia stol marmurowy oswietlenie"
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/nowoczesne-schody-drewniane-z-balustrada-prety.webp"
-    alt: "Nowoczesne schody drewniane z balustrada prety"
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/otwarta-strefa-dzienna-jadalnia-salon.webp"
-    alt: "Otwarta strefa dzienna jadalnia salon"
-  - src: "/src/assets/portfolio/_7-2024-bialystok-110m2/strefa-wejsciowa-hol-schody-desig.webp"
-    alt: "Strefa wejsciowa hol schody desig"
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/strefa-wejsciowa-hol-schody-desig.webp
+    alt: Strefa wejsciowa hol schody desig
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/otwarta-strefa-dzienna-jadalnia-salon.webp
+    alt: Otwarta strefa dzienna jadalnia salon
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/nowoczesne-schody-drewniane-z-balustrada-prety.webp
+    alt: Nowoczesne schody drewniane z balustrada prety
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/aranzacja-salonu-naroznik-kominek.webp
+    alt: Aranzacja salonu naroznik kominek
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/nowoczesna-jadalnia-stol-marmurowy-oswietlenie.webp
+    alt: Nowoczesna jadalnia stol marmurowy oswietlenie
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/minimalistyczna-kuchnia-marmurowy-fartuch.webp
+    alt: Minimalistyczna kuchnia marmurowy fartuch
+  - src: /src/assets/portfolio/_7-2024-bialystok-110m2/detale-wykonczenia-kuchni-marmur-drewno.webp
+    alt: Detale wykonczenia kuchni marmur drewno
 ---
