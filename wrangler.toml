@@ -1,5 +1,11 @@
 name = "page-noko-studio"
 compatibility_date = "2024-05-27"
 
+[vars]
+EMAIL_FROM = "formularz-kontaktowy@noko-studio.pl"
+CONTACT_EMAIL = "biuro@noko-studio.com"
+GOOGLE_PLACE_ID = "ChIJv4e8Iyx1cgkRVxRwRq6M2zQ"
+FETCH_REVIEWS = "true"
+
 [env.develop]
 name = "page-noko-studio-develop"
