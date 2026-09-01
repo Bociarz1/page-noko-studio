@@ -9,7 +9,7 @@ description: Sypialnia to jedyne miejsce w domu, w którym spędzasz aż jedną
 pubDate: 2026-06-30
 updatedDate: 2026-06-30
 author: aleksandra
-image: /src/assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jak-urzadzic-idealna-sypialnie-praktyczny-przewodnik.jpg
+image: ../../assets/blog/WhatsApp Image 2026-08-31 at 13.43.44ghjui.jpeg
 articleCategory:
   - sypialnia
 faq:
@@ -56,7 +56,7 @@ Wybór materaca to kwestia zdrowotna, nie estetyczna - dobry materac służy 8�
 
 ## Kolory do sypialni - spokój i relaks zamiast chaosu
 
-![Jasna sypialnia w stonowanych kolorach beżu i bieli sprzyjająca relaksowi](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/jasna-sypialnia-w-stonowanych-kolorach-bezu-i-bieli.jpg)
+![WhatsApp Image 2026-08-31 at 13.43.44678.jpeg](<../../assets/blog/WhatsApp Image 2026-08-31 at 13.43.44678.jpeg>)
 
 Aby urządzić przytulną sypialnie musisz zwrócić uwagę na odpowiedni kolor ścian. To jeden z kluczowych elementów wystroju sypialni, który wpływa bezpośrednio na jakość snu. Kolory do sypialni powinny być stonowane i desaturowane - odcienie beżu, ciepłej szarości, bieli z nutą ecru, zieleni (szałwia, oliwka), delikatnego błękitu lub lawendy działają wyciszająco na układ nerwowy.
 
@@ -86,7 +86,7 @@ Wszystkie źródła światła w sypialni warto wyposażyć w ściemniacz lub kil
 
 ## Style aranżacji sypialni
 
-![Przytulna sypialnia w stylu skandynawskim z jasnym drewnem i roślinami](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/aranzacja-sypialni-w-stylu-skandynawskim-z-drewnianym-lozkiem.jpg)
+![WhatsApp Image 2026-08-31 at 13.43.44.jpeg](<../../assets/blog/WhatsApp Image 2026-08-31 at 13.43.44.jpeg>)
 
 Aranżując sypialnię, warto wybrać jeden spójny styl i trzymać się go konsekwentnie - mieszanie zbyt wielu estetyk tworzy chaos, który nie sprzyja wyciszeniu.
 
@@ -103,8 +103,6 @@ Aranżując sypialnię, warto wybrać jeden spójny styl i trzymać się go kons
 **Feng shui w sypialni** to filozofia, która realnie wpływa na jakość snu. Ustaw łóżko tak, by widzieć wejście do pomieszczenia - nie musi stać idealnie na wprost drzwi. Unikaj luster naprzeciwko łóżka. Wprowadź rośliny o miękkich liściach (bez kolców i ostrych krawędzi). Postaw na naturalne materiały - drewno, len, bawełna. Harmonię buduje symetria po obu stronach łóżka i minimalizm w widocznej części pomieszczenia.
 
 ## Jak urządzić małą sypialnię - sprawdzone wskazówki
-
-![Mała kwadratowa sypialnia z funkcjonalnym łóżkiem i jasnymi ścianami](../../assets/blog/jak-urzadzic-sypialnie-praktyczny-przewodnik/mala-kwadratowa-sypialnia-z-praktyczna-zabudowa.jpg)
 
 ![WhatsApp Image 2026-08-31 at 13.43.4434567.jpeg](<../../assets/blog/WhatsApp Image 2026-08-31 at 13.43.4434567.jpeg>)
 
