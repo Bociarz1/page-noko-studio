@@ -1,6 +1,6 @@
 ---
 title: Projekt domu w Krypnie Kościelnym
-slug: 2026-krypno-koscielne-140m2
+slug: 2024-krypno-koscielne-140m2
 metaTitle: Projekt domu w Krypnie Kościelnym
 metaDescription: Aranżacja 140-metrowego domu w Krypnie Kościelnym. Projekt
   oparty na wielu detalach z wykorzystaniem rozbudowanej sztukaterii ściennej i
