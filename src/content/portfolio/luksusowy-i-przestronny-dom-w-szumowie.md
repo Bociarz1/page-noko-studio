@@ -22,17 +22,16 @@ gallery:
     alt: Przedpokój z beżową szafą, tapicerowanym siedziskiem w kształcie podkowy i
       drewnianym panelem z konsolą.
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/KUCHNIA 1.jpg
-    alt: "kuchnia w fornirze i ściana wykończona barwionym lustrem "
+    alt: kuchnia w fornirze i ściana wykończona barwionym lustrem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/KUCHNIA 2.jpg
-    alt: "kuchnia w fornirze z żaluzją w oknie "
+    alt: kuchnia w fornirze z żaluzją w oknie
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/JADALNIA.jpg
     alt: Przestronna strefa dzienna z drewnianym stołem, oryginalnymi białymi
       krzesłami, kamiennym kominkiem i lustrzanymi ścianami.
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 1.1.jpg
-    alt: "strefa dzienna z wysokim sufitem i przestronną sofą "
+    alt: strefa dzienna z wysokim sufitem i przestronną sofą
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 1.2.jpg
-    alt: "obraz dekoracyjny i ściana wykończona płytą meblową oraz barwionym lustrem
-      "
+    alt: obraz dekoracyjny i ściana wykończona płytą meblową oraz barwionym lustrem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 1.3.jpg
     alt: narożnik w salonie razem z dekoracyjnym oświetleniem i zasłonami
       ocieplającymi wnętrze
@@ -45,12 +44,12 @@ gallery:
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/GABINET 2.jpg
     alt: Gabinet z brązową sofą, drewnianym regałem i obrazem.
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/KORYTARZ DO SALONU 2.jpg
-    alt: "korytarz prowadzący do mniejszego saloniku "
+    alt: korytarz prowadzący do mniejszego saloniku
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 2.1.jpg
     alt: salonik z ciepłym narożnikiem oraz mocnym akcentem w postaci fotela w
       wyrazistej tkaninie
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 2.2.jpg
-    alt: "ścianka TV w saloniku z otwartym regałem i panelami ryflowanymi "
+    alt: ścianka TV w saloniku z otwartym regałem i panelami ryflowanymi
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 2.3.jpg
     alt: tapeta na ścianie za którą ukryta jest pralnia
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/TOALETA 1.jpg
@@ -62,8 +61,8 @@ gallery:
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SPIŻARNIA.jpg
     alt: przestronna spiżarnia z dużą ilością miejsca do przechowywania
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/PRALNIA.jpg
-    alt: "elegancka pralnia z blatem roboczym i szafami na sprzęty gospodarcze oraz
-      chemię "
+    alt: elegancka pralnia z blatem roboczym i szafami na sprzęty gospodarcze oraz
+      chemię
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SCHODY.jpg
     alt: Klatka schodowa z balustradą z przyciemnianego szkła, na tle ściany
       wykończonej drewnem i lustrami.
@@ -71,16 +70,16 @@ gallery:
     alt: Górny hol ze szklaną brązową balustradą schodów, nowoczesną lampą i
       beżowymi panelami ściennymi.
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/KLATKA SCHODOWA.jpg
-    alt: "górny hol z brązową balustradą schodów "
+    alt: górny hol z brązową balustradą schodów
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SYPIALNIA 1.jpg
     alt: "główna sypialnia w wyrazistych kontrastowych kolorach "
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SYPIALNIA 2.jpg
     alt: "zabudowa ściany płytą meblową połączoną z barwionym lustem, z ukrytym
       przejściem "
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/ŁAZIENKA PRYWATNA 1.jpg
-    alt: "łazienka prywatna z wanną wolnostojącą i spiekiem wielkoformatowym "
+    alt: łazienka prywatna z wanną wolnostojącą i spiekiem wielkoformatowym
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/ŁAZIENKA PRYWATNA 2.jpg
-    alt: "łazienka prywatna z zabudową meblową w jasnych i ciepłych kolorach "
+    alt: łazienka prywatna z zabudową meblową w jasnych i ciepłych kolorach
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/GARDEROBA 2.jpg
     alt: Korytarz z frontami z drewna i dużą lustrzaną ścianą odbijającą wnętrze
       garderoby.
@@ -88,16 +87,16 @@ gallery:
     alt: Garderoba z regałem na buty i torebki, narożną toaletką z lustrem oraz
       beżowymi pufami.
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/POKÓJ CÓRKI 1.jpg
-    alt: "Elegancki i ponadczasowy pokój dziewczynki za zabudową łóżka i biurka "
+    alt: Elegancki i ponadczasowy pokój dziewczynki za zabudową łóżka i biurka
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/POKÓJ CÓRKI 2.jpg
-    alt: "szafa w pokoju dziewczynki połączona z dekoracyjnym regałem "
+    alt: szafa w pokoju dziewczynki połączona z dekoracyjnym regałem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/POKÓJ SYNA 1.jpg
-    alt: "pokój chłopca z dużą zabudową meblową i biurkiem pod oknem "
+    alt: pokój chłopca z dużą zabudową meblową i biurkiem pod oknem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/POKÓJ SYNA 2.jpg
-    alt: "łóżeczko dla chłopca oraz dekoracyjna ściana z tapetą "
+    alt: łóżeczko dla chłopca oraz dekoracyjna ściana z tapetą
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/ŁAZIENKA DZIECI 1.jpg
-    alt: "łazienka górna z zabudową meblową i ukrytą półką na kosmetyki pod
-      prysznicem "
+    alt: łazienka górna z zabudową meblową i ukrytą półką na kosmetyki pod
+      prysznicem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/ŁAZIENKA DZIECI 2.jpg
-    alt: "szafka na umywalkę i podłużne lustra z podświetleniem LED "
+    alt: szafka na umywalkę i podłużne lustra z podświetleniem LED
 ---
