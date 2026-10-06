@@ -21,17 +21,17 @@ gallery:
     alt: Nowoczesny wiatrołap z pojemną białą szafą, wysokim lustrem i detalami w
       postaci ryflowanych frontów
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/wiatrołap 2.jpg
-    alt: "strukturalna tapeta imitująca tkaninę z dekoracyjną konsolą oraz pufą "
+    alt: strukturalna tapeta imitująca tkaninę z dekoracyjną konsolą oraz pufą
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/wiatrołap 3.jpg
     alt: drzwi z przeszkleniem oraz szafa w wiatrołapie
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/korytarz 1.jpg
-    alt: "korytarz z brązowym sufitem oraz ściana pokryta tapetą imitującą tkaninę "
+    alt: korytarz z brązowym sufitem oraz ściana pokryta tapetą imitującą tkaninę
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/kuchnia 1.jpg
     alt: Nowoczesny aneks kuchenny z wyspą
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/kuchnia 2.jpg
-    alt: "aneks kuchenny z wyspą i brązowym akcentem "
+    alt: aneks kuchenny z wyspą i brązowym akcentem
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/kuchnia 3.jpg
-    alt: "biała wyspa oraz drewnopodobne fronty w aneksie kuchennym "
+    alt: biała wyspa oraz drewnopodobne fronty w aneksie kuchennym
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/kuchnia 4.jpg
     alt: kuchnia w drewnie z mozaiką na fartuchu kuchennym oraz frezowanymi frontami
       szafek wiszących
@@ -42,37 +42,37 @@ gallery:
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/jadalnia 2.jpg
     alt: drewniany stół w jadalni z dekoracyjną lampą
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/Salon 1.jpg
-    alt: "zabudowa TV oraz ściana imitująca kamień "
+    alt: zabudowa TV oraz ściana imitująca kamień
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/Salon 2.jpg
     alt: kominek w salonie z miejscem na drewno
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/Salon 3.jpg
     alt: zabudowa szafki RTV razem z regałem oraz podświetleniem LED
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/Salon 4.jpg
-    alt: "jasny narożnik i okrągły stolik kawowy "
+    alt: jasny narożnik i okrągły stolik kawowy
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/Salon 5.jpg
-    alt: "podświetlenie LED za płytą meblową i ściana imitujaca kamień "
+    alt: podświetlenie LED za płytą meblową i ściana imitujaca kamień
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/Salon 6.jpg
     alt: stolik kawowy z kamiennym blatem
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka dół 1.jpg
-    alt: "łazienka w ciemnym drewnie ze ścianą imitującą kamień "
+    alt: łazienka w ciemnym drewnie ze ścianą imitującą kamień
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka dół 2.jpg
-    alt: "zabudowa meblowa łazienki z lustem i kinkietami "
+    alt: zabudowa meblowa łazienki z lustem i kinkietami
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka dół 4.jpg
     alt: owalne lustro i dwa dekoracyjne kinkiety
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka dół 5.jpg
     alt: owalna umywalka i zabudowa meblowa w odcieniu ciepłego drewna
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka dół 3.jpg
-    alt: "prysznic walk-in oraz tapeta imitująca tkaninę "
+    alt: prysznic walk-in oraz tapeta imitująca tkaninę
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka dół 6.jpg
-    alt: "prysznic walk-in i metalowa półka na kosmetyki "
+    alt: prysznic walk-in i metalowa półka na kosmetyki
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka góra 1.jpg
     alt: ażurowa zabudowa pralki oraz wanna wolnostojąca
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka góra 2.jpg
-    alt: "Wanna wolnostojąca z dekoracyjną lampą "
+    alt: Wanna wolnostojąca z dekoracyjną lampą
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka góra 3.jpg
     alt: zabudowa meblowa w łazience z owalnymi lustrami
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka góra 4.jpg
-    alt: "owalne lustra i kinkiety dekoracyjne "
+    alt: owalne lustra i kinkiety dekoracyjne
   - src: ../../assets/portfolio/_17-2025-Stara Wieś-60m2/łazienka góra 5.jpg
     alt: zabudowa geberitu połączona z zabudową w łazience
 ---
