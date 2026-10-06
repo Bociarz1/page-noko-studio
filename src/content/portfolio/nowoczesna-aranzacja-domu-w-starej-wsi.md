@@ -10,7 +10,7 @@ description: Projekt wnętrza w Starej Wsi pod Warszawą, zaprojektowany z myśl
   naturalnymi materiałami – ciepłym drewnem i surową strukturą kamienia. W skład
   projektu wchodzi otwarta strefa dzienna z kuchnią i jadalnią, funkcjonalny
   wiatrołap oraz dwie niezwykle stylowe łazienki.
-location: "Stara Wieś pod Warszawą "
+location: Stara Wieś pod Warszawą
 pubDate: 2025-09-19
 featured: false
 category: dom
