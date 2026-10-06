@@ -36,8 +36,7 @@ gallery:
     alt: narożnik w salonie razem z dekoracyjnym oświetleniem i zasłonami
       ocieplającymi wnętrze
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SALON 1.4.jpg
-    alt: "ściana wykończona płytą meblową z ukrytymi drzwiami oraz barwionym lustrem
-      "
+    alt: ściana wykończona płytą meblową z ukrytymi drzwiami oraz barwionym lustrem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/GABINET 1.jpg
     alt: Gabinet z biurkiem pod oknem, dużą drewnianą biblioteczką, szafą i lampą w
       kształcie płatków.
@@ -72,10 +71,10 @@ gallery:
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/KLATKA SCHODOWA.jpg
     alt: górny hol z brązową balustradą schodów
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SYPIALNIA 1.jpg
-    alt: "główna sypialnia w wyrazistych kontrastowych kolorach "
+    alt: główna sypialnia w wyrazistych kontrastowych kolorach
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/SYPIALNIA 2.jpg
-    alt: "zabudowa ściany płytą meblową połączoną z barwionym lustem, z ukrytym
-      przejściem "
+    alt: zabudowa ściany płytą meblową połączoną z barwionym lustem, z ukrytym
+      przejściem
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/ŁAZIENKA PRYWATNA 1.jpg
     alt: łazienka prywatna z wanną wolnostojącą i spiekiem wielkoformatowym
   - src: ../../assets/portfolio/_18-2026-Szumowo-240m2/ŁAZIENKA PRYWATNA 2.jpg
