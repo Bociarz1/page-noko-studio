@@ -9,7 +9,7 @@ description: Jasna i przytulna aranżacja wnętrza domu w Nowodworcach (95 m²).
   Odkryj nowoczesny salon, beżową kuchnię z wyspą i stylową łazienkę z motywem
   marmuru.
 location: Nowodworce
-pubDate: 2024-01-17
+pubDate: 2023-09-17
 featured: false
 category: dom
 area: 95 m²
