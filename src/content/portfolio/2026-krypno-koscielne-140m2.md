@@ -9,7 +9,7 @@ description: Aranżacja 140-metrowego domu w Krypnie Kościelnym. Projekt oparty
   na wielu detalach z wykorzystaniem rozbudowanej sztukaterii ściennej i
   elementów zdobniczych.
 location: Krypno Koscielne
-pubDate: 2026-01-24
+pubDate: 2024-11-30
 featured: false
 category: dom
 area: 140 m²
