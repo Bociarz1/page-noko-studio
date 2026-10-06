@@ -1,6 +1,6 @@
 ---
 title: Jasna aranżacja domu w Nowodworcach
-slug: 2024-nowodworce-95m2
+slug: 2023-nowodworce-95m2
 metaTitle: Jasna aranżacja domu w Nowodworcach
 metaDescription: Jasna i przytulna aranżacja wnętrza domu w Nowodworcach (95
   m²). Odkryj nowoczesny salon, beżową kuchnię z wyspą i stylową łazienkę z
