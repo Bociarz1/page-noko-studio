@@ -2,9 +2,8 @@
 title: Nowoczesna aranżacja domu w Starej Wsi
 slug: 2025-stara-wies-60m2
 metaTitle: Nowoczesna aranżacja domu w Starej Wsi
-metaDescription: Projekt 60-metrowej przestrzeni w domu w Starej Wsi. Nowoczesne
-  i funkcjonalne wnętrze łączące drewno i kamień. Obejmuje strefę dzienną,
-  wiatrołap i dwie łazienki.
+metaDescription: Projekt 60-metrowej przestrzeni w Starej Wsi. Nowoczesne
+  wnętrze z drewna i kamienia obejmujące strefę dzienną, wiatrołap i 2 łazienki.
 description: Projekt wnętrza w Starej Wsi pod Warszawą, zaprojektowany z myślą o
   komforcie na dwóch poziomach. Aranżacja harmonijnie łączy nowoczesność z
   naturalnymi materiałami – ciepłym drewnem i surową strukturą kamienia. W skład
