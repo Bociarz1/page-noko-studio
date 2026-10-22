@@ -41,7 +41,7 @@ gallery:
     alt: Projekt sypialni lamiele sciana warszawa architekt
   - src: /src/assets/portfolio/_2-2025-warszawa-100m2/szafa-pod-wymiar-sypialnia-projekt-wnetrz-warszawa.webp
     alt: Szafa pod wymiar sypialnia projekt wnetrz warszawa
-  - src: ../../assets/portfolio/SYPIALNIA 3.jpg
+  - src: ../../assets/portfolio/sypialnia-3-warszawa.jpg
     alt: sypialnia łóżko tapicerowane zasłony żaluzje obrazy warszawa
   - src: /src/assets/portfolio/_2-2025-warszawa-100m2/nowoczesna-strefa-umywalkowa-lustro-led-projekt-lazienki.webp
     alt: Nowoczesna strefa umywalkowa lustro led projekt lazienki
