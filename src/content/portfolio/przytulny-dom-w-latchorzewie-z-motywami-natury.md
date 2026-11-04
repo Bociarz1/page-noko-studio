@@ -13,7 +13,7 @@ description: Projekt przestronnego domu o powierzchni 166 m² w Latchorzewie.
   nadające wnętrzu unikalnego charakteru.
 location: Latchorzew
 pubDate: 2026-04-07
-featured: false
+featured: true
 category: dom
 area: 166 m²
 cover: ../../assets/portfolio/_19-2026-Latchorzew-166m2/salon 2.jpg
