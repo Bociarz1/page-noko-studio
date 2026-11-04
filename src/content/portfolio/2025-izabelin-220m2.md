@@ -8,7 +8,7 @@ description: Projekt wnętrz domu w Izabelinie (220 m²). Jasna paleta barw,
   drewno i minimalistyczne detale połączone w spójnym, otwartym układzie.
 location: Izabelin
 pubDate: 2025-01-29
-featured: true
+featured: false
 category: dom
 area: 220 m²
 cover: /src/assets/portfolio/_1-2025-izabelin-220m2/aranzacja-wnetrza-domu-salon-jadalnia-kuchnia-izabelin.webp
