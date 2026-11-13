@@ -36,11 +36,15 @@ content:
         type: string
         description: 'Tytuł, który wyświetla się w zakładce przeglądarki i w Google (do 65 znaków). Jeśli zostawisz puste, użyty zostanie Główny Tytuł.'
         required: true
+        options:
+          maxlength: 65
       - name: metaDescription
         label: Opis SEO (Meta Description)
         type: string
         description: 'Krótkie streszczenie pod SEO w Google (150-160 znaków). Jeśli zostawisz puste, użyty zostanie Opis (Zajawka).'
         required: true
+        options:
+          maxlength: 160
       - name: description
         label: Opis / Zajawka (Hero Section)
         type: string
@@ -129,11 +133,15 @@ content:
         type: string
         description: 'Tytuł, który wyświetla się w zakładce przeglądarki i w Google (do 65 znaków). Jeśli zostawisz puste, użyty zostanie Tytuł projektu.'
         required: true
+        options:
+          maxlength: 65
       - name: metaDescription
         label: Opis SEO (Meta Description)
         type: string
-        description: 'Krótkie streszczenie pod SEO w Google. Jeśli zostawisz puste, Google użyje pierwszych zdań strony.'
+        description: 'Krótkie streszczenie pod SEO w Google (do 160 znaków). Jeśli zostawisz puste, Google użyje pierwszych zdań strony.'
         required: true
+        options:
+          maxlength: 160
       - name: description
         label: Krótki opis (Hero Section)
         type: string

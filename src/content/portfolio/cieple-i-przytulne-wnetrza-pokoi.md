@@ -1,11 +1,8 @@
 ---
 title: "Ciepłe i przytulne wnętrza pokoi "
 slug: 2026-choroszcz-30
-metaTitle: "Ciepłe i przytulne wnętrza pokoi "
-metaDescription: "Projekt dwóch sypialni- głównej sypialni rodziców, pokoju
-  córki oraz oddzielnej garderoby. Głównym i dominującym kolorem jest beż, na
-  którym bardzo zależało inwestorom. Wnętrza miały być minimalistyczne oraz
-  pozwalać na odpoczynek "
+metaTitle: "Ciepłe i przytulne wnętrza pokoi – Choroszcz"
+metaDescription: "Projekt dwóch sypialni i garderoby w Choroszczy. Minimalistyczne wnętrza w beżowej tonacji – sypialnia rodziców, pokój córki i elegancka garderoba."
 description: Projekt dwóch sypialni oraz garderoby
 location: Choroszcz
 pubDate: 2026-06-04
