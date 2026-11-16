@@ -13,7 +13,7 @@ description: Projekt 60-metrowego mieszkania, w którym motywem przewodnim jest
 location: Bialystok
 pubDate: 2025-06-05
 featured: false
-category: mieszkanie
+category: apartament
 area: 60 m²
 cover: ../../assets/portfolio/_16-2025-Białystok-60m2/gabinet 1.jpg
 gallery:
