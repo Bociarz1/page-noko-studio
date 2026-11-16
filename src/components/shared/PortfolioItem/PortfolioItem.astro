@@ -12,6 +12,12 @@ interface Props {
 }
 
 const { slug, cover, title, location, category, area, year } = Astro.props;
+
+const categoryLabels: Record<string, string> = {
+  apartament: "Apartament",
+  mieszkanie: "Mieszkanie",
+  dom: "Dom",
+};
 ---
 
 <style lang="scss">
@@ -36,7 +42,7 @@ const { slug, cover, title, location, category, area, year } = Astro.props;
   <div class="portfolio-card__content">
     <div class="portfolio-card__text">
       <p class="portfolio-card__meta">
-        {category === "apartament" ? "Apartament" : "Dom"}
+        {categoryLabels[category] ?? category}
       </p>
       <h3 class="portfolio-card__title">{title}</h3>
       <p class="portfolio-card__details">{location} · {area} · {year}</p>

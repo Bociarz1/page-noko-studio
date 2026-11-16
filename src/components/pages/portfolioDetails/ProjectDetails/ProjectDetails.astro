@@ -25,7 +25,7 @@ const { project } = Astro.props;
 ---
 
 <Hero
-  preTitle={project.category === 'apartament' ? 'Apartament' : 'Dom'}
+  preTitle={({ apartament: 'Apartament', mieszkanie: 'Mieszkanie', dom: 'Dom' } as Record<string, string>)[project.category] ?? project.category}
   title={project.title}
   description={project.description}
   image={{
